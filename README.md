@@ -31,6 +31,10 @@ export OPENAI_API_KEY="your-api-key-here"
 os.environ["OPENAI_API_KEY"] = "your-api-key-here"
 ```
 
+### Server Configuration
+
+**Important**: When developing an app using the VeriSafe Agent library, ensure that the server address in your app matches the server address used by the VeriSafe Agent System. Both the app and the server must use the same address for proper communication.
+
 ## Emulator Setup
 
 Before running the VeriSafe Agent System, you need to set up and run an Android emulator:
