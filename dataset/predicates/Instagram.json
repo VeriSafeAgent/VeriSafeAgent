@@ -1,0 +1,351 @@
+{
+    "PostInteractionOptions": {
+        "description": "Options available for interacting with a post, including liking, commenting, sending, and saving.",
+        "variables": [
+            {
+                "name": "interaction_type",
+                "type": "Enum",
+                "enum_values": [
+                    "Like",
+                    "Comment",
+                    "Send",
+                    "Save"
+                ]
+            }
+        ]
+    },
+    "MainMenuNotificationAndMessage": {
+        "description": "In the main menu, click the notification ikon or meessage ikon to do these functions",
+        "variables": [
+            {
+                "name": "notification_check",
+                "type": "Boolean"
+            },
+            {
+                "name": "message_check",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "NavigationBar": {
+        "description": "The bottom navigation bar provides access to Home, Search, Create, Reels, and Profile sections.",
+        "variables": [
+            {
+                "name": "navigation_bar_menu",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "Search",
+                    "Create",
+                    "Reels",
+                    "Profile"
+                ]
+            }
+        ]
+    },
+    "ProfileActions": {
+        "description": "Actions available on the user's profile page, including editing the profile, sharing the profile, and discovering people. These actions allow the user to manage their profile and expand their network.",
+        "variables": [
+            {
+                "name": "edit_profile",
+                "type": "Boolean"
+            },
+            {
+                "name": "share_profile",
+                "type": "Boolean"
+            },
+            {
+                "name": "discover_people",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "UserProfileStatistics": {
+        "description": "Statistics related to the user's profile, including the number of posts, followers, and following. This information is crucial for understanding the user's activity and reach on the platform.",
+        "variables": [
+            {
+                "name": "num_posts",
+                "type": "Number"
+            },
+            {
+                "name": "check_posts",
+                "type": "Boolean"
+            },
+            {
+                "name": "num_followers",
+                "type": "Number"
+            },
+            {
+                "name": "check_followers",
+                "type": "Boolean"
+            },
+            {
+                "name": "num_following",
+                "type": "Number"
+            },
+            {
+                "name": "check_following",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "UserProfileEditDetails": {
+        "description": "Details available for editing on the user's profile page, including name, username, bio, gender, and the status of the Threads badge toggle.",
+        "variables": [
+            {
+                "name": "name",
+                "type": "Text"
+            },
+            {
+                "name": "username",
+                "type": "Text"
+            },
+            {
+                "name": "bio",
+                "type": "Text"
+            },
+            {
+                "name": "gender",
+                "type": "Enum",
+                "enum_values": [
+                    "Male",
+                    "Female",
+                    "Other"
+                ]
+            },
+            {
+                "name": "threads_badge",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "UserProfileBioEdit": {
+        "description": "Details of the user's bio editing state on Instagram, including the current bio text and the character count. This state is crucial for understanding what the user is editing and how much space is left for additional text.",
+        "variables": [
+            {
+                "name": "bio_text",
+                "type": "Text"
+            },
+            {
+                "name": "character_count",
+                "type": "Text"
+            },
+            {
+                "name": "bio_submit",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "PostDetails": {
+        "description": "Details of the post currently visible in the Instagram feed, including the username of the poster, the time since posting, and the description of the post.",
+        "variables": [
+            {
+                "name": "post_username",
+                "type": "Text"
+            },
+            {
+                "name": "post_time",
+                "type": "Text"
+            },
+            {
+                "name": "post_description",
+                "type": "Text"
+            }
+        ]
+    },
+    "UserProfileActions": {
+        "description": "Actions available on the user's profile page, including following, messaging, and contacting the user. These actions allow interaction with the user's profile.",
+        "variables": [
+            {
+                "name": "follow_action",
+                "type": "Boolean"
+            },
+            {
+                "name": "message_action",
+                "type": "Boolean"
+            },
+            {
+                "name": "contact_action",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "TopProfileMenu": {
+        "description": "Other menus for user's profile page on top, including thread, create, and setting",
+        "variables": [
+            {
+                "name": "top_profile_menu_actions",
+                "type": "Enum",
+                "enum_values": [
+                    "threads",
+                    "create",
+                    "setting"
+                ]
+            }
+        ]
+    },
+    "AccountSettingsOverview": {
+        "description": "Overview of account settings and activity options available on the Instagram settings page. This includes access to the Accounts Center, options for managing saved items, archives, activity, notifications, and time management, as well as privacy settings for account visibility, close friends, crossposting, and blocked accounts.",
+        "variables": [
+            {
+                "name": "accounts_center_access",
+                "type": "Boolean"
+            },
+            {
+                "name": "saved_items_access",
+                "type": "Boolean"
+            },
+            {
+                "name": "archive_access",
+                "type": "Boolean"
+            },
+            {
+                "name": "activity_access",
+                "type": "Boolean"
+            },
+            {
+                "name": "notifications_access",
+                "type": "Boolean"
+            },
+            {
+                "name": "time_management_access",
+                "type": "Boolean"
+            },
+            {
+                "name": "account_privacy_setting",
+                "type": "Boolean"
+            },
+            {
+                "name": "close_friends_check",
+                "type": "Boolean"
+            },
+            {
+                "name": "crossposting_settings_access",
+                "type": "Boolean"
+            },
+            {
+                "name": "blocked_accounts_check",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "AccountPrivacySettings": {
+        "description": "This predicate describes the privacy settings of the user's Instagram account, specifically whether the account is set to private or public. It includes the status of the private account toggle and the associated descriptions explaining the implications of each setting.",
+        "variables": [
+            {
+                "name": "private_account_status",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "SwitchToPrivatePrompt": {
+        "description": "This predicate captures the state of the prompt asking the user if they want to switch to a private account. It includes the title of the prompt and the detailed implications of switching to a private account.",
+        "variables": [
+            {
+                "name": "switch_button",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ExploreAndSearchPageContent": {
+        "description": "Details of the content displayed on the Instagram Explore and Search page, including the type of content (Reel or Photo), the creator's name, and the search bar. This information is crucial for understanding the layout and content available to the user on the Explore page, and for searching.",
+        "variables": [
+            {
+                "name": "content_type",
+                "type": "Enum",
+                "enum_values": [
+                    "Reel",
+                    "Photo"
+                ]
+            },
+            {
+                "name": "creator_name",
+                "type": "Text"
+            },
+            {
+                "name": "search_bar_active",
+                "type": "Boolean"
+            },
+            {
+                "name": "search_bar_text",
+                "type": "Text"
+            },
+            {
+                "name": "search_bar_result",
+                "type": "Text"
+            }
+        ]
+    },
+    "ExploreSearchPageState": {
+        "description": "This predicate captures the state of the Instagram Explore and Search page, including the active search term, the selected content filter category, and the presence of various content types in the grid. It provides a comprehensive view of the user's current exploration context.",
+        "variables": [
+            {
+                "name": "search_term",
+                "type": "Text"
+            },
+            {
+                "name": "selected_category",
+                "type": "Enum",
+                "enum_values": [
+                    "For you",
+                    "Accounts",
+                    "Audio",
+                    "Tags",
+                    "Places",
+                    "Reels"
+                ]
+            },
+            {
+                "name": "content_types",
+                "type": "Enum",
+                "enum_values": [
+                    "Photo",
+                    "Video",
+                    "Reel"
+                ]
+            },
+            {
+                "name": "follow_hashtag_result",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "DirectMessagesOverview": {
+        "description": "Overview of the Instagram Direct Messages page, including the user's username, the number of message requests, and the list of recent conversations with activity status.",
+        "variables": [
+            {
+                "name": "username",
+                "type": "Text"
+            },
+            {
+                "name": "message_requests",
+                "type": "Number"
+            },
+            {
+                "name": "recent_conversations",
+                "type": "Text"
+            }
+        ]
+    },
+    "NotificationOverview": {
+        "description": "Overview of the notifications displayed on the Instagram Notifications page, including follow requests, new stories, shared photos, and login alerts. This information is crucial for understanding the user's recent interactions and security alerts.",
+        "variables": [
+            {
+                "name": "follow_requests",
+                "type": "Boolean"
+            },
+            {
+                "name": "new_stories",
+                "type": "Text"
+            },
+            {
+                "name": "shared_photos",
+                "type": "Text"
+            },
+            {
+                "name": "login_alerts",
+                "type": "Text"
+            }
+        ]
+    }
+}

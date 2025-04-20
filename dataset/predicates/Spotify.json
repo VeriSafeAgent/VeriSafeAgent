@@ -1,0 +1,155 @@
+{
+    "CurrentTab": {
+        "description": "Indicates the currently selected tab in the bottom navigation bar of the Spotify app. The options include Home, Search, Your Library, Premium, and Create.",
+        "variables": [
+            {
+                "name": "selected_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "Search",
+                    "Your Library",
+                    "Premium",
+                    "Create"
+                ]
+            }
+        ]
+    },
+    "NowPlayingTrack": {
+        "description": "Details of the track currently playing in the Spotify app, including the track title and artist name.",
+        "variables": [
+            {
+                "name": "track_title",
+                "type": "Text"
+            },
+            {
+                "name": "artist_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "TopNavigationFilter": {
+        "description": "The filter applied in the top navigation bar of the Spotify app, indicating the content type being viewed. Options include All, Music, and Podcasts.",
+        "variables": [
+            {
+                "name": "filter_type",
+                "type": "Enum",
+                "enum_values": [
+                    "All",
+                    "Music",
+                    "Podcasts"
+                ]
+            }
+        ]
+    },
+    "PlaylistOptions": {
+        "description": "Options available in the playlist menu, including Playlist, Blend, and Jam, each with a description of their functionality.",
+        "variables": [
+            {
+                "name": "option_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Playlist",
+                    "Blend",
+                    "Jam"
+                ]
+            }
+        ]
+    },
+    "PlaylistCreationState": {
+        "description": "Represents the state of the playlist creation process in the Spotify app, including the name of the playlist being created and the available actions (Cancel or Create).",
+        "variables": [
+            {
+                "name": "playlist_name",
+                "type": "Text"
+            },
+            {
+                "name": "action_buttons",
+                "type": "Enum",
+                "enum_values": [
+                    "Cancel",
+                    "Create"
+                ]
+            }
+        ]
+    },
+    "PlaylistDetails": {
+        "description": "Details of the playlist currently being viewed or edited in the Spotify app, including the playlist title, creator's name, and the option to add songs.",
+        "variables": [
+            {
+                "name": "playlist_title",
+                "type": "Text"
+            },
+            {
+                "name": "creator_name",
+                "type": "Text"
+            },
+            {
+                "name": "add_songs_option",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "SearchPageState": {
+        "description": "Represents the state of the Spotify app's search page, including the search query prompt and suggestions for what to search.",
+        "variables": [
+            {
+                "name": "search_query_prompt",
+                "type": "Text"
+            },
+            {
+                "name": "search_suggestions",
+                "type": "Text"
+            }
+        ]
+    },
+    "SearchResultsState": {
+        "description": "Details of the search results displayed in the Spotify app, including the type of result (song, artist, playlist), the associated name or title, and result option",
+        "variables": [
+            {
+                "name": "result_type",
+                "type": "Enum",
+                "enum_values": [
+                    "Song",
+                    "Artist",
+                    "Playlist"
+                ]
+            },
+            {
+                "name": "result_name",
+                "type": "Text"
+            },
+            {
+                "name": "result_option",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "SongDetailsAndActions": {
+        "description": "Represents the details and available actions for a specific song in the Spotify app. This includes the song title, artist, album, and a list of possible actions the user can take.",
+        "variables": [
+            {
+                "name": "song_title",
+                "type": "Text"
+            },
+            {
+                "name": "artist_album",
+                "type": "Text"
+            },
+            {
+                "name": "available_actions",
+                "type": "Enum",
+                "enum_values": [
+                    "Add to Liked Songs",
+                    "Add to playlist",
+                    "Add to Queue",
+                    "Go to album",
+                    "Go to artist",
+                    "Share",
+                    "Go to song radio",
+                    "View song credits"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,1092 @@
+{
+    "HomeItemDetails": {
+        "description": "Details of individual content items displayed in the Home tab, including the type of content and its description.",
+        "variables": [
+            {
+                "name": "content_type",
+                "type": "Enum",
+                "enum_values": [
+                    "Pin",
+                    "Video pin",
+                    "Promoted Pin"
+                ]
+            },
+            {
+                "name": "content_description",
+                "type": "Text"
+            }
+        ]
+    },
+    "CreatingOption": {
+      "description": "You can create a Pin, Cllage, or Board, depending on what you want to create.",
+      "variables": [
+        {
+          "name": "selected_creating_option",
+          "type": "Enum",
+          "enum_values": ["Pin", "Collage", "Board"]
+        }
+      ]
+    },
+    "CurrentTab": {
+        "description": "Indicates the currently active tab in the bottom navigation bar. The options include Home, Search, Create, Notifications, and Saved.",
+        "variables": [
+            {
+                "name": "active_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "Search",
+                    "Create",
+                    "Notifications",
+                    "Saved"
+                ]
+            }
+        ]
+    },
+    "SelectedYourAccountSettingOption": {
+        "description": "A selection of settings options for your account. one of the Account settings, Progile visibility, Home feed tuner, Claimed accounts, Social permissions, Notifications, Privacy and data, Reports and violations center",
+        "variables": [
+            {
+                "name": "settings_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Account settings",
+                    "Profile visibility",
+                    "Home feed tuner",
+                    "Claimed accounts",
+                    "Social permissions",
+                    "Notifications",
+                    "Privacy and data",
+                    "Reports and violations center"
+                ]
+            }
+        ]
+    },
+    "ContentDescription": {
+        "description": "Description of the content currently being viewed, including any textual or visual elements that provide context or details about the content.",
+        "variables": [
+            {
+                "name": "content_description",
+                "type": "Text"
+            }
+        ]
+    },
+    "AdditionalContentPreview": {
+        "description": "Preview of additional content items that can be accessed or viewed from the current screen, displayed in a scrollable format.",
+        "variables": [
+            {
+                "name": "preview_content",
+                "type": "Text"
+            }
+        ]
+    },
+    "ContentViewState": {
+        "description": "Indicates the current state of the app when viewing a specific piece of content, including the type of content being viewed and any interactive options available.",
+        "variables": [
+            {
+                "name": "content_type",
+                "type": "Enum",
+                "enum_values": [
+                    "Image",
+                    "Video",
+                    "Pin"
+                ]
+            },
+            {
+                "name": "interactive_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Back Button",
+                    "Image Search"
+                ]
+            }
+        ]
+    },
+    "CommentSectionDetails": {
+        "description": "Details of the comment section for a specific content item, including the total number of comments, individual comments with user details, comment text, time since posted, and available interactions.",
+        "variables": [
+            {
+                "name": "total_comments",
+                "type": "Number"
+            },
+            {
+                "name": "comment_user",
+                "type": "Text"
+            },
+            {
+                "name": "comment_text",
+                "type": "Text"
+            },
+            {
+                "name": "comment_time",
+                "type": "Text"
+            },
+            {
+                "name": "replies_count",
+                "type": "Number"
+            },
+            {
+                "name": "reaction_count",
+                "type": "Number"
+            }
+        ]
+    },
+    "ReactionOptions": {
+        "description": "Available reaction options for comments, displayed as emoji buttons at the bottom of the comment section.",
+        "variables": [
+            {
+                "name": "reaction_emoji",
+                "type": "Enum",
+                "enum_values": [
+                    "\ud83d\udc40",
+                    "\ud83d\udc4f",
+                    "\ud83d\udd25",
+                    "\ud83d\udccc",
+                    "Love it!",
+                    "Mind. Blown.",
+                    "Goals",
+                    "*Taps save"
+                ]
+            }
+        ]
+    },
+    "SharePinInterface": {
+        "description": "Details of the sharing interface for a Pin, including the available sharing options and the contact information displayed for direct sharing.",
+        "variables": [
+            {
+                "name": "sharing_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Gmail",
+                    "Messages",
+                    "Copy link",
+                    "More"
+                ]
+            },
+            {
+                "name": "contact_name",
+                "type": "Text"
+            },
+            {
+                "name": "contact_username",
+                "type": "Text"
+            },
+            {
+                "name": "more_sharing_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Read aloud",
+                    "Bluetooth",
+                    "Chrome",
+                    "Drive",
+                    "Evernote",
+                    "Gmail",
+                    "Save",
+                    "Quick Share",
+                    "Messages"
+                ]
+            }
+        ]
+    },
+    "SearchTabSponsoredContent": {
+        "description": "Details of the sponsored content displayed at the top of the screen on Search tab, including the sponsor's name and the content description.",
+        "variables": [
+            {
+                "name": "sponsor_name",
+                "type": "Text"
+            },
+            {
+                "name": "sponsored_content_description",
+                "type": "Text"
+            }
+        ]
+    },
+    "ContentRecommendation": {
+        "description": "Details of the content recommendations displayed on the screen, including the category name and the specific recommendation.",
+        "variables": [
+            {
+                "name": "category_name",
+                "type": "Text"
+            },
+            {
+                "name": "recommendation",
+                "type": "Text"
+            }
+        ]
+    },
+    "SearchQuery": {
+        "description": "The current search query entered by the user in the search bar.",
+        "variables": [
+            {
+                "name": "search_query",
+                "type": "Text"
+            }
+        ]
+    },
+    "SearchHistory": {
+        "description": "The history of the search bar by the user.",
+        "variables": [
+            {
+                "name": "history",
+                "type": "Text"
+            }
+        ]
+    },
+    "SearchSuggestions": {
+        "description": "Represents the current search query entered by the user and the list of suggested search queries displayed by the app. This includes the main search query and any related suggestions provided by the app.",
+        "variables": [
+            {
+                "name": "search_query",
+                "type": "Text"
+            },
+            {
+                "name": "suggested_options",
+                "type": "Text"
+            },
+            {
+                "name": "is_profile",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "SearchCategoryTags": {
+        "description": "The category tags displayed below the search bar, representing different themes or topics related to the search query.",
+        "variables": [
+            {
+                "name": "category_tags_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "SearchResultsContent": {
+        "description": "Details of the content items displayed as search results, including the title and description of each item.",
+        "variables": [
+            {
+                "name": "content_title",
+                "type": "Text"
+            },
+            {
+                "name": "content_description",
+                "type": "Text"
+            }
+        ]
+    },
+    "SearchSponsoredContentDetails": {
+        "description": "Details of the sponsored content displayed in the search results, including the sponsor's name and the content description.",
+        "variables": [
+            {
+                "name": "sponsor_name",
+                "type": "Text"
+            },
+            {
+                "name": "sponsored_content_description",
+                "type": "Text"
+            }
+        ]
+    },
+    "PinDetails": {
+        "description": "Details of the pin currently being viewed, including the title, user who posted it, number of reactions, and associated hashtags.",
+        "variables": [
+            {
+                "name": "pin_title",
+                "type": "Text"
+            },
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "reaction_count",
+                "type": "Number"
+            },
+            {
+                "name": "comment_count",
+                "type": "Number"
+            },
+            {
+                "name": "pin_description",
+                "type": "Text"
+            }
+        ]
+    },
+    "PinInteractionOptions": {
+        "description": "Interactive options available for the pin, including the ability to react, comment, share, and save.",
+        "variables": [
+            {
+                "name": "react_option",
+                "type": "Boolean"
+            },
+            {
+                "name": "comment_option",
+                "type": "Boolean"
+            },
+            {
+                "name": "save_option",
+                "type": "Boolean"
+            },
+            {
+                "name": "follow_option",
+                "type": "Boolean"
+            },
+            {
+                "name": "download_image_option",
+                "type": "Boolean"
+            },
+            {
+                "name": "report_pin_option",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "SearchResultFilter": {
+        "description": "Filters for the content you've searched for. There are 4 options: All pins, Videos, Boards, Profiles.",
+        "variables": [
+            {
+                "name": "filter_by",
+                "type": "Enum",
+                "enum_values": [
+                    "All Pins",
+                    "Videos",
+                    "Boards",
+                    "Profiles"
+                ]
+            }
+        ]
+    },
+    "CreationInterfaceOptions": {
+        "description": "Options available in the creation interface, including the ability to create a Pin or a Board.",
+        "variables": [
+            {
+                "name": "creation_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Pin",
+                    "Board"
+                ]
+            }
+        ]
+    },
+    "BoardCreationDetails": {
+        "description": "Details of the board creation process, including the board name, collaborators, and visibility settings.",
+        "variables": [
+            {
+                "name": "board_name",
+                "type": "Text"
+            },
+            {
+                "name": "collaborator_name",
+                "type": "Text"
+            },
+            {
+                "name": "collaborator_username",
+                "type": "Text"
+            },
+            {
+                "name": "visibility_secret",
+                "type": "Boolean"
+            },
+            {
+                "name": "pin_name_added_on_board",
+                "type": "Text"
+            },
+            {
+                "name": "content_added_on_board",
+                "type": "Text"
+            }
+        ]
+    },
+    "PinCreationDetails": {
+        "description": "Details required for creating a new pin, including the title, description, link, selected board, and any tagged topics.",
+        "variables": [
+            {
+                "name": "pin_title",
+                "type": "Text"
+            },
+            {
+                "name": "pin_description",
+                "type": "Text"
+            },
+            {
+                "name": "pin_link",
+                "type": "Text"
+            },
+            {
+                "name": "selected_board",
+                "type": "Text"
+            },
+            {
+                "name": "tagged_topics",
+                "type": "Text"
+            },
+            {
+                "name": "allow_comments",
+                "type": "Boolean"
+            },
+            {
+                "name": "pins_visual_details",
+                "type": "Text"
+            },
+            {
+                "name": "shopping_recommendations",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "NotificationTabDetails": {
+        "description": "Details of the notifications displayed in the 'New' and 'Seen' sections, including the notification description and the time since it was received.",
+        "variables": [
+            {
+                "name": "notification_description",
+                "type": "Text"
+            },
+            {
+                "name": "notification_time",
+                "type": "Text"
+            }
+        ]
+    },
+    "NotificationTabFilterOptions": {
+        "description": "Options available for filtering updates in the notifications section. The options include 'All', 'Comments', and 'Photos'.",
+        "variables": [
+            {
+                "name": "filter_option",
+                "type": "Enum",
+                "enum_values": [
+                    "All",
+                    "Comments",
+                    "Photos"
+                ]
+            }
+        ]
+    },
+    "BoardOverview": {
+        "description": "Details of the boards displayed with other's profile, including the board name, number of pins, and the time since the last update.",
+        "variables": [
+            {
+                "name": "username",
+                "type": "Text"
+            },
+            {
+                "name": "board_name",
+                "type": "Text"
+            },
+            {
+                "name": "num_of_pins",
+                "type": "Number"
+            },
+            {
+                "name": "last_updated",
+                "type": "Text"
+            }
+        ]
+    },
+    "CategorySelection": {
+        "description": "The category currently selected in the Saved tab, which can be Pins, Boards, or Collages.",
+        "variables": [
+            {
+                "name": "selected_category",
+                "type": "Enum",
+                "enum_values": [
+                    "Pins",
+                    "Boards",
+                    "Collages"
+                ]
+            }
+        ]
+    },
+    "BoardSortingOptions": {
+        "description": "The current sorting option selected for organizing boards in the Saved tab. The options include A to Z, Reorder, Last saved to, Newest, and Oldest.",
+        "variables": [
+            {
+                "name": "selected_sorting_option",
+                "type": "Enum",
+                "enum_values": [
+                    "A to Z",
+                    "Reorder",
+                    "Last saved to",
+                    "Newest",
+                    "Oldest"
+                ]
+            }
+        ]
+    },
+    "SavedPinsStatus": {
+        "description": "Indicates the current status of the Pins in the Saved tab, including the number of pins saved and any active filters such as Favorites or Created by you.",
+        "variables": [
+            {
+                "name": "num_of_pins_saved",
+                "type": "Number"
+            },
+            {
+                "name": "favorites_filter_active",
+                "type": "Boolean"
+            },
+            {
+                "name": "created_by_you_filter_active",
+                "type": "Boolean"
+            },
+            {
+                "name": "feed_layout_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Wide",
+                    "Standard",
+                    "Compact"
+                ]
+            }
+        ]
+    },
+    "SavedTabSearchPins": {
+        "description": "Details of the pins that have been recently viewed or saved by the user, displayed as thumbnails.",
+        "variables": [
+            {
+                "name": "recently_viewed_thumbnails",
+                "type": "Text"
+            },
+            {
+                "name": "recently_saved_thumbnails",
+                "type": "Text"
+            },
+            {
+                "name": "search_query",
+                "type": "Text"
+            }
+        ]
+    },
+    "AccountUserProfileDetails": {
+        "description": "Details of the account user's profile being edited, including first name, last name, username, pronouns, about section, and website link.",
+        "variables": [
+            {
+                "name": "first_name",
+                "type": "Text"
+            },
+            {
+                "name": "last_name",
+                "type": "Text"
+            },
+            {
+                "name": "username",
+                "type": "Text"
+            },
+            {
+                "name": "pronouns",
+                "type": "Text"
+            },
+            {
+                "name": "about",
+                "type": "Text"
+            },
+            {
+                "name": "website",
+                "type": "Text"
+            },
+            {
+                "name": "num_followers",
+                "type": "Number"
+            },
+            {
+                "name": "num_followings",
+                "type": "Number"
+            }
+        ]
+    },
+    "AccountManagementSettings": {
+        "description": "Details of the account management settings screen, including personal information, email, password, app theme, app sounds, and options for account deactivation and deletion.",
+        "variables": [
+            {
+                "name": "email",
+                "type": "Text"
+            },
+            {
+                "name": "password",
+                "type": "Text"
+            },
+            {
+                "name": "app_theme",
+                "type": "Text"
+            },
+            {
+                "name": "app_sounds",
+                "type": "Boolean"
+            },
+            {
+                "name": "deactivate_account",
+                "type": "Boolean"
+            },
+            {
+                "name": "delete_account",
+                "type": "Boolean"
+            },
+            {
+                "name": "birthdate",
+                "type": "Text"
+            },
+            {
+                "name": "gender",
+                "type": "Text"
+            },
+            {
+                "name": "country_region",
+                "type": "Text"
+            },
+            {
+                "name": "language",
+                "type": "Text"
+            }
+        ]
+    },
+    "ProfileVisibilitySettings": {
+        "description": "Settings related to the visibility of a user's profile on Pinterest, including options for making the profile private and hiding it from search engines.",
+        "variables": [
+            {
+                "name": "private_profile_enabled",
+                "type": "Boolean"
+            },
+            {
+                "name": "search_privacy_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "HomeFeedInterestSettings": {
+        "description": "Represents the current selection state of interests that influence the user's Pinterest home feed. Each interest has a name and a boolean indicating whether it is selected.",
+        "variables": [
+            {
+                "name": "interest_name",
+                "type": "Text"
+            },
+            {
+                "name": "is_selected",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "HomeFeedPinSettings": {
+        "description": "Details of the pins that have been recently interacted with by the user, including the time since the interaction.",
+        "variables": [
+            {
+                "name": "interaction_time",
+                "type": "Text"
+            },
+            {
+                "name": "pin_thumbnail",
+                "type": "Text"
+            }
+        ]
+    },
+    "HomeFeedBoardSettings": {
+        "description": "Represents the current selection state of boards that influence the user's Pinterest home feed. Each board has a name, the number of pins, the time since the last update, and a boolean indicating whether it is hidden.",
+        "variables": [
+            {
+                "name": "board_name",
+                "type": "Text"
+            },
+            {
+                "name": "num_of_pins",
+                "type": "Number"
+            },
+            {
+                "name": "last_updated",
+                "type": "Text"
+            },
+            {
+                "name": "is_hidden",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "HomeFeedTuningOptions": {
+        "description": "Represents the current selection state of options available for tuning the home feed, including Pins, Interests, Boards, and Following.",
+        "variables": [
+            {
+                "name": "selected_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Pins",
+                    "Interests",
+                    "Boards",
+                    "Following"
+                ]
+            }
+        ]
+    },
+    "HomeFeedFollowingSettings": {
+        "description": "Details of the profile currently being viewed, including the profile name, number of followers, and the following status.",
+        "variables": [
+            {
+                "name": "profile_name",
+                "type": "Text"
+            },
+            {
+                "name": "num_of_followers",
+                "type": "Text"
+            },
+            {
+                "name": "following_status",
+                "type": "Enum",
+                "enum_values": [
+                    "Following",
+                    "Not Following"
+                ]
+            }
+        ]
+    },
+    "InstagramAccountClaimSettings": {
+        "description": "Details of the Instagram account claiming process within the Pinterest app, including the header title, description of the feature, and the presence of the claim action button.",
+        "variables": [
+            {
+                "name": "instagram_account",
+                "type": "Text"
+            }
+        ]
+    },
+    "SocialPermissionsSettings": {
+        "description": "Settings related to social permissions on Pinterest, including message settings, comment permissions, and comment filtering options. This includes the ability to allow comments on the user's Pins, filter comments on the user's Pins, and filter comments on others' Pins, as well as the list of blocked words or phrases.",
+        "variables": [
+            {
+                "name": "allow_comments_on_pins",
+                "type": "Boolean"
+            },
+            {
+                "name": "filter_comments_on_my_pins",
+                "type": "Boolean"
+            },
+            {
+                "name": "blocked_words",
+                "type": "Text"
+            },
+            {
+                "name": "filter_comments_on_others_pins",
+                "type": "Boolean"
+            },
+            {
+                "name": "message_settings_friends",
+                "type": "Enum",
+                "enum_values": [
+                    "Inbox",
+                    "Request",
+                    "Don't deliver"
+                ]
+            },
+            {
+                "name": "message_settings_followers",
+                "type": "Enum",
+                "enum_values": [
+                    "Inbox",
+                    "Request",
+                    "Dont' deliver"
+                ]
+            },
+            {
+                "name": "message_settings_following",
+                "type": "Enum",
+                "enum_values": [
+                    "Inbox",
+                    "Request",
+                    "Don't deliver"
+                ]
+            },
+            {
+                "name": "message_settings_everyone_else",
+                "type": "Enum",
+                "enum_values": [
+                    "Inbox",
+                    "Request",
+                    "Don't deliver"
+                ]
+            },
+            {
+                "name": "message_settings_blocked_profile",
+                "type": "Text"
+            }
+        ]
+    },
+    "ShoppingRecommendationsSettings": {
+        "description": "Settings related to shopping recommendations on Pinterest, including the ability to show similar products using visual search.",
+        "variables": [
+            {
+                "name": "show_similar_products",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "VideoPinSettings": {
+        "description": "Settings related to video pins on Pinterest, including the ability to allow downloads and autoplay videos on cellular data.",
+        "variables": [
+            {
+                "name": "video_pin_downloads",
+                "type": "Boolean"
+            },
+            {
+                "name": "autoplay_videos_on_cellular_data",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "NotificationSettings": {
+        "description": "Status for the current notification settings, taking each setting name and setting status as arguments. Examples of setting names include \"Comments\", \"Reactions\", \"Saves\", \"Views and impressions\", \"Collages\" for Pins user published. \n\"Comments\", \"Mentions\", \"Reminders\", \"Comments with photos\" for Pins user saved. \n\"New Pins from creators you follow\", and \"New Pins from creators you might like\" for activity from creators.\n\"Boards you might like\", \"Searches you might like\" for boards and searches. \n\"Pins inspired by your recent activity\", \"Pins picked for you\", \"Popular Pins\" for pin picks. \n\"Group board updates\", \"Group board invites\", \"Messages\" for social. \n\"Price drops\" for shopping. \n\"Pinterest announcements\", \"Feedback and surveys\", \"Reports and violations center updates\", \"Activity on Shuffles\" for others.\nThe setting status is a combination of Push and in-app settings, such as 'Push off', 'Push on', 'in-app on', or 'in-app off'.",
+        "variables": [
+            {
+                "name": "setting_name",
+                "type": "Text"
+            },
+            {
+                "name": "setting_status",
+                "type": "Enum",
+                "enum_values": [
+                    "Push on",
+                    "Push off",
+                    "Email on",
+                    "Email off"
+                ]
+            }
+        ]
+    },
+    "NotificationPermissions": {
+        "description": "Permissions for receiving notifications, including the ability to toggle Push, Email, and In-app notifications. Each permission can be either enabled or disabled.",
+        "variables": [
+            {
+                "name": "push_permission",
+                "type": "Boolean"
+            },
+            {
+                "name": "email_permission",
+                "type": "Boolean"
+            },
+            {
+                "name": "in_app_permission",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "PrivacyAndDataSettings": {
+        "description": "Represents the current state of privacy and data settings in the Pinterest app, including the status of various privacy options and actions related to data management.",
+        "variables": [
+            {
+                "name": "use_info_from_sites",
+                "type": "Boolean"
+            },
+            {
+                "name": "use_of_partner_info",
+                "type": "Boolean"
+            },
+            {
+                "name": "ads_about_pinterest",
+                "type": "Boolean"
+            },
+            {
+                "name": "activity_for_ads_reporting",
+                "type": "Boolean"
+            },
+            {
+                "name": "sharing_info_with_partners",
+                "type": "Boolean"
+            },
+            {
+                "name": "delete_data_and_account",
+                "type": "Boolean"
+            },
+            {
+                "name": "request_your_data",
+                "type": "Boolean"
+            },
+            {
+                "name": "clear_app_cache",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "SecuritySettings": {
+        "description": "Represents the current state of security settings in the app, including the status of two-factor authentication and the option to log in with Google.",
+        "variables": [
+            {
+                "name": "two_factor_authentication_enabled",
+                "type": "Boolean"
+            },
+            {
+                "name": "login_with_google_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ConnectedDeviceSettings": {
+        "description": "Details of devices connected to the user's account, including the last accessed date and time, location, and device type for each session.",
+        "variables": [
+            {
+                "name": "last_accessed",
+                "type": "Date"
+            },
+            {
+                "name": "location",
+                "type": "Text"
+            },
+            {
+                "name": "device_type",
+                "type": "Text"
+            },
+            {
+                "name": "session_status",
+                "type": "Enum",
+                "enum_values": [
+                    "Current session",
+                    "End activity"
+                ]
+            }
+        ]
+    },
+    "UserProfileOverview": {
+        "description": "Overview of the user's profile, including the profile name, username, number of followers, number of followings, monthly views, and website link.",
+        "variables": [
+            {
+                "name": "profile_name",
+                "type": "Text"
+            },
+            {
+                "name": "username",
+                "type": "Text"
+            },
+            {
+                "name": "num_of_followers",
+                "type": "Number"
+            },
+            {
+                "name": "num_of_following",
+                "type": "Number"
+            },
+            {
+                "name": "monthly_views",
+                "type": "Number"
+            },
+            {
+                "name": "website_link",
+                "type": "Text"
+            }
+        ]
+    },
+    "UserProfileTabs": {
+        "description": "Tabs available on the user's profile page, indicating the current selection between 'Created' and 'Saved'.",
+        "variables": [
+            {
+                "name": "selected_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Created",
+                    "Saved"
+                ]
+            }
+        ]
+    },
+    "UserBoardOverview": {
+        "description": "Overview of the boards displayed on the user's profile, including board names, pin counts, sections, and last updated times.",
+        "variables": [
+            {
+                "name": "board_name",
+                "type": "Text"
+            },
+            {
+                "name": "pin_count",
+                "type": "Number"
+            },
+            {
+                "name": "last_updated",
+                "type": "Text"
+            }
+        ]
+    },
+    "SearchUserBoardOverview": {
+        "description": "Details about board overview of the currently searched user.",
+        "variables": [
+            {
+                "name": "profile_name",
+                "type": "Text"
+            },
+            {
+                "name": "board_name",
+                "type": "Text"
+            },
+            {
+                "name": "num_of_pins",
+                "type": "Number"
+            },
+            {
+                "name": "last_updated",
+                "type": "Text"
+            }
+        ]
+    },
+    "OtherUserProfileInfo": {
+        "description": "Details of other user's profile information, including profile name, username, num of followers, num of followings, profile description, and follow status.",
+        "variables": [
+            {
+                "name": "profile_name",
+                "type": "Text"
+            },
+            {
+                "name": "username",
+                "type": "Text"
+            },
+            {
+                "name": "num_of_followers",
+                "type": "Number"
+            },
+            {
+                "name": "monthly_views",
+                "type": "Number"
+            },
+            {
+                "name": "num_of_followings",
+                "type": "Number"
+            },
+            {
+                "name": "profile_description",
+                "type": "Text"
+            },
+            {
+                "name": "is_follow",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "OthersProfileTabs": {
+        "description": "Tabs available on the other's profile page, indicating the current selection between 'Created' and 'Saved'.",
+        "variables": [
+            {
+                "name": "profile_name",
+                "type": "Text"
+            },
+            {
+                "name": "selected_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Created",
+                    "Saved"
+                ]
+            }
+        ]
+    },
+    "UserProfileDetails": {
+    "description": "Represents the state of the 'User Profile' screen in the application, including the user's first name, username, and follower/following count.",
+    "variables": [
+        {
+            "name": "predicate",
+            "type": "Text"
+        },
+        {
+            "name": "first_name",
+            "type": "Text"
+        },
+        {
+            "name": "username",
+            "type": "Text"
+        },
+        {
+            "name": "num_followers",
+            "type": "Number"
+        },
+        {
+            "name": "num_followings",
+            "type": "Number"
+        }
+    ]
+}
+}

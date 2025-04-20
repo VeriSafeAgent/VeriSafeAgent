@@ -1,0 +1,196 @@
+{
+    "UserAccountInformation": {
+        "description": "Details of the user account currently signed in, including the user's name and email address.",
+        "variables": [
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "user_email",
+                "type": "Text"
+            }
+        ]
+    },
+    "AnotherAccount": {
+        "description": "Options available for managing the user's Google account, including managing the account, adding another account, and managing accounts on the device.",
+        "variables": [
+            {
+                "name": "another_account_user_name",
+                "type": "Text"
+            },
+            {
+                "name": "another_account_user_email",
+                "type": "Text"
+            }
+        ]
+    },
+    "TaskNotificationSettings": {
+        "description": "Status for the current task notification settings, including the name of the setting and whether it is enabled or disabled. Examples of setting names include All Tasks notifications, Account status, Tasks for today, Tasks from yesterday, Timed tasks, and Allow notification dot.",
+        "variables": [
+            {
+                "name": "all_tasks_notifications",
+                "type": "Text"
+            },
+            {
+                "name": "account_status",
+                "type": "Boolean"
+            },
+            {
+                "name": "tasks_for_today",
+                "type": "Text"
+            },
+            {
+                "name": "tasks_from_yesterday",
+                "type": "Text"
+            },
+            {
+                "name": "timed_tasks",
+                "type": "Text"
+            },
+            {
+                "name": "allow_notification_dot",
+                "type": "Text"
+            }
+        ]
+    },
+    "ThemeSelection": {
+        "description": "The current theme selection for the Google Tasks app, which determines the appearance of the app's widget and notifications. The user can choose between Light, Dark, and System default themes.",
+        "variables": [
+            {
+                "name": "selected_theme",
+                "type": "Enum",
+                "enum_values": [
+                    "Light",
+                    "Dark",
+                    "System default"
+                ]
+            }
+        ]
+    },
+    "TaskListInformation": {
+        "description": "Information about the tasks listed under a specific task list, including task titles, descriptions, due dates, and star status.",
+        "variables": [
+            {
+                "name": "task_list_title",
+                "type": "Text"
+            },
+            {
+                "name": "task_title",
+                "type": "Text"
+            },
+            {
+                "name": "task_details",
+                "type": "Text"
+            },
+            {
+                "name": "task_start_date",
+                "type": "Date"
+            },
+            {
+                "name": "is_starred",
+                "type": "Boolean"
+            },
+            {
+                "name": "is_completed",
+                "type": "Boolean"
+            },
+            {
+                "name": "is_repeated",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "SelectedTaskList": {
+        "description": "Indicates currently selected task list in the task list tab. It can be Starred or task list title",
+        "variables": [
+            {
+                "name": "task_list_title",
+                "type": "Text"
+            }
+        ]
+    },
+    "SubTaskInformation": {
+        "description": "information of subtask of currently selected tasks, including subtask name and the status of completion.",
+        "variables": [
+            {
+                "name": "main_task_title",
+                "type": "Text"
+            },
+            {
+                "name": "subtask_title",
+                "type": "Text"
+            },
+            {
+                "name": "is_completed",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "RecurrenceInformation": {
+        "description": "Defines the recurrence pattern for a task in Google Tasks, including the frequency, specific days of the week, time of day, and end condition.",
+        "variables": [
+            {
+                "name": "task_title",
+                "type": "Text"
+            },
+            {
+                "name": "frequency_number",
+                "type": "Number"
+            },
+            {
+                "name": "frequency_unit",
+                "type": "Enum",
+                "enum_values": [
+                    "day",
+                    "week",
+                    "month",
+                    "year"
+                ]
+            },
+            {
+                "name": "days_of_week",
+                "type": "Enum",
+                "enum_values": [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ]
+            },
+            {
+                "name": "time_of_day",
+                "type": "Time"
+            },
+            {
+                "name": "end_condition",
+                "type": "Enum",
+                "enum_values": [
+                    "Never",
+                    "On",
+                    "After"
+                ]
+            },
+            {
+                "name": "end_date",
+                "type": "Date"
+            },
+            {
+                "name": "end_occurrences",
+                "type": "Number"
+            }
+        ]
+    },
+    "AvailableTaskList": {
+        "description": "Available task list currently displayed on screen.",
+        "variables": [
+            {
+                "name": "task_list",
+                "type": "Text"
+            }
+        ]
+    }
+}

@@ -1,0 +1,5 @@
+{
+  "SearchPlace": {
+    "SearchQueryAndFilters": "Ensures the search is specifically for a particular type of place, such as pizza, and uses a filter option like Top Rated to find the best options. This is important to fulfill the user instruction of finding the best places according to specific criteria."
+  }
+}

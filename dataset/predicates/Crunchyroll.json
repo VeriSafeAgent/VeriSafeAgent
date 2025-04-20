@@ -1,0 +1,513 @@
+{
+    "NavigationBarStatus": {
+        "description": "Status of the navigation bar, indicating which section is currently selected.",
+        "variables": [
+            {
+                "name": "selected_section",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "My Lists",
+                    "Browse",
+                    "Simulcasts",
+                    "Account"
+                ]
+            }
+        ]
+    },
+    "HomeCurrentShowDetails": {
+        "description": "Details of the currently displayed in the 'Continue Watching' feature in the home navigation bar, including age rating, language options, genres,a brief description, episode name, episode number and bookmarked",
+        "variables": [
+            {
+                "name": "age_rating",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            },
+            {
+                "name": "genres",
+                "type": "Text"
+            },
+            {
+                "name": "description",
+                "type": "Text"
+            },
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "episode_number",
+                "type": "Number"
+            },
+            {
+                "name": "is_bookmarked",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "HomeTopPicksForYou": {
+        "description": "Details of the anime titles displayed in the 'Top Picks for You' section in the home navigation bar, including title and language options.",
+        "variables": [
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "HomeContinueWatchingDetails": {
+        "description": "Details of the anime currently being watched in the 'Continue Watching' section in the home navigation bar, including the title, episode number, and remaining time.",
+        "variables": [
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "episode_number",
+                "type": "Text"
+            },
+            {
+                "name": "remaining_time",
+                "type": "Text"
+            }
+        ]
+    },
+    "HomeLatestSeriesDetails": {
+        "description": "Details of the latest series from the winter season section in the home navigation bar, including the title and language options.",
+        "variables": [
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "HomeNewSeasonExclusives": {
+        "description": "Details of anime titles displayed in the 'New Season Exclusives' section in the home navigation bar, including title and language options.",
+        "variables": [
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "HomeNewEpisodesDetails": {
+        "description": "Details of new episodes section in the home navigation bar, including the date, time, title, episode range, and language options.",
+        "variables": [
+            {
+                "name": "date",
+                "type": "Text"
+            },
+            {
+                "name": "time",
+                "type": "Time"
+            },
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "episode_range",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "HomeMostPopularDetails": {
+        "description": "Details of the anime titles displayed in the 'Most Popular' section in the home navigation bar, including title and language options.",
+        "variables": [
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "SelectedAnimeDetails": {
+        "description": "Details of the currently selected anime in the most popular section, including title, series type, language options, description, and bookmarked.",
+        "variables": [
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "series_type",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            },
+            {
+                "name": "description",
+                "type": "Text"
+            },
+            {
+                "name": "is_bookmarked",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "HomeAlternateWorldsDetails": {
+        "description": "Details of the anime titles displayed under 'Alternate worlds' section in the home navigation bar, including anime title, and language options.",
+        "variables": [
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "HomeNeedSomeEscapismDetails": {
+        "description": "Details of the anime titles displayed in the 'Need Some Escapism' section in the home navigation bar, including title and language options.",
+        "variables": [
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "HomeWhimsicalHistoryLessonsDetails": {
+        "description": "Details of the anime titles displayed in the 'Whimsical History Lessons!' section in the home navigation bar, including title and language options.",
+        "variables": [
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "BrowseSectionStatus": {
+        "description": "Status of the 'Browse' section in the Crunchyroll app, indicating the selected category and the list of popular anime titles displayed.",
+        "variables": [
+            {
+                "name": "selected_category",
+                "type": "Enum",
+                "enum_values": [
+                    "All Anime",
+                    "Simulcasts",
+                    "Anime Genres",
+                    "Music"
+                ]
+            },
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "AllAnimeSortOptionStatus": {
+        "description": "Indicates the current sorting option selected in the 'ALL ANIME' section in the 'Browse' section. The options available are Popularity, Newest, and Alphabetical, with one of them being selected at any given time.",
+        "variables": [
+            {
+                "name": "selected_sort_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Popularity",
+                    "Newest",
+                    "Alphabetical"
+                ]
+            }
+        ]
+    },
+    "AllAnimeContentFilterSettings": {
+        "description": "Settings for filtering content in the 'ALL ANIME' section in the 'Browse' section, including the type of content to show and the language preference.",
+        "variables": [
+            {
+                "name": "content_type",
+                "type": "Enum",
+                "enum_values": [
+                    "All",
+                    "Series",
+                    "Movies"
+                ]
+            },
+            {
+                "name": "language_preference",
+                "type": "Enum",
+                "enum_values": [
+                    "All",
+                    "Subtitled",
+                    "Dubbed"
+                ]
+            }
+        ]
+    },
+    "BrowseGenreSectionStatus": {
+        "description": "Status of the 'Genres' section in the 'Browse' navigation bar in the Crunchyroll app, indicating the selected genre and the list of anime category such as 'Popular', 'New', and per genres section. Each section involves anime title, dubbed and subtitled options.",
+        "variables": [
+            {
+                "name": "selected_genre",
+                "type": "Enum",
+                "enum_values": [
+                    "ACTION",
+                    "ADVENTURE< COMEDY",
+                    "DRAMA",
+                    "FANTASY",
+                    "MUSIC",
+                    "ROMANCE",
+                    "SCI-FI",
+                    "SEIMEN",
+                    "SHOJO",
+                    "SHONEN",
+                    "SLICED OF LIFE",
+                    "SPORTS",
+                    "SUPERNATURAL",
+                    "THRILLER"
+                ]
+            },
+            {
+                "name": "category_name",
+                "type": "Text"
+            },
+            {
+                "name": "show_me_filter",
+                "type": "Enum",
+                "enum_values": [
+                    "All",
+                    "Series",
+                    "Movies"
+                ]
+            },
+            {
+                "name": "language_filter",
+                "type": "Enum",
+                "enum_values": [
+                    "All",
+                    "Subtitled",
+                    "Dubbed"
+                ]
+            },
+            {
+                "name": "rank",
+                "type": "Number"
+            },
+            {
+                "name": "anime_titles",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "UserProfileSettings": {
+        "description": "Details of the user's profile settings in the 'Account' section, including profile name, content restrictions, audio language, subtitle language, closed captions status, membership type, and email.",
+        "variables": [
+            {
+                "name": "profile_name",
+                "type": "Text"
+            },
+            {
+                "name": "content_restrictions",
+                "type": "Text"
+            },
+            {
+                "name": "audio_language",
+                "type": "Text"
+            },
+            {
+                "name": "subtitle_language",
+                "type": "Text"
+            },
+            {
+                "name": "show_closed_captions",
+                "type": "Boolean"
+            },
+            {
+                "name": "membership_type",
+                "type": "Enum",
+                "enum_values": [
+                    "Free",
+                    "Premium"
+                ]
+            },
+            {
+                "name": "email",
+                "type": "Text"
+            },
+            {
+                "name": "stream_using_cellular",
+                "type": "Boolean"
+            },
+            {
+                "name": "password",
+                "type": "Text"
+            }
+        ]
+    },
+    "NotificationStatus": {
+        "description": "Indicates the current status of notifications in the Crunchyroll app, including notification title and notification content.",
+        "variables": [
+            {
+                "name": "notification_title",
+                "type": "Text"
+            },
+            {
+                "name": "notification_content",
+                "type": "Text"
+            }
+        ]
+    },
+    "NotificationSettings": {
+        "description": "Status for the current notification settings, taking each setting name and setting status as arguments. Examples of setting names include General Updates, Content Updates, Promotional Updates, and the setting status is either true (on) or false (off).",
+        "variables": [
+            {
+                "name": "general_updates",
+                "type": "Boolean"
+            },
+            {
+                "name": "content_updates",
+                "type": "Boolean"
+            },
+            {
+                "name": "promotional_updates",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ConnectedAppsState": {
+        "description": "Represents the state of the app regarding connected applications, specifically indicating which app is available for connection and the current connection status.",
+        "variables": [
+            {
+                "name": "app_name",
+                "type": "Text"
+            },
+            {
+                "name": "connection_status",
+                "type": "Enum",
+                "enum_values": [
+                    "Connected",
+                    "Disconnected"
+                ]
+            }
+        ]
+    },
+    "MyListsSectionStatus": {
+        "description": "Status of the 'My Lists' section in the Crunchyroll app, indicating the active tab and the list of recent activities displayed, including anime title, episode continuation, and language options.",
+        "variables": [
+            {
+                "name": "active_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Watchlist",
+                    "Crunchylists",
+                    "History",
+                    "Downloads"
+                ]
+            },
+            {
+                "name": "watchlist_anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "watchlist_episode_continuation",
+                "type": "Text"
+            },
+            {
+                "name": "watchlist_language_options",
+                "type": "Text"
+            },
+            {
+                "name": "is_watchlist_anime_like",
+                "type": "Boolean"
+            },
+            {
+                "name": "crunchylist_title",
+                "type": "Text"
+            },
+            {
+                "name": "crunchylist_num_of_items",
+                "type": "Number"
+            },
+            {
+                "name": "crunchy_list_last_updated_date",
+                "type": "Date"
+            },
+            {
+                "name": "crunchylist_anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "crunchylist_anime_language_options",
+                "type": "Text"
+            },
+            {
+                "name": "history_anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "history_anime_episode_tilte",
+                "type": "Text"
+            },
+            {
+                "name": "history_anime_episode_number",
+                "type": "Number"
+            },
+            {
+                "name": "history_anime_language_options",
+                "type": "Text"
+            }
+        ]
+    },
+    "CrunchylistCreationScreen": {
+        "description": "Represents the state of the app when the user is on the 'Create Crunchylist' screen, including the ability to enter a list name and create the list.",
+        "variables": [
+            {
+                "name": "list_name_field",
+                "type": "Text"
+            }
+        ]
+    },
+    "SimulcastSeasonDetails": {
+        "description": "Details of the anime titles displayed in the 'Simulcast Season' section, including the season name, anime title, and language options.",
+        "variables": [
+            {
+                "name": "season_name",
+                "type": "Text"
+            },
+            {
+                "name": "anime_title",
+                "type": "Text"
+            },
+            {
+                "name": "language_options",
+                "type": "Text"
+            }
+        ]
+    }
+}

@@ -1,0 +1,254 @@
+{
+    "SpecificNewsDetails": {
+        "description": "Details for one specific article after clicking into it",
+        "variables": [
+            {
+                "name": "NewsName",
+                "type": "Text"
+            },
+            {
+                "name": "NewsReportingFrom",
+                "type": "Text"
+            },
+            {
+                "name": "NewsReporter",
+                "type": "Text"
+            },
+            {
+                "name": "NewsReportedDate",
+                "type": "Date"
+            },
+            {
+                "name": "NewsHashTag",
+                "type": "Text"
+            },
+            {
+                "name": "isSaved",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "VideoDetails": {
+        "description": "Details for each video",
+        "variables": [
+            {
+                "name": "VideoName",
+                "type": "Text"
+            },
+            {
+                "name": "VideoGenre",
+                "type": "Text"
+            },
+            {
+                "name": "VideoDate",
+                "type": "Date"
+            },
+            {
+                "name": "isSaved",
+                "type": "Boolean"
+            },
+            {
+                "name": "VideoNote",
+                "type": "Text"
+            }
+        ]
+    },
+    "LiveDetails": {
+        "description": "Details for each live",
+        "variables": [
+            {
+                "name": "LiveName",
+                "type": "Text"
+            },
+            {
+                "name": "LiveGenre",
+                "type": "Text"
+            },
+            {
+                "name": "LiveDate",
+                "type": "Date"
+            },
+            {
+                "name": "ViewingNumber",
+                "type": "Number"
+            },
+            {
+                "name": "LiveSummary",
+                "type": "Text"
+            },
+            {
+                "name": "LiveReporter",
+                "type": "Text"
+            }
+        ]
+    },
+    "SelectedNavigationTabs": {
+        "description": "The selected navigation tabs available at the top of the BBC app screen, indicating the current section being viewed. Options include All, News, Business, Innovation, Culture, and Arts.",
+        "variables": [
+            {
+                "name": "selected_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "All",
+                    "News",
+                    "Business",
+                    "Innovation",
+                    "Culture",
+                    "Arts"
+                ]
+            }
+        ]
+    },
+    "ListingArticleDetails": {
+        "description": "Details of each article listed and on the BBC main app screen, including the headline, description, time since publication, and category.",
+        "variables": [
+            {
+                "name": "headline",
+                "type": "Text"
+            },
+            {
+                "name": "description",
+                "type": "Text"
+            },
+            {
+                "name": "time_since_publication",
+                "type": "Text"
+            },
+            {
+                "name": "category",
+                "type": "Text"
+            }
+        ]
+    },
+    "SelectedBottomNavigation": {
+        "description": "The selected bottom navigation options available on the BBC app screen, indicating the future section being accessed. Options include Home, Video, Live, and More.",
+        "variables": [
+            {
+                "name": "selected_section",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "Video",
+                    "Live",
+                    "More"
+                ]
+            }
+        ]
+    },
+    "MoreSectionNavigation": {
+        "description": "The navigation options available in the 'More BBC' section, indicating the categories and settings accessible from this screen.",
+        "variables": [
+            {
+                "name": "selected_category",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "News",
+                    "Israel-Gaza War",
+                    "War in Ukraine",
+                    "US & Canada",
+                    "UK",
+                    "Africa",
+                    "Asia",
+                    "Australia",
+                    "Europe",
+                    "Latin America",
+                    "Middle East",
+                    "In Pictures",
+                    "BBC InDepth",
+                    "BBC Verify",
+                    "Business"
+                ]
+            }
+        ]
+    },
+    "UserOptions": {
+        "description": "Options available for user interaction in the 'More BBC' section, including access to saved items and settings.",
+        "variables": [
+            {
+                "name": "option_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Saved Items",
+                    "Settings"
+                ]
+            }
+        ]
+    },
+    "SelectedSettingsPageOptions": {
+        "description": "Options selected on the BBC app's settings page, including account settings, view account, text size, theme, notifications, manage privacy, and sign-in status.",
+        "variables": [
+            {
+                "name": "settings_page_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Account Settings",
+                    "View Account",
+                    "Text Size",
+                    "Theme",
+                    "Notifications",
+                    "Manage Privacy",
+                    "Sign In"
+                ]
+            }
+        ]
+    },
+    "ThemeSelection": {
+        "description": "The current theme selection in the BBC app's theme settings page, indicating which theme option is selected among 'Automatic', 'Default', and 'Dark'.",
+        "variables": [
+            {
+                "name": "selected_theme",
+                "type": "Enum",
+                "enum_values": [
+                    "Automatic",
+                    "Default",
+                    "Dark"
+                ]
+            }
+        ]
+    },
+    "SpecificRegionInContinent": {
+        "description": "The specific region within a continent, such as 'China' or 'All Asia'.",
+        "variables": [
+            {
+                "name": "region",
+                "type": "Enum",
+                "enum_values": [
+                    "All Asia",
+                    "China",
+                    "India",
+                    "All UK",
+                    "England",
+                    "N. Ireland",
+                    "Scotland",
+                    "Wales"
+                ]
+            }
+        ]
+    },
+    "RegionSpecificNews": {
+        "description": "Details of news articles specific to a selected region, including the region name, article headline, description, time since publication, and category.",
+        "variables": [
+            {
+                "name": "region_name",
+                "type": "Text"
+            },
+            {
+                "name": "headline",
+                "type": "Text"
+            },
+            {
+                "name": "description",
+                "type": "Text"
+            },
+            {
+                "name": "time_since_publication",
+                "type": "Text"
+            },
+            {
+                "name": "category",
+                "type": "Text"
+            }
+        ]
+    }
+}

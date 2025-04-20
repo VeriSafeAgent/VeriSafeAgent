@@ -1,0 +1,438 @@
+{
+    "Searched": {
+        "description": "What you searched for in the search bar currently. It doesn't include the search history.",
+        "variables": [
+            {
+                "name": "searched_content",
+                "type": "Text"
+            }
+        ]
+    },
+    "SortSearchResultsBy": {
+        "description": "What to sort by when sorting search results",
+        "variables": [
+            {
+                "name": "search_sort_by",
+                "type": "Enum",
+                "enum_values": [
+                    "Relevance",
+                    "Hot",
+                    "Top",
+                    "New",
+                    "Comment count"
+                ]
+            }
+        ]
+    },
+    "FilterSearchResultsByTime": {
+        "description": "How old documents you want to include in the search results",
+        "variables": [
+            {
+                "name": "search_filter_by_time",
+                "type": "Enum",
+                "enum_values": [
+                    "All time",
+                    "Past year",
+                    "Past month",
+                    "Past week",
+                    "Today",
+                    "Past hour"
+                ]
+            }
+        ]
+    },
+    "CommentContent": {
+        "description": "The content of the comment I'm currently writing",
+        "variables": [
+            {
+                "name": "content",
+                "type": "Text"
+            }
+        ]
+    },
+    "NumOfAchievements": {
+        "description": "Number of achievements I've earned",
+        "variables": [
+            {
+                "name": "num_of_achievements",
+                "type": "Number"
+            }
+        ]
+    },
+    "NumOfKarma": {
+        "description": "The number of karma I have",
+        "variables": [
+            {
+                "name": "num_of_karma",
+                "type": "Number"
+            }
+        ]
+    },
+    "SortPostsBy": {
+        "description": "Sort by when viewing posts in the community",
+        "variables": [
+            {
+                "name": "post_sort_by",
+                "type": "Enum",
+                "enum_values": [
+                    "Hot",
+                    "New",
+                    "Top",
+                    "Controversial",
+                    "Rising"
+                ]
+            }
+        ]
+    },
+    "RecentlyVisitedCommunity": {
+        "description": "The community I recently visited from the community tab. It includes the community name and the list index of the community in the list of communities",
+        "variables": [
+            {
+                "name": "community_name",
+                "type": "Text"
+            },
+            {
+                "name": "list_idx",
+                "type": "Number"
+            }
+        ]
+    },
+    "MyCommunities": {
+        "description": "The communities I'm a part of",
+        "variables": [
+            {
+                "name": "community_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "CommunityAlertSettings": {
+        "description": "The current alert settings for the community, including the alert level and its description.\nOff: No alerts\nLow: Some alerts for tending posts\nFrequent: Daily alerts for new posts",
+        "variables": [
+            {
+                "name": "alert_level",
+                "type": "Enum",
+                "enum_values": [
+                    "Off",
+                    "Low",
+                    "Frequent"
+                ]
+            }
+        ]
+    },
+    "PostDetails": {
+        "description": "Details of the post currently being viewed, including the community, author, time since posted, title, upvotes, comments, shares, list index, and whether I upvoted the post. List index is the index of the post in the list of posts. If the post is not in a list, the list index is *. List index is started from 1. Upvoted is true if I upvoted the post, otherwise it is false.",
+        "variables": [
+            {
+                "name": "community",
+                "type": "Text"
+            },
+            {
+                "name": "author",
+                "type": "Text"
+            },
+            {
+                "name": "time_since_posted",
+                "type": "Text"
+            },
+            {
+                "name": "tags",
+                "type": "Text"
+            },
+            {
+                "name": "title",
+                "type": "Text"
+            },
+            {
+                "name": "upvotes",
+                "type": "Number"
+            },
+            {
+                "name": "comments",
+                "type": "Number"
+            },
+            {
+                "name": "shares",
+                "type": "Number"
+            },
+            {
+                "name": "list_idx",
+                "type": "Number"
+            },
+            {
+                "name": "upvoted",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "CommentDetails": {
+        "description": "Details of each comment under the post, including the author, time since posted, content, upvotes, list index, and whether I upvoted the comment. List index is the index of the comment in the list of comments. If the comment is not in a list, the list index is *. List index is started from 1. Upvoted is true if I upvoted the comment, otherwise it is false.",
+        "variables": [
+            {
+                "name": "comment_author",
+                "type": "Text"
+            },
+            {
+                "name": "comment_time_since_posted",
+                "type": "Text"
+            },
+            {
+                "name": "comment_content",
+                "type": "Text"
+            },
+            {
+                "name": "comment_upvotes",
+                "type": "Number"
+            },
+            {
+                "name": "list_idx",
+                "type": "Number"
+            },
+            {
+                "name": "upvoted",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "UserAccount": {
+        "description": "Information about the currently logged-in user, including the username and online status.",
+        "variables": [
+            {
+                "name": "username",
+                "type": "Text"
+            },
+            {
+                "name": "online_status",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "SortCommentsBy": {
+        "description": "The current sorting option selected for viewing comments on a post. Options include Best, Top, New, Controversial, Old, and Q&A.",
+        "variables": [
+            {
+                "name": "comment_sort_by",
+                "type": "Enum",
+                "enum_values": [
+                    "Best",
+                    "Top",
+                    "New",
+                    "Controversial",
+                    "Old",
+                    "Q&A"
+                ]
+            }
+        ]
+    },
+    "FeedSelection": {
+        "description": "The current feed selection state in the Reddit app, indicating which feed is currently active. The options include Home, Popular, Watch, and Latest.",
+        "variables": [
+            {
+                "name": "selected_feed",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "Popular",
+                    "Watch",
+                    "Latest"
+                ]
+            }
+        ]
+    },
+    "CommunityCreateDetailsInput": {
+        "description": "Details required for creating a community, including the community name and description, community topic selection, indicating the number of topics selected and the available categories and subtopics. This helps in understanding the user's progress in setting up a community and the specific interests they are targeting. The community type is one of Public, Private, Restricted, or Mature. Mature communities are for adult content and are only accessible to users over 18.",
+        "variables": [
+            {
+                "name": "community_name",
+                "type": "Text"
+            },
+            {
+                "name": "community_description",
+                "type": "Text"
+            },
+            {
+                "name": "community_topic",
+                "type": "Text"
+            },
+            {
+                "name": "community_type",
+                "type": "Enum",
+                "enum_values": [
+                    "Public",
+                    "Private",
+                    "Restricted",
+                    "Mature"
+                ]
+            }
+        ]
+    },
+    "BottomNavigationBarState": {
+        "description": "The current bottom navigation bar selection in the Reddit app, indicating which tab is currently active. The options include Home, Communities, Create, Chat and Inbox. From home, you can see some feed. From communities, you can discover new communities to join. From create, you can create a post to the community you are a part of. From chat, you can see your messages. From inbox, you can see your notifications.",
+        "variables": [
+            {
+                "name": "selected_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "Communities",
+                    "Create",
+                    "Chat",
+                    "Inbox"
+                ]
+            }
+        ]
+    },
+    "CommunityDetails": {
+        "description": "Details of the Reddit community currently being viewed, including the community name, total members, online members, community description, and whether I joined the community. List index is the index of the community in the list of communities. If the community is not in a list, the list index is *. List index is started from 1. Joined is true if I joined the community, otherwise it is false.",
+        "variables": [
+            {
+                "name": "community_name",
+                "type": "Text"
+            },
+            {
+                "name": "total_members",
+                "type": "Number"
+            },
+            {
+                "name": "online_members",
+                "type": "Number"
+            },
+            {
+                "name": "community_description",
+                "type": "Text"
+            },
+            {
+                "name": "list_idx",
+                "type": "Number"
+            },
+            {
+                "name": "joined",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "CommunityPostSortBy": {
+        "description": "The current sorting option selected for viewing posts in the community, including the sorting criteria and the available options. The options include Hot, New, Top, Controversial, and Old.",
+        "variables": [
+            {
+                "name": "post_sort_by",
+                "type": "Enum",
+                "enum_values": [
+                    "Hot",
+                    "New",
+                    "Top",
+                    "Controversial",
+                    "Rising"
+                ]
+            }
+        ]
+    },
+    "CommunityPostViewType": {
+        "description": "The current view type selected for viewing posts in the community, including the view type and the available options. The options include Card, and Compact.",
+        "variables": [
+            {
+                "name": "post_view_type",
+                "type": "Enum",
+                "enum_values": [
+                    "Card",
+                    "Compact"
+                ]
+            }
+        ]
+    },
+    "CommunityPostFilterByTopic": {
+        "description": "The current filter by topic selected for viewing posts in the community, including the topic and the available options. Each community has a set of topics that can be filtered by. The options include All, and Topic.",
+        "variables": [
+            {
+                "name": "topic",
+                "type": "Text"
+            }
+        ]
+    },
+    "App": {
+        "description": "The name of the app currently being used.",
+        "variables": [
+            {
+                "name": "app_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Reddit"
+                ]
+            }
+        ]
+    },
+    "ExploreCommunityTopics": {
+        "description": "The list of community topics available for exploration on the Communities tab. Each topic represents a category under which various communities are grouped.",
+        "variables": [
+            {
+                "name": "topic_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "CommunityCategorySelection": {
+        "description": "The current category of communities being viewed in the Reddit app under the 'Movies & TV' section. This includes categories like 'Action Movies & Series', 'Animated Movies & Series', and 'Comedy Movies & Series'.",
+        "variables": [
+            {
+                "name": "category_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "InboxActions": {
+        "description": "Available actions in the Inbox tab, including creating a new message, marking all tabs as read, and managing notification settings.",
+        "variables": [
+            {
+                "name": "action_name",
+                "type": "Enum",
+                "enum_values": [
+                    "New message",
+                    "Mark all inbox tabs as read",
+                    "Manage notification settings"
+                ]
+            }
+        ]
+    },
+    "PrivateMessagesSettings": {
+        "description": "Status for the current private messages setting in notification settings. The setting status is one of All on, Inbox, or All off.",
+        "variables": [
+            {
+                "name": "setting_status",
+                "type": "Enum",
+                "enum_values": [
+                    "All on",
+                    "Inbox",
+                    "All off"
+                ]
+            }
+        ]
+    },
+    "ChatMessageSettings": {
+    "description": "Status for the current chat messages setting in notification settings. The setting status is one of All on, Inbox, or All off.",
+    "variables": [
+            {
+                "name": "setting_status",
+                "type": "Enum",
+                "enum_values": [
+                    "All on",
+                    "Inbox",
+                    "All off"
+                ]
+            }
+        ]
+    },
+    "ChatRequestsSettings": {
+        "description": "Status for the current chat requests setting in notification settings. The setting status is one of All on, Inbox, or All off.",
+        "variables": [
+            {
+                "name": "setting_status",
+                "type": "Enum",
+                "enum_values": [
+                    "All on",
+                    "Inbox",
+                    "All off"
+                ]
+            }
+        ]
+    }
+}

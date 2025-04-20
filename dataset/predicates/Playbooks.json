@@ -1,0 +1,307 @@
+{
+    "NavigationTabState": {
+        "description": "Represents the state of the navigation tabs at the bottom of the Play Books app, indicating which tab is currently active.",
+        "variables": [
+            {
+                "name": "active_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "Library",
+                    "Wishlist",
+                    "Shop"
+                ]
+            }
+        ]
+    },
+    "BookCategorySelection": {
+        "description": "Indicates the selected book category on the Play Books home screen, such as Ebooks or Audiobooks.",
+        "variables": [
+            {
+                "name": "selected_category",
+                "type": "Enum",
+                "enum_values": [
+                    "Ebooks",
+                    "Audiobooks"
+                ]
+            }
+        ]
+    },
+    "SearchBarState": {
+        "description": "Indicates the state of the search bar on the Play Books home screen, including the searchbar text",
+        "variables": [
+            {
+                "name": "searchbar_text",
+                "type": "Text"
+            },
+            {
+                "name": "activate_search",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "CategorySelection": {
+        "description": "Represents the available categories or sections on the Play Books app screen, such as 'Top selling,' 'New releases,' and 'Bookstore.'",
+        "variables": [
+            {
+                "name": "category_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Top selling",
+                    "New releases",
+                    "Bookstore"
+                ]
+            }
+        ]
+    },
+    "SearchResultsState": {
+        "description": "Represents the state of the search results in the Play Books app, including the list of search results displayed.",
+        "variables": [
+            {
+                "name": "search_results",
+                "type": "Text"
+            }
+        ]
+    },
+    "IndividualBookDetails": {
+        "description": "Information about each individual book displayed in the search results, including the book title, rating, and pricing details.",
+        "variables": [
+            {
+                "name": "book_title",
+                "type": "Text"
+            },
+            {
+                "name": "rating",
+                "type": "Text"
+            },
+            {
+                "name": "pricing_details",
+                "type": "Text"
+            }
+        ]
+    },
+    "BookDetails": {
+        "description": "Represents the detailed information of a specific book displayed on the Play Books app, including the title, author, series, release date, average rating, number of reviews, format, page count, pricing details, and adding wishlist",
+        "variables": [
+            {
+                "name": "book_title",
+                "type": "Text"
+            },
+            {
+                "name": "author",
+                "type": "Text"
+            },
+            {
+                "name": "series_info",
+                "type": "Text"
+            },
+            {
+                "name": "release_date",
+                "type": "Date"
+            },
+            {
+                "name": "average_rating",
+                "type": "Number"
+            },
+            {
+                "name": "number_of_reviews",
+                "type": "Text"
+            },
+            {
+                "name": "format",
+                "type": "Text"
+            },
+            {
+                "name": "page_count",
+                "type": "Number"
+            },
+            {
+                "name": "pricing_details",
+                "type": "Text"
+            },
+            {
+                "name": "adding_wishlist",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "CategoryTabState": {
+        "description": "Indicates the state of the category tabs on the Play Books library page, showing which category is currently selected.",
+        "variables": [
+            {
+                "name": "selected_category",
+                "type": "Enum",
+                "enum_values": [
+                    "Your books",
+                    "Shelves",
+                    "Series",
+                    "Upcoming"
+                ]
+            }
+        ]
+    },
+    "ShelfCreationState": {
+        "description": "Represents the state of the shelf creation process in the Play Books app, with the name of the shelf being created, and ok button for creation",
+        "variables": [
+            {
+                "name": "shelf_name",
+                "type": "Text"
+            },
+            {
+                "name": "confirm_shelf_creation",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ShelfState": {
+        "description": "Represents the state of a specific shelf in the Play Books app, including the shelf title, its current status (e.g., empty or filled), and the availability of the 'Add books' option.",
+        "variables": [
+            {
+                "name": "shelf_title",
+                "type": "Text"
+            },
+            {
+                "name": "shelf_status",
+                "type": "Enum",
+                "enum_values": [
+                    "empty",
+                    "filled"
+                ]
+            },
+            {
+                "name": "add_books_option",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "CheckProfileAndSetting": {
+        "description": "Check profile menu and setting in the Play Books app",
+        "variables": [
+            {
+                "name": "profile_and_setting_click",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "AccountSettingsOptions": {
+        "description": "Represents the available account settings options in the Play Books app, including managing the Google account, accessing notifications, Play Books settings, and help & feedback.",
+        "variables": [
+            {
+                "name": "manage_google_account",
+                "type": "Boolean"
+            },
+            {
+                "name": "notifications_option",
+                "type": "Boolean"
+            },
+            {
+                "name": "play_books_settings",
+                "type": "Boolean"
+            },
+            {
+                "name": "help_feedback",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "GeneralSettingsState": {
+        "description": "Represents the state of general settings in the Play Books app, including options for downloading over Wi-Fi, enabling PDF uploading, saving notes in Google Drive, offline dictionary usage, parental controls, and downloading new books to an SD card.",
+        "variables": [
+            {
+                "name": "download_over_wifi",
+                "type": "Boolean"
+            },
+            {
+                "name": "enable_pdf_uploading",
+                "type": "Boolean"
+            },
+            {
+                "name": "save_notes_in_drive",
+                "type": "Text"
+            },
+            {
+                "name": "offline_dictionary",
+                "type": "Text"
+            },
+            {
+                "name": "parental_controls",
+                "type": "Text"
+            },
+            {
+                "name": "download_to_sd_card",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ReadingSettingsState": {
+        "description": "Represents the state of reading settings in the Play Books app, including options for auto-rotating the screen, using volume keys to turn pages, using a 3D effect for page turning, automatically reading aloud, and using a more natural reading voice.",
+        "variables": [
+            {
+                "name": "auto_rotate_screen",
+                "type": "Text"
+            },
+            {
+                "name": "volume_keys_turn_pages",
+                "type": "Text"
+            },
+            {
+                "name": "use_3d_effect",
+                "type": "Boolean"
+            },
+            {
+                "name": "automatically_read_aloud",
+                "type": "Boolean"
+            },
+            {
+                "name": "natural_reading_voice",
+                "type": "Boolean"
+            },
+            {
+                "name": "Tools_for_beggining_readers",
+                "type": "Boolean"
+            },
+            {
+                "name": "Automatically_turn_pages",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "AudiobookPlaybackSettings": {
+        "description": "Represents the settings related to audiobook playback in the Play Books app, including audio quality and skip amounts.",
+        "variables": [
+            {
+                "name": "audio_quality",
+                "type": "Text"
+            },
+            {
+                "name": "skip_backward_amount",
+                "type": "Text"
+            },
+            {
+                "name": "skip_forward_amount",
+                "type": "Text"
+            }
+        ]
+    },
+    "NotificationSettings": {
+        "description": "Represents the notification settings in the Play Books app, including options for series, authors, price drops, and recommendations.",
+        "variables": [
+            {
+                "name": "series_notifications",
+                "type": "Boolean"
+            },
+            {
+                "name": "authors_notifications",
+                "type": "Boolean"
+            },
+            {
+                "name": "price_drops_notifications",
+                "type": "Boolean"
+            },
+            {
+                "name": "recommendations_notifications",
+                "type": "Boolean"
+            }
+        ]
+    }
+}

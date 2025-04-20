@@ -1,0 +1,569 @@
+{
+    "PostDetails": {
+        "description": "Details of a post on the Facebook page, including the page name, timestamp, like, visibility setting, the number of photos in the post, and the post order like 1, 2, 3.",
+        "variables": [
+            {
+                "name": "page_name",
+                "type": "Text"
+            },
+            {
+                "name": "timestamp",
+                "type": "Text"
+            },
+            {
+                "name": "like_number",
+                "type": "Number"
+            },
+            {
+                "name": "is_liked",
+                "type": "Boolean"
+            },
+            {
+                "name": "comments_number",
+                "type": "Number"
+            },
+            {
+                "name": "visibility",
+                "type": "Text"
+            },
+            {
+                "name": "num_photos",
+                "type": "Text"
+            },
+            {
+                "name": "video_volume_mute",
+                "type": "Boolean"
+            },
+            {
+                "name": "post_order",
+                "type": "Number"
+            }
+        ]
+    },
+    "current_shown_filter_of_the_page": {
+        "description": "Filtering the things you see on the page you're currently viewing There are options for Posts, About, Photos, and More.",
+        "variables": [
+            {
+                "name": "filter",
+                "type": "Enum",
+                "enum_values": [
+                    "Posts",
+                    "About",
+                    "Photos",
+                    "More"
+                ]
+            }
+        ]
+    },
+    "mainpage_menu": {
+        "description": "Details of the main page menu of home page,such as home, videos, friends, profile, notification, menu, creating post, and search",
+        "variables": [
+            {
+                "name": "mainpage_top_menu",
+                "type": "Enum",
+                "enum_values": [
+                    "home",
+                    "videos",
+                    "friends",
+                    "profile",
+                    "notification",
+                    "menu",
+                    "create_post",
+                    "search"
+                ]
+            }
+        ]
+    },
+    "OtherUserMenu": {
+        "description": "menus from other users profile menu, such as post, information, pictures, videos, mention",
+        "variables": [
+            {
+                "name": "other_user_menu",
+                "type": "Enum",
+                "enum_values": [
+                    "post",
+                    "information",
+                    "pictures",
+                    "videos",
+                    "mention"
+                ]
+            }
+        ]
+    },
+    "PostCreationDetails": {
+        "description": "Details of the post being created, including the user's name, privacy setting, and sharing options.",
+        "variables": [
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "privacy_setting",
+                "type": "Text"
+            },
+            {
+                "name": "post_text",
+                "type": "Text"
+            },
+            {
+                "name": "share_on_threads",
+                "type": "Boolean"
+            },
+            {
+                "name": "share_on_instagram",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "PeopleYouMayKnow": {
+        "description": "Information about people you may know, including their name and the option to add them as a friend.",
+        "variables": [
+            {
+                "name": "person_name",
+                "type": "Text"
+            },
+            {
+                "name": "add_friend_option",
+                "type": "Enum",
+                "enum_values": [
+                    "add_friend",
+                    "delete_friend_recommend"
+                ]
+            }
+        ]
+    },
+    "SearchResultsOverview": {
+        "description": "Overview of the search results for a given query on Facebook, including the search term, selected category, and the presence of various result types such as posts, people, groups, events, videos, and pages.",
+        "variables": [
+            {
+                "name": "search_term",
+                "type": "Text"
+            },
+            {
+                "name": "selected_category",
+                "type": "Enum",
+                "enum_values": [
+                    "All",
+                    "Posts",
+                    "People",
+                    "Groups",
+                    "Events",
+                    "Videos",
+                    "Pages",
+                    "Marketplace",
+                    "place"
+                ]
+            }
+        ]
+    },
+    "UserProfileOverview": {
+        "description": "Overview of a user's profile on Facebook, including the profile name, number of friends, is friend or not, and profile description.",
+        "variables": [
+            {
+                "name": "profile_name",
+                "type": "Text"
+            },
+            {
+                "name": "num_friends",
+                "type": "Text"
+            },
+            {
+                "name": "is_friend",
+                "type": "Boolean"
+            },
+            {
+                "name": "profile_description",
+                "type": "Text"
+            }
+        ]
+    },
+    "PageProfileOverview": {
+        "description": "Overview of a page's profile on Facebook, including the profile name, profile image, is followed or not, number of likes, number of followers, descriptions, end editing profile image and background image",
+        "variables": [
+            {
+                "name": "profile_name",
+                "type": "Text"
+            },
+            {
+                "name": "is_followed",
+                "type": "Boolean"
+            },
+            {
+                "name": "likes_number",
+                "type": "Text"
+            },
+            {
+                "name": "followers_number",
+                "type": "Text"
+            },
+            {
+                "name": "profile_description",
+                "type": "Text"
+            },
+            {
+                "name": "profile_image",
+                "type": "Text"
+            },
+            {
+                "name": "image_edit",
+                "type": "Enum",
+                "enum_values": [
+                    "profile_image_edit",
+                    "background_image_edit"
+                ]
+            }
+        ]
+    },
+    "UserShortcuts": {
+        "description": "Represents the shortcuts available to the user on the main menu screen, including options like past activities, saved items, groups, videos, friends, feed, events, and games.",
+        "variables": [
+            {
+                "name": "shortcut_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Memories",
+                    "Saved",
+                    "Groups",
+                    "Video",
+                    "Friends",
+                    "Feeds",
+                    "Events",
+                    "Gaming"
+                ]
+            }
+        ]
+    },
+    "MenuSections": {
+        "description": "The sections available in the menu, which can be expanded or collapsed, such as Help and Support, Settings and Privacy, Professional Access, and Other Products by Meta.",
+        "variables": [
+            {
+                "name": "section_name",
+                "type": "Enum",
+                "enum_values": [
+                    "help_and_support",
+                    "settings_and_privacy",
+                    "Professional_access",
+                    "Also_from_Meta"
+                ]
+            },
+            {
+                "name": "help_and_support_expanded_menu",
+                "type": "Enum",
+                "enum_values": [
+                    "customer_center",
+                    "account_status",
+                    "support_inbox",
+                    "report_a_problem",
+                    "safety",
+                    "terms_and_policies"
+                ]
+            },
+            {
+                "name": "settings_and_privacy_expanded_menu",
+                "type": "Enum",
+                "enum_values": [
+                    "settings",
+                    "privacy_protection_center",
+                    "device_requests",
+                    "recent_ad_activity"
+                ]
+            },
+            {
+                "name": "Professional_access_expanded_menu",
+                "type": "Enum",
+                "enum_values": [
+                    "awareness",
+                    "Meta_Verified"
+                ]
+            },
+            {
+                "name": "Also_from_Meta_expanded_menu",
+                "type": "Enum",
+                "enum_values": [
+                    "Meta_Quest_3S",
+                    "WhatsApp",
+                    "Threads",
+                    "Messenger",
+                    "Instagram"
+                ]
+            }
+        ]
+    },
+    "DefaultAudienceSettings": {
+        "description": "Represents the default audience settings for content shared on Facebook, including the options available and the currently selected setting.",
+        "variables": [
+            {
+                "name": "audience_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Public",
+                    "Friends",
+                    "Custom"
+                ]
+            }
+        ]
+    },
+    "PageInteractionOptions": {
+        "description": "Options available for interacting with a Facebook page, including actions like reporting, helping, blocking, searching, inviting friends, following, and sharing the profile.",
+        "variables": [
+            {
+                "name": "interaction_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Report Page",
+                    "Help OpenAI",
+                    "Block",
+                    "Search",
+                    "Invite friends",
+                    "Follow",
+                    "Share profile"
+                ]
+            }
+        ]
+    },
+    "UserProfileEditDetails": {
+        "description": "Details of the user's profile while editing on Facebook, including the user's name, number of friends, current institution, past school, current city, and hometown.",
+        "variables": [
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "num_friends",
+                "type": "Number"
+            },
+            {
+                "name": "current_institution",
+                "type": "Text"
+            },
+            {
+                "name": "past_school",
+                "type": "Text"
+            },
+            {
+                "name": "current_city",
+                "type": "Text"
+            },
+            {
+                "name": "hometown",
+                "type": "Text"
+            },
+            {
+                "name": "profile_note",
+                "type": "Text"
+            }
+        ]
+    },
+    "ProfilePictureEditOptions": {
+        "description": "Options available when editing a profile picture on Facebook, including the ability to make the picture temporary, add a frame, and share the update to the News Feed. Also includes the visibility setting and any description added to the profile picture.",
+        "variables": [
+            {
+                "name": "make_temporary",
+                "type": "Boolean"
+            },
+            {
+                "name": "add_frame",
+                "type": "Boolean"
+            },
+            {
+                "name": "share_to_news_feed",
+                "type": "Boolean"
+            },
+            {
+                "name": "visibility_setting",
+                "type": "Text"
+            },
+            {
+                "name": "profile_picture_description",
+                "type": "Text"
+            },
+            {
+                "name": "profile_picture_save",
+                "type": "Enum",
+                "enum_values": [
+                    "SAVE"
+                ]
+            }
+        ]
+    },
+    "SearchInputAndSuggestions": {
+        "description": "Represents the current state of the search input and the suggestions provided by the app. This includes the text entered in the search bar and the list of suggested search terms or hashtags.",
+        "variables": [
+            {
+                "name": "search_input",
+                "type": "Text"
+            },
+            {
+                "name": "suggested_terms",
+                "type": "Text"
+            }
+        ]
+    },
+    "SettingsAndPrivacyOptions": {
+        "description": "Options available in the Settings And Privacy section, including Accounts center, Tools and resources",
+        "variables": [
+            {
+                "name": "Accounts_Center_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Personal_details",
+                    "Password_and_security",
+                    "Ad_preferences",
+                    "Verification"
+                ]
+            },
+            {
+                "name": "Tools_And_Resources_options",
+                "type": "Enum",
+                "enum_values": [
+                    "privacy_checkup",
+                    "supervision",
+                    "default_audience_settings"
+                ]
+            },
+            {
+                "name": "preferences_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Content preferences",
+                    "Reaction preferences",
+                    "Notifications",
+                    "Accessibility",
+                    "Tab bar",
+                    "Language and region",
+                    "Media",
+                    "Your time on Facebook",
+                    "Browser",
+                    "Dark mode",
+                    "Camera roll sharing suggestions"
+                ]
+            },
+            {
+                "name": "audience_visibility_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Profile locking",
+                    "Profile details",
+                    "How people find and contact you",
+                    "Posts",
+                    "Stories",
+                    "Reels",
+                    "Followers and public content",
+                    "Profile and tagging",
+                    "Blocking",
+                    "Active status"
+                ]
+            },
+            {
+                "name": "Payments_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Ads payments",
+                    "Payouts"
+                ]
+            },
+            {
+                "name": "Activity_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Activity log",
+                    "Device permissions",
+                    "Apps and websites",
+                    "Business integrations",
+                    "Learn how to manage your information"
+                ]
+            },
+            {
+                "name": "Community_Standards_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Terms of Service",
+                    "Privacy Policy",
+                    "Cookies policy",
+                    "Community Standards",
+                    "Meta Company Info",
+                    "About"
+                ]
+            },
+            {
+                "name": "search_settings",
+                "type": "Text"
+            }
+        ]
+    },
+    "GroupSearchResults": {
+        "description": "Details of the group search results displayed on the screen, including the group name, privacy status, number of members, , the number of posts per day, and joining button.",
+        "variables": [
+            {
+                "name": "group_name",
+                "type": "Text"
+            },
+            {
+                "name": "privacy_status",
+                "type": "Text"
+            },
+            {
+                "name": "number_of_members",
+                "type": "Text"
+            },
+            {
+                "name": "posts_per_day",
+                "type": "Text"
+            },
+            {
+                "name": "is_joined",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "PhotoSelectionScreenState": {
+        "description": "Represents the state of the photo selection screen in the Facebook app, including the selected tab, the source of photos, and the presence of photo thumbnails with their respective timestamps.",
+        "variables": [
+            {
+                "name": "selected_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Camera Roll",
+                    "Photos of You",
+                    "Suggested Photos"
+                ]
+            },
+            {
+                "name": "photo_source",
+                "type": "Enum",
+                "enum_values": [
+                    "Gallery",
+                    "Camera"
+                ]
+            }
+        ]
+    },
+    "CameraInterfaceState": {
+        "description": "Represents the state of the camera interface in the Facebook app, including the status of the camera_function, and the active camera of front and back.",
+        "variables": [
+            {
+                "name": "camera_function",
+                "type": "Enum",
+                "enum_values": [
+                    "take_picture",
+                    "add_filter"
+                ]
+            },
+            {
+                "name": "active_camera",
+                "type": "Enum",
+                "enum_values": [
+                    "front",
+                    "back"
+                ]
+            },
+            {
+                "name": "camera_pictrue_done",
+                "type" : "Enum",
+                "enum_values": [
+                    "done"
+                ]
+            }
+        ]
+    }
+}

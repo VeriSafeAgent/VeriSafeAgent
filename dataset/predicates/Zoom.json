@@ -1,0 +1,757 @@
+{
+    "MeetingOptions": {
+        "description": "Options selected on the Meetings tab of the Zoom application. This option is supposed be next screen",
+        "variables": [
+            {
+                "name": "meeting_option",
+                "type": "Enum",
+                "enum_values": [
+                    "New Meeting",
+                    "Join Meeting",
+                    "Schedule Meeting",
+                    "Share Screen"
+                ]
+            }
+        ]
+    },
+    "CalendarIntegration": {
+        "description": "Indicates whether the option to add a calendar is available on the Meetings tab of the Zoom application.",
+        "variables": [
+            {
+                "name": "add_calendar",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "BottomQuickMenuOptions": {
+        "description": "Indicates which tab will be active in the Zoom application by current action. The options include Meetings, Team Chat, Mail, Calendar, and More.",
+        "variables": [
+            {
+                "name": "active_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Meetings",
+                    "Team Chat",
+                    "Mail",
+                    "Calendar",
+                    "More"
+                ]
+            }
+        ]
+    },
+    "MeetingStartOptions": {
+        "description": "Options available when starting a new meeting in the Zoom application. These options include whether the video is on, whether to use a personal meeting ID (PMI), and the PMI number.",
+        "variables": [
+            {
+                "name": "video_on",
+                "type": "Boolean"
+            },
+            {
+                "name": "use_pmi",
+                "type": "Boolean"
+            },
+            {
+                "name": "pmi_number",
+                "type": "Text"
+            }
+        ]
+    },
+    "JoinMeetingOptions": {
+        "description": "Options available on the 'Join a meeting' screen in the Zoom application. These options include entering a Meeting ID or personal link name, the user's display name, and toggles for audio and video settings.",
+        "variables": [
+            {
+                "name": "meeting_id_or_link_name",
+                "type": "Text"
+            },
+            {
+                "name": "user_display_name",
+                "type": "Text"
+            },
+            {
+                "name": "connect_to_audio",
+                "type": "Boolean"
+            },
+            {
+                "name": "video_on",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ShareScreenPrompt": {
+        "description": "Indicates the state of the app when the user is prompted to enter a sharing key or meeting ID to share their screen to a Zoom Room. This includes the presence of the input field for the sharing key or meeting ID and the availability of 'Cancel' and 'OK' buttons.",
+        "variables": [
+            {
+                "name": "sharing_key_or_meeting_id",
+                "type": "Text"
+            }
+        ]
+    },
+    "ChatOptions": {
+        "description": "Options available in the Team Chat tab, including search, starred items, folders, mentions, drafts, and bookmarks.",
+        "variables": [
+            {
+                "name": "chat_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Search",
+                    "Starred Items",
+                    "Folders",
+                    "Mentions",
+                    "Drafts",
+                    "Bookmarks",
+                    "Files",
+                    "Reminders",
+                    "External",
+                    "Customize",
+                    "Add contacts"
+                ]
+            }
+        ]
+    },
+    "UserStatus": {
+        "description": "Displays the current status of the user, including their name and online status.",
+        "variables": [
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "online_status",
+                "type": "Enum",
+                "enum_values": [
+                    "Online",
+                    "Offline"
+                ]
+            }
+        ]
+    },
+    "CalendarTabState": {
+        "description": "Represents the state of the Calendar tab in the Zoom application, including the current month, selected date, and the presence of a calendar connection prompt.",
+        "variables": [
+            {
+                "name": "current_month",
+                "type": "Text"
+            },
+            {
+                "name": "selected_date",
+                "type": "Date"
+            }
+        ]
+    },
+    "PersonalMeetingOptions": {
+        "description": "Options available for managing a personal meeting in the Zoom application, including the personal meeting ID and actions such as starting the meeting, sending an invitation, and editing the meeting.",
+        "variables": [
+            {
+                "name": "personal_meeting_id",
+                "type": "Text"
+            },
+            {
+                "name": "personal_meeting_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Start Meeting",
+                    "Send Invitation",
+                    "Edit Meeting"
+                ]
+            }
+        ]
+    },
+    "TeamChatOptions": {
+        "description": "Options available in the Team Chat tab, including actions for starting a new message, creating a new channel, inviting a new contact, and joining a channel.",
+        "variables": [
+            {
+                "name": "team_chat_option",
+                "type": "Enum",
+                "enum_values": [
+                    "New Message",
+                    "New Channel",
+                    "Invite New Contact",
+                    "Join Channel"
+                ]
+            }
+        ]
+    },
+    "UserProfileDetails": {
+        "description": "Details of the user's profile in the Zoom application, including account email, display name, department, job title, location, work location, status message, personal meeting ID (PMI), and user type.",
+        "variables": [
+            {
+                "name": "account_email",
+                "type": "Text"
+            },
+            {
+                "name": "display_name",
+                "type": "Text"
+            },
+            {
+                "name": "department",
+                "type": "Text"
+            },
+            {
+                "name": "job_title",
+                "type": "Text"
+            },
+            {
+                "name": "location",
+                "type": "Text"
+            },
+            {
+                "name": "work_location",
+                "type": "Text"
+            },
+            {
+                "name": "status_message",
+                "type": "Text"
+            },
+            {
+                "name": "personal_meeting_id",
+                "type": "Text"
+            },
+            {
+                "name": "user_type",
+                "type": "Text"
+            }
+        ]
+    },
+    "UserProfileOverviewInMoreTab": {
+        "description": "Overview of the user's profile information displayed on the 'More' tab, including the user's name, account type, and email address.",
+        "variables": [
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "account_type",
+                "type": "Text"
+            },
+            {
+                "name": "email_address",
+                "type": "Text"
+            }
+        ]
+    },
+    "MoreTabFeatures": {
+        "description": "Features and options selected under the 'More' tab, including added features and settings.",
+        "variables": [
+            {
+                "name": "selected_feature",
+                "type": "Enum",
+                "enum_values": [
+                    "Whiteboards",
+                    "Events",
+                    "Apps",
+                    "Contacts",
+                    "Clips",
+                    "Notes",
+                    "Docs",
+                    "Meetings",
+                    "Team Chat"
+
+                ]
+            }
+        ]
+    },
+    "SelectedUser": {
+        "description": "Details of the selected user in the Zoom application, including the user's name, email address, and status.",
+        "variables": [
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "email_address",
+                "type": "Text"
+            },
+            {
+                "name": "status",
+                "type": "Enum",
+                "enum_values": [
+                    "Online",
+                    "Offline"
+                ]
+            }
+        ]
+    },
+    "ChattingBarOptions": {
+        "description": "Options available in the chat bar, including the ability to send a message, attach a file, and send an emoji.",
+        "variables": [
+            {
+                "name": "chat_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Add Files",
+                    "Audio Recording",
+                    "Send Emoji",
+                    "Send Message"
+                ]
+            }
+        ]
+    },
+    "ChattingBarMessage": {
+        "description": "The message typed in the chat bar.",
+        "variables": [
+            {
+                "name": "chat_message",
+                "type": "Text"
+            }
+        ]
+    },
+    "NavigationOptions": {
+        "description": "Represents the available navigation options in the Team Chat section, including Starred, Folders, Mentions, Drafts, and Bookmarks.",
+        "variables": [
+            {
+                "name": "navigation_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Starred",
+                    "Folders",
+                    "Mentions",
+                    "Drafts",
+                    "Bookmarks"
+                ]
+            }
+        ]
+    },
+    "ChatSessionDetails": {
+        "description": "Details of the current chat session, including the chat name, user status, and the last message sent with its timestamp.",
+        "variables": [
+            {
+                "name": "chat_name",
+                "type": "Text"
+            },
+            {
+                "name": "user_status",
+                "type": "Enum",
+                "enum_values": [
+                    "Available",
+                    "Busy",
+                    "Do Not Disturb",
+                    "Away"
+                ]
+            },
+            {
+                "name": "last_message",
+                "type": "Text"
+            },
+            {
+                "name": "message_timestamp",
+                "type": "Time"
+            }
+        ]
+    },
+    "ScheduledMeetings": {
+        "description": "Details of the meetings scheduled for today, including the time, meeting title, meeting ID, and the option to start the meeting.",
+        "variables": [
+            {
+                "name": "meeting_time",
+                "type": "Time"
+            },
+            {
+                "name": "meeting_title",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_id",
+                "type": "Text"
+            },
+            {
+                "name": "start_option",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "SettingMeetingDetails": {
+        "description": "Setting one of Details of a scheduled meeting in the Zoom app, including the date and time, topic, meeting ID, duration, passcode, and available actions.",
+        "variables": [
+            {
+                "name": "selected_detail",
+                "type": "Enum",
+                "enum_values": [
+                    "Meeting Date Time",
+                    "Meeting Topic",
+                    "Meeting ID",
+                    "Meeting Duration",
+                    "Meeting Passcode",
+                    "Available Actions"
+                ]
+            },
+            {
+                "name": "value",
+                "type": "Text"
+            }
+        ]
+    },
+    "CurrentScreenName": {
+        "description": "The name of the current screen in the Zoom application.",
+        "variables": [
+            {
+                "name": "screen_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "SelectedMeetingRepeatOption": {
+    "description": "Set the repeat frequency setting for a scheduled meeting. The user can choose from several options to set how often the meeting should recur.",
+    "variables": [
+        {
+            "name": "repeat_frequency",
+            "type": "Enum",
+            "enum_values": [
+                "None",
+                "Every day",
+                "Every week",
+                "Every 2 weeks",
+                "Every month",
+                "Every year"
+            ]
+        }
+    ]
+},
+    "EmailCompositionDetails": {
+        "description": "Details of the email being composed, including the sender's email address, subject, and body content which contains Zoom meeting information.",
+        "variables": [
+            {
+                "name": "from_email",
+                "type": "Text"
+            },
+            {
+                "name": "subject",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_topic",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_time",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_link",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_id",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_passcode",
+                "type": "Text"
+            }
+        ]
+    },
+    "WhiteboardCreationOption": {
+        "description": "The option to create a new whiteboard, indicated by the presence of a 'New' button.",
+        "variables": [
+            {
+                "name": "create_new_whiteboard",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "AudioSettings": {
+        "description": "Settings related to audio configurations in the meeting settings page, including auto-connect options and microphone settings.",
+        "variables": [
+            {
+                "name": "selected_audio_setting",
+                "type": "Enum",
+                "enum_values": [
+                    "Auto Connect Option",
+                    "Mute Microphone",
+                    "Mute/Unmute Sound"
+                ]
+            },
+            {
+                "name": "value",
+                "type": "Text"
+            }
+        ]
+    },
+    "VideoSettings": {
+        "description": "Settings related to video configurations in the meeting settings page, including video mirroring, preview, and aspect ratio.",
+        "variables": [
+            {
+                "name": "selected_video_setting",
+                "type": "Enum",
+                "enum_values": [
+                    "Turn Off Video",
+                    "Mirror Video",
+                    "Show Video Preview",
+                    "Picture-in-Picture",
+                    "Aspect Ratio"
+                ]
+            },
+            {
+                "name": "value",
+                "type": "Text"
+            }
+        ]
+    },
+    "GeneralSettings": {
+        "description": "General settings for the meeting, including controls visibility, connected time display, and participant name display.",
+        "variables": [
+            {
+                "name": "selected_general_setting",
+                "type": "Enum",
+                "enum_values": [
+                    "Show Meeting Controls",
+                    "Show Connected Time",
+                    "Show Name on Join",
+                    "Show Non-Video Participants",
+                    "Confirm on Leave"
+                ]
+            },
+            {
+                "name": "value",
+                "type": "Text"
+            }
+        ]
+    },
+    "ScreenSharingDialogState": {
+        "description": "Represents the state of the screen sharing dialog in a meeting application, including the prompt message, input field for sharing key or meeting ID, and the available actions (Cancel and OK).",
+        "variables": [
+            {
+                "name": "prompt_message",
+                "type": "Text"
+            },
+            {
+                "name": "input_field_placeholder",
+                "type": "Text"
+            }
+        ]
+    },
+    "ParticipantStatus": {
+        "description": "Details about the current participant in the meeting, including their role, audio status, and video status.",
+        "variables": [
+            {
+                "name": "participant_name",
+                "type": "Text"
+            },
+            {
+                "name": "participant_role",
+                "type": "Enum",
+                "enum_values": [
+                    "Host",
+                    "Co-host",
+                    "Participant"
+                ]
+            },
+            {
+                "name": "audio_status",
+                "type": "Enum",
+                "enum_values": [
+                    "Muted",
+                    "Unmuted"
+                ]
+            },
+            {
+                "name": "video_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            }
+        ]
+    },
+    "MeetingControls": {
+        "description": "The available controls at the bottom of the meeting screen, including options to unmute, stop video, view participants, chat, react, and share.",
+        "variables": [
+            {
+                "name": "control_options",
+                "type": "Enum",
+                "enum_values": [
+                    "mute",
+                    "Stop video",
+                    "Participants",
+                    "Chat",
+                    "Reactions",
+                    "Share",
+                    "invite"
+                ]
+            }
+        ]
+    },
+    "ParticipantCount": {
+        "description": "The number of participants currently in the meeting.",
+        "variables": [
+            {
+                "name": "num_of_participants",
+                "type": "Number"
+            }
+        ]
+    },
+    "InviteOptions": {
+        "description": "Select Options available for inviting participants to a meeting in the video conferencing app. This includes various methods such as Messages, Gmail, inviting Zoom contacts, inviting common areas, and copying an invite link.",
+        "variables": [
+            {
+                "name": "invite_method",
+                "type": "Enum",
+                "enum_values": [
+                    "Messages",
+                    "Gmail",
+                    "Invite Zoom contacts",
+                    "Invite common areas",
+                    "Copy invite link"
+                ]
+            }
+        ]
+    },
+    "SelectedMeeting": {
+        "description": "Details of the selected meeting in the Zoom application, including the meeting title, date, time, and meeting ID.",
+        "variables": [
+            {
+                "name": "meeting_title",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_date",
+                "type": "Date"
+            },
+            {
+                "name": "meeting_time",
+                "type": "Time"
+            },
+            {
+                "name": "meeting_id",
+                "type": "Text"
+            }
+        ]
+    },
+    "SelectedMeetingDetailsManagement": {
+        "description": "Select one of Options for managing meeting details, including starting the meeting, chatting, adding to the calendar, inviting participants, and deleting the meeting.",
+        "variables": [
+            {
+                "name": "manage_option",
+                "type": "Enum",
+                "enum_values": [
+                    "edit",
+                    "start",
+                    "chat",
+                    "add to calender",
+                    "invite",
+                    "delete"
+                ]
+            }
+        ]
+    },
+    "SimpleConfirmation": {
+        "description": "Make simple confirmation dialog with a message and 'OK' button or 'Cancel' button.",
+        "variables": [
+            {
+                "name": "confirmation_message",
+                "type": "Text"
+            }
+        ]
+    },
+    "SelectedEditMeetingOptions": {
+        "description": "Select one of the options for editing a scheduled meeting, including changing the meeting title, date, time, duration, and passcode.",
+        "variables": [
+            {
+                "name": "edit_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Date",
+                    "From",
+                    "To",
+                    "Time zone",
+                    "Repeat",
+                    "Attendees",
+                    "Passcode"
+                ]
+            }
+        ]
+    },
+    "SelectedEditBooleanMeetingOptions": {
+        "description": "Select one of the boolean options for editing a scheduled meeting, including enabling or disabling options like continuous meeting chat, using PMI, requiring a passcode, and adding to the calendar.",
+        "variables": [
+            {
+                "name": "edit_option",
+                "type": "Enum",
+                "enum_values": [
+                    "enable_continuous_meeting_chat",
+                    "use_pmi",
+                    "require_meeting_passcode",
+                    "enable_waiting_room",
+                    "only_allow_authenticated users",
+                    "host_video_on",
+                    "participant_video_on",
+                    "add_to_calendar"
+                ]
+            }
+        ]
+    },
+    "ScheduledMeetingDetails": {
+        "description": "Represents the settings for scheduling a meeting, including security settings, video options, and calendar integration.",
+        "variables": [
+            {
+                "name": "enable_continuous_meeting_chat",
+                "type": "Boolean"
+            },
+            {
+                "name": "use_pmi",
+                "type": "Boolean"
+            },
+            {
+                "name": "pmi_number",
+                "type": "Text"
+            },
+            {
+                "name": "require_meeting_passcode",
+                "type": "Boolean"
+            },
+            {
+                "name": "meeting_passcode",
+                "type": "Text"
+            },
+            {
+                "name": "enable_waiting_room",
+                "type": "Boolean"
+            },
+            {
+                "name": "only_allow_authenticated_users",
+                "type": "Boolean"
+            },
+            {
+                "name": "host_video_on",
+                "type": "Boolean"
+            },
+            {
+                "name": "participant_video_on",
+                "type": "Boolean"
+            },
+            {
+                "name": "add_to_calendar",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "MeetingDetails": {
+        "description": "Details of a scheduled meeting in the Zoom app, including the date and time, topic, meeting ID, duration, passcode, and available actions.",
+        "variables": [
+            {
+                "name": "meeting_date_time",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_topic",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_id",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_duration",
+                "type": "Text"
+            },
+            {
+                "name": "meeting_passcode",
+                "type": "Text"
+            },
+            {
+                "name": "available_actions",
+                "type": "Text"
+            }
+        ]
+    }
+}

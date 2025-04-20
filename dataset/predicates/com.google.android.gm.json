@@ -1,0 +1,271 @@
+{
+    "EmailDetails": {
+        "description": "Details of each email in the inbox, including the sender's name, email subject, and timestamp.",
+        "variables": [
+            {
+                "name": "sender_name",
+                "type": "Text"
+            },
+            {
+                "name": "email_subject",
+                "type": "Text"
+            },
+            {
+                "name": "timestamp",
+                "type": "Time"
+            }
+        ]
+    },
+    "UnreadEmailCount": {
+        "description": "The number of unread emails in the inbox, indicated by the notification icon.",
+        "variables": [
+            {
+                "name": "unread_count",
+                "type": "Text"
+            }
+        ]
+    },
+    "EmailContentDetails": {
+        "description": "Details of the currently opened email, including the email title, sender's name, timestamp, and the main content of the email.",
+        "variables": [
+            {
+                "name": "email_title",
+                "type": "Text"
+            },
+            {
+                "name": "sender_name",
+                "type": "Text"
+            },
+            {
+                "name": "timestamp",
+                "type": "Time"
+            },
+            {
+                "name": "email_content",
+                "type": "Text"
+            }
+        ]
+    },
+    "UserProfileInfo": {
+        "description": "Information about the signed-in user, including the user's name, email address, and the number of unread items.",
+        "variables": [
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "user_email",
+                "type": "Text"
+            },
+            {
+                "name": "unread_items",
+                "type": "Text"
+            }
+        ]
+    },
+    "ThemeSetting": {
+        "description": "The current theme setting of the application, which determines the visual appearance. The options include System default, Light, and Dark.",
+        "variables": [
+            {
+                "name": "theme",
+                "type": "Enum",
+                "enum_values": [
+                    "System default",
+                    "Light",
+                    "Dark"
+                ]
+            }
+        ]
+    },
+    "ComposeEmailScreen": {
+        "description": "The state of the compose email screen, including the sender's email address, recipient's email address, subject of the email, and the main content of the email being composed.",
+        "variables": [
+            {
+                "name": "sender_email",
+                "type": "Text"
+            },
+            {
+                "name": "recipient_email",
+                "type": "Text"
+            },
+            {
+                "name": "email_subject",
+                "type": "Text"
+            },
+            {
+                "name": "email_content",
+                "type": "Text"
+            }
+        ]
+    },
+    "TrashSectionInfo": {
+        "description": "Information about the trash and spam section, including the message about automatic deletion and the presence of the 'Empty trash now or Empty spam now' button.",
+        "variables": [
+            {
+                "name": "empty_trash_or_spam_button",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "EmailActionMenu": {
+        "description": "Represents the available actions in the email management menu when one or more emails are selected. This includes options such as moving emails to a different folder, snoozing them, changing labels, adding a star, marking as not important, muting, and reporting as spam.",
+        "variables": [
+            {
+                "name": "action_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Move to",
+                    "Snooze",
+                    "Change labels",
+                    "Add star",
+                    "Mark not important",
+                    "Mute",
+                    "Report spam",
+                    "Archive",
+                    "Delete",
+                    "Mark unread"
+                ]
+            }
+        ]
+    },
+    "SingleEmailActionMenu": {
+        "description": "Represents the available actions in the email management menu when viewing an email. This includes options such as replying to all, forwarding, adding a star, marking as unread, translating, printing, and blocking the sender.",
+        "variables": [
+            {
+                "name": "action_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Reply all",
+                    "Forward",
+                    "Add star",
+                    "Mark unread from here",
+                    "Translate",
+                    "Print",
+                    "Block"
+                ]
+            }
+        ]
+    },
+    "ComposeEmailOptions": {
+        "description": "Represents the available options in the compose email screen menu, which includes actions like scheduling send, adding from contacts, enabling confidential mode, saving drafts, discarding drafts, accessing settings, and seeking help or feedback.",
+        "variables": [
+            {
+                "name": "option_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Schedule send",
+                    "Add from Contacts",
+                    "Confidential mode",
+                    "Save draft",
+                    "Discard",
+                    "Settings",
+                    "Help & feedback"
+                ]
+            }
+        ]
+    },
+    "MainScreenUpperBarOptions": {
+        "description": "Represents the available options in the very first page of the application which includes menu button and account profile button",
+        "variables": [
+            {
+                "name": "option_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Menu",
+                    "Account Profile",
+                    "Google Meet"
+                ]
+            }
+        ]
+    },
+    "MenuInboxOptions": {
+        "description": "Represents the available options in the menu screen which includes inbox, starred, snoozed, sent, drafts, all mail, trash, spam, and settings. it's all about other inbox name",
+        "variables": [
+            {
+                "name": "option_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Primary",
+                    "Promotions",
+                    "Social",
+                    "Updates",
+                    "Starred",
+                    "Snoozed",
+                    "Important",
+                    "Sent",
+                    "Scheduled",
+                    "Outbox",
+                    "Drafts",
+                    "All mail",
+                    "Spam",
+                    "Trash"
+                ]
+            }
+        ]
+    },
+    "CurrentInboxName": {
+        "description": "The name of the current inbox being viewed, such as Primary, Social, Promotions, Updates, or Important.",
+        "variables": [
+            {
+                "name": "inbox_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "SelectedEmails": {
+        "description": "The name of email selected by the user.",
+        "variables": [
+            {
+                "name": "selected_email_subject",
+                "type": "Text"
+            }
+        ]
+    },
+    "EmailLabelingOptions": {
+        "description": "Represents the state of the 'Label as' dialog in the Gmail app, including the available label options and their selection status.",
+        "variables": [
+            {
+                "name": "label_name",
+                "type": "Text"
+            },
+            {
+                "name": "is_selected",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "LabelCheckBox": {
+        "description": "Represents the checkbox for selecting a label in the 'Label as' dialog.",
+        "variables": [
+            {
+                "name": "selected_label_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "ConfirmationButton": {
+        "description": "Represents the confirmation button in a dialog or prompt.",
+        "variables": [
+            {
+                "name": "button_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "MoveToDialogOptions": {
+        "description": "Represents the available options in the 'Move to' dialog within the Gmail app, which allows users to move selected emails to different categories or folders. This includes the names of the categories available for selection.",
+        "variables": [
+            {
+                "name": "category_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Promotions",
+                    "Social",
+                    "Updates",
+                    "Serry",
+                    "taipei"
+                ]
+            }
+        ]
+    }
+}

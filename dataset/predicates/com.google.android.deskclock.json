@@ -1,0 +1,414 @@
+{
+    "NextAlarm": {
+        "description": "Information about the next scheduled alarm, including the day and time.",
+        "variables": [
+            {
+                "name": "next_alarm_day",
+                "type": "Text"
+            },
+            {
+                "name": "next_alarm_time",
+                "type": "Time"
+            }
+        ]
+    },
+    "SelectedTab": {
+        "description": "Indicates which tab is currently selected in the bottom navigation bar of the Clock app.",
+        "variables": [
+            {
+                "name": "selected_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Alarm",
+                    "Clock",
+                    "Timer",
+                    "Stopwatch",
+                    "Bedtime"
+                ]
+            }
+        ]
+    },
+    "CurrentTimeAndDate": {
+        "description": "Displays the current time and date on the main screen of the Clock app.",
+        "variables": [
+            {
+                "name": "current_time",
+                "type": "Time"
+            },
+            {
+                "name": "current_date",
+                "type": "Date"
+            }
+        ]
+    },
+    "MenuOptions": {
+        "description": "The currently available options in the menu of the Clock app in Clock app, which include 'Screen saver', 'Settings', 'Privacy policy', 'Help', and 'Send feedback'. These options allow the user to navigate to different settings and informational pages within the app.",
+        "variables": [
+            {
+                "name": "menu_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Screen saver",
+                    "Settings",
+                    "Privacy policy",
+                    "Help",
+                    "Send feedback"
+                ]
+            }
+        ]
+    },
+    "ClockStyleSettings": {
+        "description": "Settings related to the clock's display style, including whether the clock is digital or analog.",
+        "variables": [
+            {
+                "name": "clock_style",
+                "type": "Enum",
+                "enum_values": [
+                    "Digital",
+                    "Analog"
+                ]
+            }
+        ]
+    },
+    "DisplayTimeWithSeconds": {
+        "description": "Indicates whether the clock displays time with seconds.",
+        "variables": [
+            {
+                "name": "display_seconds",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "AutomaticHomeClock": {
+        "description": "Indicates whether the automatic home clock feature is enabled, which adds a clock for home when traveling.",
+        "variables": [
+            {
+                "name": "automatic_home_clock",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "HomeTimeZone": {
+        "description": "The time zone set for the home location.",
+        "variables": [
+            {
+                "name": "home_time_zone",
+                "type": "Text"
+            }
+        ]
+    },
+    "AlarmSettings": {
+        "description": "Settings related to the alarm configuration, including silence duration, snooze length, volume control, gradual volume increase, and alarm volume size.",
+        "variables": [
+            {
+                "name": "silence_after",
+                "type": "Text"
+            },
+            {
+                "name": "snooze_length",
+                "type": "Text"
+            },
+            {
+                "name": "gradually_increase_volume",
+                "type": "Text"
+            },
+            {
+                "name": "volume_buttons_function",
+                "type": "Enum",
+                "enum_values": [
+                    "Control volume",
+                    "Snooze",
+                    "Stop",
+                    "Do nothing"
+                ]
+            },
+            {
+                "name": "alarm_volume",
+                "type": "Number"
+            }
+        ]
+    },
+    "WeekStartSetting": {
+        "description": "The day of the week on which the calendar week starts.",
+        "variables": [
+            {
+                "name": "start_week_on",
+                "type": "Text"
+            }
+        ]
+    },
+    "TimerSettings": {
+        "description": "Settings related to the timer configuration, including timer sound, gradual volume increase, and vibration.",
+        "variables": [
+            {
+                "name": "timer_sound",
+                "type": "Text"
+            },
+            {
+                "name": "timer_gradually_increase_volume",
+                "type": "Text"
+            },
+            {
+                "name": "timer_vibrate",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ScreenSaverSettings": {
+        "description": "Settings related to the display style and night mode of the screen saver mode.",
+        "variables": [
+            {
+                "name": "screen_savor_style",
+                "type": "Enum",
+                "enum_values": [
+                    "Digital",
+                    "Analog"
+                ]
+            },
+            {
+                "name": "screen_savor_night_mode",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "AlarmTimeSelection": {
+        "description": "Represents the current state of the alarm time selection, including the selected hour, minute, and period (AM/PM).",
+        "variables": [
+            {
+                "name": "selected_hour",
+                "type": "Number"
+            },
+            {
+                "name": "selected_minute",
+                "type": "Number"
+            },
+            {
+                "name": "selected_period",
+                "type": "Enum",
+                "enum_values": [
+                    "AM",
+                    "PM"
+                ]
+            }
+        ]
+    },
+    "AlarmDetails": {
+        "description": "Details of the currently set alarm, including time, label, active status, scheduled day, repeat days, ringtone, and vibrate option.",
+        "variables": [
+            {
+                "name": "alarm_time",
+                "type": "Time"
+            },
+            {
+                "name": "alarm_label",
+                "type": "Text"
+            },
+            {
+                "name": "alarm_active",
+                "type": "Boolean"
+            },
+            {
+                "name": "scheduled_day",
+                "type": "Text"
+            },
+            {
+                "name": "ringtone",
+                "type": "Text"
+            },
+            {
+                "name": "vibrate",
+                "type": "Boolean"
+            },
+            {
+                "name": "alarm_type",
+                "type": "Enum",
+                "enum_values": [
+                    "Wake up",
+                    "Other"
+                ]
+            }
+        ]
+    },
+    "StopwatchState": {
+        "description": "Represents the current state of the Stopwatch tab in the Clock app, including whether the stopwatch is ready to start, running, or paused, and currently displayed time.",
+        "variables": [
+            {
+                "name": "stopwatch_status",
+                "type": "Enum",
+                "enum_values": [
+                    "Ready",
+                    "Running",
+                    "Paused"
+                ]
+            },
+            {
+                "name": "stopwatch_current_time",
+                "type": "Time"
+            }
+        ]
+    },
+    "TimerCurrentState": {
+        "description": "Represents the current state of the Timer in the Clock app, including the hours, minutes, and seconds set on the timer, and whether the timer is running or paused.",
+        "variables": [
+            {
+                "name": "timer_hours",
+                "type": "Number"
+            },
+            {
+                "name": "timer_minutes",
+                "type": "Number"
+            },
+            {
+                "name": "timer_seconds",
+                "type": "Number"
+            },
+            {
+                "name": "timer_status",
+                "type": "Enum",
+                "enum_values": [
+                    "Ready",
+                    "Running",
+                    "Paused"
+                ]
+            }
+        ]
+    },
+    "CitySearchState": {
+        "description": "Represents the current state of the city search feature in the Clock app, including the presence of a search input field and the ability to navigate back to a previous screen.",
+        "variables": [
+            {
+                "name": "search_query",
+                "type": "Text"
+            }
+        ]
+    },
+    "CitySearchResults": {
+        "description": "Represents the current state of the city search results in the Clock app, including the search query and the list of cities with their corresponding local times.",
+        "variables": [
+            {
+                "name": "search_query",
+                "type": "Text"
+            },
+            {
+                "name": "city_name",
+                "type": "Text"
+            },
+            {
+                "name": "local_time",
+                "type": "Time"
+            }
+        ]
+    },
+    "WorldClockCityTime": {
+        "description": "Represents the time displayed for a specific city in the world clock section of the Clock app.",
+        "variables": [
+            {
+                "name": "city_name",
+                "type": "Text"
+            },
+            {
+                "name": "city_time",
+                "type": "Time"
+            }
+        ]
+    },
+    "BedtimeSchedule": {
+        "description": "Represents the bedtime schedule settings, including the bedtime and wake-up times, and the next alarm day.",
+        "variables": [
+            {
+                "name": "bedtime_time",
+                "type": "Time"
+            },
+            {
+                "name": "wake_up_time",
+                "type": "Time"
+            },
+            {
+                "name": "next_alarm_day",
+                "type": "Text"
+            }
+        ]
+    },
+    "BedtimeTabState": {
+        "description": "Represents the current state of the Bedtime tab in the Clock app, including the selected sleep sound, upcoming events, and the selected tab in the navigation bar.",
+        "variables": [
+            {
+                "name": "selected_sleep_sound",
+                "type": "Text"
+            },
+            {
+                "name": "upcoming_events_date",
+                "type": "Date"
+            },
+            {
+                "name": "upcoming_events_status",
+                "type": "Text"
+            }
+        ]
+    },
+    "RecentBedtimeActivity": {
+        "description": "Displays recent bedtime activity, including time spent on the device and time in bed, represented in a weekly graph.",
+        "variables": [
+            {
+                "name": "time_on_device",
+                "type": "Text"
+            },
+            {
+                "name": "time_in_bed",
+                "type": "Text"
+            }
+        ]
+    },
+    "AutomaticTimeSettings": {
+        "description": "Indicates whether the automatic time setting feature is enabled, which allows the device to set the time automatically.",
+        "variables": [
+            {
+                "name": "set_time_automatically",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "DateTimeSettings": {
+        "description": "Represents the current date and time settings, including the manually set date and time.",
+        "variables": [
+            {
+                "name": "current_date",
+                "type": "Date"
+            },
+            {
+                "name": "current_time",
+                "type": "Time"
+            }
+        ]
+    },
+    "TimeZoneSettings": {
+        "description": "Settings related to the time zone configuration, including automatic time zone setting and the use of location for time zone determination.",
+        "variables": [
+            {
+                "name": "set_time_zone_automatically",
+                "type": "Boolean"
+            },
+            {
+                "name": "use_location_for_time_zone",
+                "type": "Boolean"
+            },
+            {
+                "name": "current_time_zone",
+                "type": "Text"
+            }
+        ]
+    },
+    "TimeFormatSettings": {
+        "description": "Settings related to the time format, including whether the 24-hour format is used.",
+        "variables": [
+            {
+                "name": "use_locale_default",
+                "type": "Boolean"
+            },
+            {
+                "name": "use_24_hour_format",
+                "type": "Boolean"
+            }
+        ]
+    }
+}

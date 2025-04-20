@@ -1,0 +1,1062 @@
+{
+    "SelectedTab": {
+        "description": "Indicates which tab is currently selected in the Settings app main menu.",
+        "variables": [
+            {
+                "name": "selected_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Network & internet",
+                    "Connected devices",
+                    "Apps",
+                    "Notifications",
+                    "Battery",
+                    "Storage",
+                    "Sound & vibration",
+                    "Display",
+                    "Wallpaper & style",
+                    "Accessibility",
+                    "Security",
+                    "Privacy",
+                    "Location",
+                    "Safety & emergency",
+                    "Passwords & accounts",
+                    "Digital Wellbing & parental controls",
+                    "Google",
+                    "System",
+                    "About emulated device",
+                    "Tips & support"
+                ]
+            }
+        ]
+    },
+    "MobileNetworkStatus": {
+        "description": "Details about the current mobile network provider and connection type.",
+        "variables": [
+            {
+                "name": "provider_name",
+                "type": "Text"
+            },
+            {
+                "name": "connection_type",
+                "type": "Text"
+            }
+        ]
+    },
+    "WiFiConnectionStatus": {
+        "description": "Information about the current Wi-Fi connection, including the network name and connection status.",
+        "variables": [
+            {
+                "name": "wifi_network_name",
+                "type": "Text"
+            },
+            {
+                "name": "wifi_connection_status",
+                "type": "Text"
+            }
+        ]
+    },
+    "ConnectedInternet": {
+        "description": "Indicates which internet is connected",
+        "variables": [
+            {
+                "name": "is_mobile_network",
+                "type": "Boolean"
+            },
+            {
+                "name": "is_wifi_network",
+                "type": "Boolean"
+            },
+            {
+                "name": "internet_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "SavedNetworksInfo": {
+        "description": "Information about the number of saved networks on the device.",
+        "variables": [
+            {
+                "name": "num_saved_networks",
+                "type": "Number"
+            }
+        ]
+    },
+    "DataUsageInfo": {
+        "description": "Details about non-carrier data usage over a specified period.",
+        "variables": [
+            {
+                "name": "data_used",
+                "type": "Text"
+            },
+            {
+                "name": "usage_period",
+                "type": "Text"
+            }
+        ]
+    },
+    "NetworkPreferences": {
+        "description": "Indicates whether the 'Turn on Wi-Fi automatically' and 'Notify for public networks' feature is enabled or disabled.",
+        "variables": [
+            {
+                "name": "auto_turn_on_status",
+                "type": "Boolean"
+            },
+            {
+                "name": "notify_for_public_networks",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "NetworkInternetSettings": {
+        "description": "Details about the network and internet settings including the states of SIMs, Airplane mode, Hotspot & tethering, Data Saver, VPN, Private DNS, Adaptive connectivity.",
+        "variables": [
+            {
+                "name": "sims",
+                "type": "Text"
+            },
+            {
+                "name": "airplane_mode",
+                "type": "Boolean"
+            },
+            {
+                "name": "hotspot_and_tethering",
+                "type": "Boolean"
+            },
+            {
+                "name": "data_saver",
+                "type": "Boolean"
+            },
+            {
+                "name": "vpn",
+                "type": "Boolean"
+            },
+            {
+                "name": "private_dns",
+                "type": "Enum",
+                "enum_values": [
+                    "Off",
+                    "Automatic",
+                    "Private DNS provider hostname"
+                ]
+            },
+            {
+                "name": "adaptive_connectivity",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ConnectedDevices": {
+        "description": "Options available in the 'Connected devices' section of the Settings app, including which device is connected",
+        "variables": [
+            {
+                "name": "connected_device_name",
+                "type": "Boolean"
+            },
+            {
+                "name": "saved_device_name",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "RecentlyOpenedApps": {
+        "description": "Details about the most recently opened apps, including the app name and the time since it was last opened.",
+        "variables": [
+            {
+                "name": "app_name",
+                "type": "Text"
+            },
+            {
+                "name": "last_opened_time",
+                "type": "Text"
+            }
+        ]
+    },
+    "DefaultApps": {
+        "description": "Information about the default apps set for various functions such as browsing, calling, and messaging.",
+        "variables": [
+            {
+                "name": "default_apps_list",
+                "type": "Text"
+            }
+        ]
+    },
+    "CloudMediaApp": {
+        "description": "The app designated as the cloud media app.",
+        "variables": [
+            {
+                "name": "cloud_media_app_name",
+                "type": "Text"
+            }
+        ]
+    },
+    "UnusedApps": {
+        "description": "Information about the number of unused apps.",
+        "variables": [
+            {
+                "name": "num_unused_apps",
+                "type": "Number"
+            },
+            {
+                "name": "unused_apps_list",
+                "type": "Text"
+            }
+        ]
+    },
+    "SpecialAppAccess": {
+        "description": "Details about apps that have special access, such as unrestricted data usage.",
+        "variables": [
+            {
+                "name": "num_apps_unrestricted_data",
+                "type": "Number"
+            }
+        ]
+    },
+    "ScreenTimeDetails": {
+        "description": "Details about the screen time usage for the current day, including the total time spent and the specific date being viewed.",
+        "variables": [
+            {
+                "name": "total_screen_time",
+                "type": "Text"
+            },
+            {
+                "name": "current_date",
+                "type": "Date"
+            }
+        ]
+    },
+    "AppUsageLimits": {
+        "description": "Information about the ability to set daily limits for app usage, including the name and time duration of that limitted app",
+        "variables": [
+            {
+                "name": "limitted_app_name",
+                "type": "Text"
+            },
+            {
+                "name": "limitted_app_time_durations",
+                "type": "Text"
+            }
+        ]
+    },
+    "AppSummary": {
+        "description": "Summary of the screen time usage for individual apps, including the app name and the time used.",
+        "variables": [
+            {
+                "name": "app_name",
+                "type": "Text"
+            },
+            {
+                "name": "app_usage_time",
+                "type": "Text"
+            }
+        ]
+    },
+    "AppInfoDetails": {
+        "description": "Details about the app information page for a specific application, including the app name, notification status, permissions, storage usage, mobile data usage, screen time, and battery usage.",
+        "variables": [
+            {
+                "name": "app_name",
+                "type": "Text"
+            },
+            {
+                "name": "notification_status",
+                "type": "Text"
+            },
+            {
+                "name": "permissions_status",
+                "type": "Text"
+            },
+            {
+                "name": "storage_usage",
+                "type": "Text"
+            },
+            {
+                "name": "mobile_data_usage",
+                "type": "Text"
+            },
+            {
+                "name": "screen_time",
+                "type": "Text"
+            },
+            {
+                "name": "battery_usage",
+                "type": "Text"
+            },
+            {
+                "name": "open_by_default",
+                "type": "Boolean"
+            },
+            {
+                "name": "pause_app_if_unused",
+                "type": "Boolean"
+            },
+            {
+                "name": "app_details",
+                "type": "Text"
+            },
+            {
+                "name": "app_version",
+                "type": "Text"
+            }
+        ]
+    },
+    "AppNotificationDetails": {
+        "description": "Details of notification settings per application",
+        "variables": [
+            {
+                "name": "app_name",
+                "type": "Text"
+            },
+            {
+                "name": "notification_menu_name",
+                "type": "Text"
+            },
+            {
+                "name": "options",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "NotificationHistoryStatus": {
+        "description": "Indicates whether the notification history feature is enabled or disabled in the Settings app.",
+        "variables": [
+            {
+                "name": "is_notification_history_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "RecentlyDismissedNotifications": {
+        "description": "Details of recently dismissed notifications, including the app name, notification content, and the time of dismissal.",
+        "variables": [
+            {
+                "name": "app_name",
+                "type": "Text"
+            },
+            {
+                "name": "notification_content",
+                "type": "Text"
+            },
+            {
+                "name": "dismissal_time",
+                "type": "Time"
+            }
+        ]
+    },
+    "NotificationGeneralSettings": {
+        "description": "Indicates whether the general notification setttings, including the status of 'Notifications on lock screen', 'Do not disturb', 'Wireless emergency alerts', 'Hide silent notifications in status bar', 'Allow notification snoozing', 'Notification dot on app icon', 'Enhanced notifications'.",
+        "variables": [
+            {
+                "name": "notifications_on_lock_screen",
+                "type": "Enum",
+                "enum_values": [
+                    "Show conversations and silent",
+                    "Hide silent conversations and notifications",
+                    "Dont show any notifications"
+                ]
+            },
+            {
+                "name": "do_not_disturb",
+                "type": "Text"
+            },
+            {
+                "name": "wireless_emergency_alerts",
+                "type": "Boolean"
+            },
+            {
+                "name": "hid_silent_notifications_in_status_bar",
+                "type": "Boolean"
+            },
+            {
+                "name": "allow_notification_snoozing",
+                "type": "Boolean"
+            },
+            {
+                "name": "notification_dot_on_app_icon",
+                "type": "Boolean"
+            },
+            {
+                "name": "enhanced_notifications",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "BatteryStatus": {
+        "description": "Details about the current battery status, including the battery percentage, charging status, and whether the battery percentage is shown in the status bar.",
+        "variables": [
+            {
+                "name": "battery_percentage",
+                "type": "Number"
+            },
+            {
+                "name": "charging_status",
+                "type": "Text"
+            },
+            {
+                "name": "show_battery_percentage",
+                "type": "Boolean"
+            },
+            {
+                "name": "adaptive_battery",
+                "type": "Boolean"
+            },
+            {
+                "name": "battery_saver",
+                "type": "Boolean"
+            },
+            {
+                "name": "battery_saver_turn_off_when_charged_over_90percent",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "StorageUsageDetails": {
+        "description": "Details about the storage usage on the device, including total storage, used storage, and the breakdown of storage usage by category.",
+        "variables": [
+            {
+                "name": "total_storage",
+                "type": "Text"
+            },
+            {
+                "name": "used_storage",
+                "type": "Text"
+            },
+            {
+                "name": "apps_storage",
+                "type": "Text"
+            },
+            {
+                "name": "system_storage",
+                "type": "Text"
+            },
+            {
+                "name": "images_storage",
+                "type": "Text"
+            },
+            {
+                "name": "documents_storage",
+                "type": "Text"
+            },
+            {
+                "name": "trash_storage",
+                "type": "Text"
+            },
+            {
+                "name": "games_storage",
+                "type": "Text"
+            },
+            {
+                "name": "audio_storage",
+                "type": "Text"
+            },
+            {
+                "name": "videos_storage",
+                "type": "Text"
+            }
+        ]
+    },
+    "VolumeSettings": {
+        "description": "Current volume levels for different categories including media, call, ring & notification, and alarm.",
+        "variables": [
+            {
+                "name": "media_volume",
+                "type": "Number"
+            },
+            {
+                "name": "call_volume",
+                "type": "Number"
+            },
+            {
+                "name": "ring_notification_volume",
+                "type": "Number"
+            },
+            {
+                "name": "alarm_volume",
+                "type": "Number"
+            }
+        ]
+    },
+    "SoundSettings": {
+        "description": "Settings related to sound features including Do Not Disturb, Phone Ringtone, Live Caption, Now Playing, Media, and Vibration & Haptics.",
+        "variables": [
+            {
+                "name": "do_not_disturb_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "phone_ringtone",
+                "type": "Text"
+            },
+            {
+                "name": "live_caption_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "identify_songs_playing_nearby",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "vibration_haptics_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "pin_media_player",
+                "type": "Boolean"
+            },
+            {
+                "name": "show_media_on_lock_screen",
+                "type": "Boolean"
+            },
+            {
+                "name": "show_media_recommendations",
+                "type": "Boolean"
+            },
+            {
+                "name": "default_notification_sound",
+                "type": "Text"
+            },
+            {
+                "name": "default_alarm_sound",
+                "type": "Text"
+            },
+            {
+                "name": "dial_pad_tones",
+                "type": "Boolean"
+            },
+            {
+                "name": "screen_locking_sound",
+                "type": "Boolean"
+            },
+            {
+                "name": "charging_sounds_and_vibration",
+                "type": "Boolean"
+            },
+            {
+                "name": "touch_sounds",
+                "type": "Boolean"
+            },
+            {
+                "name": "always_show_icon_when_in_vibrate_mode",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "BrightnessLevel": {
+        "description": "Indicates the current brightness level setting on the device's display settings page.",
+        "variables": [
+            {
+                "name": "brightness_percentage",
+                "type": "Number"
+            }
+        ]
+    },
+    "DarkThemeStatus": {
+        "description": "Indicates whether the dark theme is enabled and its automatic activation status.",
+        "variables": [
+            {
+                "name": "dark_theme_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ScreenSaverStatus": {
+        "description": "Indicates the current status and type of screen saver active on the device.",
+        "variables": [
+            {
+                "name": "screen_saver_status",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "AutoRotateScreenStatus": {
+        "description": "Indicates whether the auto-rotate screen feature is enabled.",
+        "variables": [
+            {
+                "name": "auto_rotate_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "FontSizeSettings": {
+        "description": "Details about the current font size settings, including the ability to make text bigger or smaller using a slider.",
+        "variables": [
+            {
+                "name": "font_size_level",
+                "type": "Number"
+            }
+        ]
+    },
+    "DisplaySizeSettings": {
+        "description": "Details about the current display size settings, including the ability to make everything bigger or smaller using a slider.",
+        "variables": [
+            {
+                "name": "display_size_level",
+                "type": "Number"
+            }
+        ]
+    },
+    "TextAppearanceSettings": {
+        "description": "Settings related to text appearance, including bold text and high contrast text options.",
+        "variables": [
+            {
+                "name": "bold_text_enabled",
+                "type": "Boolean"
+            },
+            {
+                "name": "high_contrast_text_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ScreenTimeoutSetting": {
+        "description": "Indicates the current screen timeout setting selected in the device's display settings. The user can choose from several predefined durations, which determine how long the device remains active without user interaction before the screen turns off.",
+        "variables": [
+            {
+                "name": "timeout_duration",
+                "type": "Enum",
+                "enum_values": [
+                    "15 seconds",
+                    "30 seconds",
+                    "1 minute",
+                    "2 minutes",
+                    "5 minutes",
+                    "10 minutes",
+                    "30 minutes"
+                ]
+            }
+        ]
+    },
+    "SecuritySettings": {
+        "description": "Indicates the current security settings, including the status of 'find my device', 'security update date', 'google play system update date', and 'screen lock'.",
+        "variables": [
+            {
+                "name": "find_my_device",
+                "type": "Text"
+            },
+            {
+                "name": "security_update_date",
+                "type": "Date"
+            },
+            {
+                "name": "google_play_system_update_date",
+                "type": "Date"
+            },
+            {
+                "name": "screen_lock",
+                "type": "Enum",
+                "enum_values": [
+                    "None",
+                    "Swipe",
+                    "Pattern",
+                    "PIN",
+                    "Password"
+                ]
+            }
+        ]
+    },
+    "PrivacySettingsStatus": {
+        "description": "Indicates the status of various privacy settings on the device, including Camera access, Microphone access, Show passwords, Notifications on lock screen, Show media on lock screen, Android System Intelligence, Personalize using app data, and Show clipboard access.",
+        "variables": [
+            {
+                "name": "camera_access",
+                "type": "Boolean"
+            },
+            {
+                "name": "microphone_access",
+                "type": "Boolean"
+            },
+            {
+                "name": "show_passwords",
+                "type": "Boolean"
+            },
+            {
+                "name": "show_media_on_lock_screen",
+                "type": "Boolean"
+            },
+            {
+                "name": "android_system_intelligence",
+                "type": "Boolean"
+            },
+            {
+                "name": "personalize_using_app_data",
+                "type": "Boolean"
+            },
+            {
+                "name": "show_clipboard_access",
+                "type": "Boolean"
+            },
+            {
+                "name": "autofill_with_google",
+                "type": "Boolean"
+            },
+            {
+                "name": "usage_and_diagnostics",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "LocationPermissionStatus": {
+        "description": "Indicates the location permission status for each app, including the app name, permission level, and last accessed time if available.",
+        "variables": [
+            {
+                "name": "app_name",
+                "type": "Text"
+            },
+            {
+                "name": "permission_level",
+                "type": "Enum",
+                "enum_values": [
+                    "Allowed all the time",
+                    "Allowed only while in use",
+                    "Not allowed"
+                ]
+            },
+            {
+                "name": "last_accessed_time",
+                "type": "Time"
+            }
+        ]
+    },
+    "LocationServicesStatus": {
+        "description": "Indicates the status of various location services settings, including Earthquake alerts, Emergency Location Service, Google Location Sharing, Location Accuracy, Timeline, Trusted places, Wi-Fi scanning, and Bluetooth scanning.",
+        "variables": [
+            {
+                "name": "earthquake_alerts_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "emergency_location_service_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "location_accuracy_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "wifi_scanning_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "bluetooth_scanning_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            }
+        ]
+    },
+    "LocationSettingsStatus": {
+        "description": "Indicates the current status of location settings, including whether location services are enabled",
+        "variables": [
+            {
+                "name": "use_location_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "PasswordAndAccountsSettings": {
+        "description": "Details about the current settings in the 'Passwords & accounts' section, including the selected password manager, autofill service, accounts associated with the device owner, and the status of automatic data synchronization.",
+        "variables": [
+            {
+                "name": "accounts_for_owner",
+                "type": "Text"
+            },
+            {
+                "name": "auto_sync_status",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "DigitalWellbeingOverview": {
+        "description": "Overview of the user's digital wellbeing, including today's total screen time, number of unlocks, and notifications received.",
+        "variables": [
+            {
+                "name": "total_screen_time_today",
+                "type": "Text"
+            },
+            {
+                "name": "number_of_unlocks",
+                "type": "Text"
+            },
+            {
+                "name": "number_of_notifications",
+                "type": "Number"
+            }
+        ]
+    },
+    "DigitalWellbeingSettings": {
+        "description": "Indicates the current settings and statuses for digital wellbeing features, including app limits, bedtime mode, focus mode, screen time reminders, and heads up notifications.",
+        "variables": [
+            {
+                "name": "app_limits_status",
+                "type": "Text"
+            },
+            {
+                "name": "bedtime_mode_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "screen_time_reminders_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "heads_up_status",
+                "type": "Enum",
+                "enum_values": [
+                    "On",
+                    "Off"
+                ]
+            },
+            {
+                "name": "show_icon_in_app_list",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "ParentalControlsStatus": {
+        "description": "Indicates the current status and setup options for parental controls, including the ability to add content restrictions and set limits for children's screen time.",
+        "variables": [
+            {
+                "name": "parental_controls_description",
+                "type": "Text"
+            },
+            {
+                "name": "parental_controls_setup_status",
+                "type": "Text"
+            }
+        ]
+    },
+    "SystemLanguageAndInputSettings": {
+        "description": "Details about the current language and input settings in the System Settings tab, including preferred language, app languages, on-screen keyboard, physical keyboard, voice input, and text-to-speech output.",
+        "variables": [
+            {
+                "name": "preferred_language",
+                "type": "Text"
+            },
+            {
+                "name": "text_to_speech_output_engine",
+                "type": "Text"
+            },
+            {
+                "name": "text_to_speech_output_language",
+                "type": "Text"
+            },
+            {
+                "name": "text_to_speech_output_speech_rate",
+                "type": "Number"
+            },
+            {
+                "name": "text_to_speech_output_pitch",
+                "type": "Number"
+            },
+            {
+                "name": "spell_checker",
+                "type": "Boolean"
+            },
+            {
+                "name": "pointer_speed",
+                "type": "Number"
+            }
+        ]
+    },
+    "AppLanguageSettings": {
+        "description": "Details about the language settings for each app that supports language selection. This includes the app name and its current language setting, which can be 'System default' or a specific language.",
+        "variables": [
+            {
+                "name": "app_name",
+                "type": "Text"
+            },
+            {
+                "name": "language_setting",
+                "type": "Text"
+            }
+        ]
+    },
+    "PhysicalKeyboardSettings": {
+        "description": "Details about the current physical keyboard settings, including the default keyboard name, the status of the on-screen keyboard, and the availability of keyboard shortcuts.",
+        "variables": [
+            {
+                "name": "default_keyboard_name",
+                "type": "Text"
+            },
+            {
+                "name": "on_screen_keyboard_status",
+                "type": "Boolean"
+            },
+            {
+                "name": "keyboard_shortcuts",
+                "type": "Text"
+            }
+        ]
+    },
+    "OnScreenKeyboardSettings": {
+        "description": "Details about the on-screen keyboard settings, including the name of the keyboard, its description, and whether it is enabled.",
+        "variables": [
+            {
+                "name": "keyboard_name",
+                "type": "Text"
+            },
+            {
+                "name": "keyboard_description",
+                "type": "Text"
+            },
+            {
+                "name": "is_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "GboardLanguageSettings": {
+        "description": "Details about the current language settings with keyboard named 'Gboard', including the selected language and keyboard layout.",
+        "variables": [
+            {
+                "name": "selected_language",
+                "type": "Text"
+            },
+            {
+                "name": "preferences",
+                "type": "Text"
+            },
+            {
+                "name": "theme",
+                "type": "Text"
+            },
+            {
+                "name": "text_correction",
+                "type": "Text"
+            },
+            {
+                "name": "glide_typing",
+                "type": "Text"
+            },
+            {
+                "name": "voice_typing",
+                "type": "Text"
+            },
+            {
+                "name": "physical_keyboard",
+                "type": "Text"
+            },
+            {
+                "name": "clipboard",
+                "type": "Text"
+            },
+            {
+                "name": "dictionary",
+                "type": "Text"
+            },
+            {
+                "name": "ejojis_stickers_gifs",
+                "type": "Text"
+            },
+            {
+                "name": "privacy",
+                "type": "Text"
+            }
+        ]
+    },
+    "EmulatedDeviceBasicInfo": {
+        "description": "Basic information about the device, including the device name, Google account, and phone number.",
+        "variables": [
+            {
+                "name": "device_name",
+                "type": "Text"
+            },
+            {
+                "name": "google_account",
+                "type": "Text"
+            },
+            {
+                "name": "phone_number",
+                "type": "Text"
+            }
+        ]
+    },
+    "EmulatedDeviceDetails": {
+        "description": "Detailed information about the device, including SIM status, model, IMEI, and Android version.",
+        "variables": [
+            {
+                "name": "sim_status",
+                "type": "Text"
+            },
+            {
+                "name": "model",
+                "type": "Text"
+            },
+            {
+                "name": "imei",
+                "type": "Text"
+            },
+            {
+                "name": "android_version",
+                "type": "Text"
+            }
+        ]
+    },
+    "EmulatedDeviceIdentifiers": {
+        "description": "Detailed identifiers for the emulated device, including IMEI, Android version, IP address, Wi-Fi MAC address, Bluetooth address, uptime, and build number.",
+        "variables": [
+            {
+                "name": "ip_address",
+                "type": "Text"
+            },
+            {
+                "name": "wifi_mac_address",
+                "type": "Text"
+            },
+            {
+                "name": "bluetooth_address",
+                "type": "Text"
+            },
+            {
+                "name": "uptime",
+                "type": "Text"
+            },
+            {
+                "name": "build_number",
+                "type": "Text"
+            }
+        ]
+    }
+}

@@ -1,0 +1,858 @@
+{
+  "SearchContent": {
+    "description": "What you searched for in the search bar currently. It doesn't include the search history.",
+    "variables": [
+      {
+        "name": "content",
+        "type": "Text"
+      }
+    ]
+  },
+  "PostDetails": {
+    "description": "The details of the posts that appear in your feed or search results, including the title, author, content, created_at, whether you upvoted it, the number of upvotes, comments, shares,  whether you follow the author, and selected post order like [1, 2, 3]",
+    "variables": [
+      {
+        "name": "title",
+        "type": "Text"
+      },
+      {
+        "name": "author",
+        "type": "Text"
+      },
+      {
+        "name": "content",
+        "type": "Text"
+      },
+      {
+        "name": "created_at",
+        "type": "Date"
+      },
+      {
+        "name": "upvoted",
+        "type": "Boolean"
+      },
+      {
+        "name": "upvote_count",
+        "type": "Number"
+      },
+      {
+        "name": "comment_count",
+        "type": "Number"
+      },
+      {
+        "name": "share_count",
+        "type": "Number"
+      },
+      {
+        "name": "selected_post_order",
+        "type": "Number"
+      }
+    ]
+  },
+  "AnswerDetails": {
+      "description": "The details of the answers that appear in your feed or search results, including the title, author, content, created_at, whether you upvoted it, the number of upvotes, comments, shares,  whether you follow the author, and selected post order like [1, 2, 3]",
+      "variables": [
+        {
+          "name": "title",
+          "type": "Text"
+        },
+        {
+          "name": "author",
+          "type": "Text"
+        },
+        {
+          "name": "content",
+          "type": "Text"
+        },
+        {
+          "name": "created_at",
+          "type": "Date"
+        },
+        {
+          "name": "upvoted",
+          "type": "Boolean"
+        },
+        {
+          "name": "upvote_count",
+          "type": "Number"
+        },
+        {
+          "name": "comment_count",
+          "type": "Number"
+        },
+        {
+          "name": "share_count",
+          "type": "Number"
+        },
+        {
+          "name": "selected_post_order",
+          "type": "Number"
+        }
+      ]
+    },
+  "WritingPostContentNow": {
+    "description": "The content of the post you're currently writing",
+    "variables": [
+      {
+        "name": "content",
+        "type": "Text"
+      }
+    ]
+  },
+  "QuestionContent": {
+    "description": "The content of the question you're currently writing",
+    "variables": [
+      {
+        "name": "content",
+        "type": "Text"
+      }
+    ]
+  },
+  "SpaceSortingCriteria": {
+    "description": "Criteria to sort the space list which I participated in",
+    "variables": [
+      {
+        "name": "criteria",
+        "type": "Enum",
+        "enum_values": ["Alphabetical", "By Role", "Recently Visited"]
+      }
+    ]
+  },
+  "ThemeSetting": {
+    "description": "Theme setting of the app. Light, Dark, or Auto",
+    "variables": [
+      {
+        "name": "theme",
+        "type": "Enum",
+        "enum_values": ["Light", "Dark", "Auto"]
+      }
+    ]
+  },
+  "NotificationFilterOption": {
+    "description": "The type of notifications you want to filter. All notifications shows all notifications, and the rest shows notifications for each category.",
+    "variables": [
+      {
+        "name": "option",
+        "type": "Enum",
+        "enum_values": [
+          "All Notifications",
+          "Stories",
+          "Questions",
+          "Spaces",
+          "People updates",
+          "Comments and mentions",
+          "Upvotes",
+          "Your content",
+          "Your profile",
+          "Announcements",
+          "Earnings",
+          "Subscriptions"
+        ]
+      }
+    ]
+  },
+  "NotificationCount": {
+    "description": "The number of notifications displayed in the notification icon at the bottom of the screen.",
+    "variables": [
+      {
+        "name": "notification_count",
+        "type": "Number"
+      }
+    ]
+  },
+  "QuestionAnswerNotificationDetails": {
+    "description": "Details of each notification displayed on the notifications screen, including the time since the notification, the question title, and the responder's name.",
+    "variables": [
+      {
+        "name": "time_since_notification",
+        "type": "Text"
+      },
+      {
+        "name": "question_title",
+        "type": "Text"
+      },
+      {
+        "name": "responder_name",
+        "type": "Text"
+      }
+    ]
+  },
+  "NotificationCategoryCount": {
+    "description": "Represents the count of unread notifications for each category on the notifications screen. This includes categories like Stories, Questions, Spaces, and others, each with a specific count indicating the number of unread notifications.",
+    "variables": [
+      {
+        "name": "category_name",
+        "type": "Enum",
+        "enum_values": [
+          "All Notifications",
+          "Stories",
+          "Questions",
+          "Spaces",
+          "People updates",
+          "Comments and mentions",
+          "Upvotes",
+          "Your content",
+          "Your profile",
+          "Announcements",
+          "Earnings",
+          "Subscriptions"
+        ]
+      },
+      {
+        "name": "unread_count",
+        "type": "Number"
+      }
+    ]
+  },
+  "NotificationPushAlarmSettings": {
+    "description": "Status for the current notification push alarmsettings, taking each setting name and setting status as arguments. Examples of setting names include New answers, Requests, and the setting status is either enabled or disabled.",
+    "variables": [
+      {
+        "name": "setting_name",
+        "type": "Text"
+      },
+      {
+        "name": "setting_status",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "NotificationEmailSettings": {
+    "description": "Status for the current notification email settings, taking each setting name and setting status as arguments. Examples of setting names include New answers, Requests, and the setting status is either enabled or disabled.",
+    "variables": [
+      {
+        "name": "setting_name",
+        "type": "Text"
+      },
+      {
+        "name": "setting_status",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "SpaceCreationDetails": {
+    "description": "Details required for creating a new space, including the space name, its availability status, and a brief description.",
+    "variables": [
+      {
+        "name": "space_name",
+        "type": "Text"
+      },
+      {
+        "name": "name_availability",
+        "type": "Boolean"
+      },
+      {
+        "name": "brief_description",
+        "type": "Text"
+      }
+    ]
+  },
+  "PostVisibilitySetting": {
+    "description": "The visibility setting for the post being created, indicating who can see the post once it's published. Public means Others will se your identity alongside this question on your profile and in their feeds. Limited means your identity will be shown but this question will not appeaer in your followers' feeds or your profile",
+    "variables": [
+      {
+        "name": "visibility",
+        "type": "Enum",
+        "enum_values": ["Public", "Limited"]
+      }
+    ]
+  },
+  "UserProfileDetails": {
+    "description": "Details about the user's profile, including their name, number of followers, number of following, total content views, monthly content views, number of active spaces, and join date.",
+    "variables": [
+      {
+        "name": "user_name",
+        "type": "Text"
+      },
+      {
+        "name": "num_of_followers",
+        "type": "Number"
+      },
+      {
+        "name": "num_of_following",
+        "type": "Number"
+      },
+      {
+        "name": "total_content_views",
+        "type": "Text"
+      },
+      {
+        "name": "monthly_content_views",
+        "type": "Text"
+      },
+      {
+        "name": "active_spaces",
+        "type": "Number"
+      },
+      {
+        "name": "join_date",
+        "type": "Date"
+      }
+    ]
+  },
+  "YourContentStatsOverview": {
+    "description": "Overview of content statistics of me for a selected time period, including views, upvotes, comments, and shares (external). you can watch this page from Your content & stats page",
+    "variables": [
+      {
+        "name": "time_period",
+        "type": "Enum",
+        "enum_values": ["Last 7 days", "Last 30 days", "All time"]
+      },
+      {
+        "name": "views",
+        "type": "Number"
+      },
+      {
+        "name": "upvotes",
+        "type": "Number"
+      },
+      {
+        "name": "comments",
+        "type": "Number"
+      },
+      {
+        "name": "shares",
+        "type": "Number"
+      }
+    ]
+  },
+  "YourOwnContentStats": {
+    "description": "Statistics for all types of posts you've created. Does not include posts created by other people, including the title, views, upvotes, comments, and shares. Here, content includes post, answer, ask an so on.",
+    "variables": [
+      {
+        "name": "content_title",
+        "type": "Text"
+      },
+      {
+        "name": "content_views",
+        "type": "Number"
+      },
+      {
+        "name": "content_upvotes",
+        "type": "Text"
+      },
+      {
+        "name": "content_comments",
+        "type": "Text"
+      },
+      {
+        "name": "content_shares",
+        "type": "Text"
+      }
+    ]
+  },
+  "MyContentFilterSettings": {
+    "description": "Settings for filtering contents I've uploaded list based on type and the year it was posted. This includes the selected content type and the selected year. year_posted can be \"All years\" or specific year (2025, 2024, ...). Bookmark is not relevant to this predicate.",
+    "variables": [
+      {
+        "name": "content_type",
+        "type": "Enum",
+        "enum_values": ["All types", "Questions", "Answers", "Posts"]
+      },
+      {
+        "name": "year_posted",
+        "type": "Text"
+      }
+    ]
+  },
+  "MyContentSortMetric": {
+    "description": "The metric by which the contents I've uploaded list is currently sorted. This includes options like Views, Upvotes, Comments, Shares (external), and Date posted. The selected metric is indicated by a checkmark. Bookmark is not relevant to this predicate.",
+    "variables": [
+      {
+        "name": "selected_metric",
+        "type": "Enum",
+        "enum_values": [
+          "Views",
+          "Upvotes",
+          "Comments",
+          "Shares (external)",
+          "Date posted"
+        ]
+      }
+    ]
+  },
+  "SpaceOverview": {
+    "description": "Overview of the currently viewing space, including the space name, description, number of contributors, number of followers, and number_of_posts_last_week.",
+    "variables": [
+      {
+        "name": "space_name",
+        "type": "Text"
+      },
+      {
+        "name": "space_description",
+        "type": "Text"
+      },
+      {
+        "name": "number_of_contributors",
+        "type": "Number"
+      },
+      {
+        "name": "number_of_followers",
+        "type": "Number"
+      },
+      {
+        "name": "number_of_posts_last_week",
+        "type": "Number"
+      }
+    ]
+  },
+  "ContributorDetails": {
+    "description": "Details of each contributor in currently watching space, including their name, profile description, and role.",
+    "variables": [
+      {
+        "name": "contributor_name",
+        "type": "Text"
+      },
+      {
+        "name": "profile_description",
+        "type": "Text"
+      }
+    ]
+  },
+  "SpaceSpecificNotificationSettings": {
+    "description": "Settings for space-specific notifications, including the type of notifications received and the delivery method.",
+    "variables": [
+      {
+        "name": "space_name",
+        "type": "Text"
+      },
+      {
+        "name": "notification_type",
+        "type": "Enum",
+        "enum_values": ["All posts", "Personalized", "Off"]
+      },
+      {
+        "name": "push_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "email_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "SearchFilterSelection": {
+    "description": "Captures the current selection state of search result filters, including type, author, and time filters.",
+    "variables": [
+      {
+        "name": "type_filter",
+        "type": "Enum",
+        "enum_values": [
+          "All types",
+          "Questions",
+          "Answers",
+          "Posts",
+          "Profiles",
+          "Topics",
+          "Spaces"
+        ]
+      },
+      {
+        "name": "author_filter",
+        "type": "Enum",
+        "enum_values": ["All people", "People you follow", "Find people"]
+      },
+      {
+        "name": "time_filter",
+        "type": "Enum",
+        "enum_values": [
+          "All time",
+          "Past hour",
+          "Past day",
+          "Past week",
+          "Past month",
+          "Past year"
+        ]
+      }
+    ]
+  },
+  "QuestionSortingState": {
+    "description": "Captures the current sorting option when you are **on the question page**. The options are Recommended, Upvotes, and Recent.",
+    "variables": [
+      {
+        "name": "selected_sort_option",
+        "type": "Enum",
+        "enum_values": ["Recommended", "Upvotes", "Recent"]
+      }
+    ]
+  },
+  "QuestionFilterState": {
+    "description": "You can filter for answers or posts related to the current question, view all related posts, or select only the answers to your question.",
+    "variables": [
+      {
+        "name": "selected_option",
+        "type": "Enum",
+        "enum_values": ["All related", "Answers"]
+      }
+    ]
+  },
+  "BottomNavigationBarState": {
+    "description": "The current state of the bottom navigation bar. You can select the state from the following options: Home, Following, Answer, Spaces, and Notification Page. Others can be accessed from the left side menu opened from the user profile icon.",
+    "variables": [
+      {
+        "name": "selected_tab",
+        "type": "Enum",
+        "enum_values": [
+          "Home",
+          "Following",
+          "Answer",
+          "Spaces",
+          "Notification Page"
+        ]
+      }
+    ]
+  },
+  "CurrentLeftSideMenuState": {
+    "description": "The current state of the left side menu. You can select the state from the following options: Messages, Monitization, Your content & stats, Bookmarks, Drafts, and Profile. Others can be accessed from the bottom navigation bar. Messages page lists the messages you have received. Monitization page lists the monitization options you have. Your content & stats page lists the statistics of my content (I've written). Bookmarks page lists the contents you have bookmarked. Drafts page lists the contents you have drafted. Profile page lists your profile information.",
+    "variables": [
+      {
+        "name": "page_name",
+        "type": "Enum",
+        "enum_values": [
+          "Messages",
+          "Monitization",
+          "Your content & stats",
+          "Bookmarks",
+          "Drafts",
+          "Profile"
+        ]
+      }
+    ]
+  },
+  "QuestionAndSessionNotificationSettings": {
+    "description": "Status for the current notification settings, taking each setting name and setting status as arguments. Examples of setting names include New followers, Host updates, and the setting status is either enabled or disabled.",
+    "variables": [
+      {
+        "name": "setting_name",
+        "type": "Enum",
+        "enum_values": ["New followers", "Host updates"]
+      },
+      {
+        "name": "setting_status",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "UpvoteNotificationSettings": {
+    "description": "Status for the current upvote notification settings, indicating whether notifications are enabled or disabled for when someone upvotes the user's content.",
+    "variables": [
+      {
+        "name": "upvote_notifications_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "ContentShareNotificationSettings": {
+    "description": "Status for the current content share notification settings, indicating whether notifications are enabled or disabled for when someone shares the user's content.",
+    "variables": [
+      {
+        "name": "share_notifications_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "AnswerNotificationSettings": {
+    "description": "Status for the current answer notification settings, including whether notifications are enabled for 'Featured in Digest' and 'Thanks'. 'Featured in Digest' means Notify me when my answer is featured in a Quora Digest. Thanks means notify me when someon thanks me for my answer",
+    "variables": [
+      {
+        "name": "setting_name",
+        "type": "Enum",
+        "enum_values": ["Featured in Digest", "Thanks"]
+      },
+      {
+        "name": "setting_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "QuoraDigestSettings": {
+    "description": "Settings for the Quora Digest notifications, including whether the notifications are enabled and the frequency of the digest. The frequency can be set to 'As available', 'Daily', or 'Weekly'.",
+    "variables": [
+      {
+        "name": "notifications_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "digest_frequency",
+        "type": "Enum",
+        "enum_values": ["As available", "Daily", "Weekly"]
+      }
+    ]
+  },
+  "ThingsYouMightLikeNotificationSettings": {
+    "description": "Status for the current 'Things You Might Like' notification settings, including the setting name and whether the notification is enabled. Examples of setting names include Popular answers, Stories based on my activity, Recommended questions, and Space suggestions.",
+    "variables": [
+      {
+        "name": "setting_name",
+        "type": "Enum",
+        "enum_values": [
+          "Popular answers",
+          "Stories based on my activity",
+          "Recommended questions",
+          "Space suggestions"
+        ]
+      },
+      {
+        "name": "notification_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "SpaceGeneralNotificationSettings": {
+    "description": "Settings for notifications related to spaces, including space invites, spaces for you, new submissions, accepted submissions, and space updates. Each setting can be enabled or disabled. This setting applied for all spaces you are joined.",
+    "variables": [
+      {
+        "name": "space_invites_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "spaces_for_you_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "new_submissions_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "accepted_submissions_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "space_updates_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "GeneralQuestionsAndAnswersNotificationSettings": {
+    "description": "Status for the current notification settings in the 'General Questions & Answers' section, including notifications for 'New answers' and 'Requests'. Each setting indicates whether notifications are enabled or disabled.",
+    "variables": [
+      {
+        "name": "setting_name",
+        "type": "Enum",
+        "enum_values": ["New answer", "Requests"]
+      },
+      {
+        "name": "setting_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "MessageCommentsMentionsNotificationSettings": {
+    "description": "Status for the current notification settings related to message, comments and replies, mentions. It takes each setting name and setting status as arguments. Examples of setting names include Messages, Comments and replies, Mentions, and the setting status is either enabled or disabled.",
+    "variables": [
+      {
+        "name": "setting_name",
+        "type": "Enum",
+        "enum_values": ["Messages", "Comments and replies", "Mentions"]
+      },
+      {
+        "name": "setting_status",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "NetworkNotificationSettings": {
+    "description": "Status for the current network-related notification settings, including notifications for new followers, answer highlights, and question highlights. Each setting indicates whether notifications are enabled or disabled. Answer highlights and Question highlights are about people you follow.",
+    "variables": [
+      {
+        "name": "setting_name",
+        "type": "Enum",
+        "enum_values": [
+          "New followers",
+          "Answer highlights",
+          "Question highlights"
+        ]
+      },
+      {
+        "name": "setting_enabled",
+        "type": "Text"
+      }
+    ]
+  },
+  "SuggestedSpacesToFollow": {
+    "description": "Details of the spaces suggested for the user to follow, including the space name, number of followers, number of posts today, and a brief description of the space.",
+    "variables": [
+      {
+        "name": "space_name",
+        "type": "Text"
+      },
+      {
+        "name": "follower_count",
+        "type": "Text"
+      },
+      {
+        "name": "posts_today",
+        "type": "Text"
+      },
+      {
+        "name": "space_description",
+        "type": "Text"
+      }
+    ]
+  },
+  "QuestionLogStats": {
+    "description": "Details of the question log for a specific question on Quora, including the question, number of public followers, number of views, and time since last followed.",
+    "variables": [
+      {
+        "name": "question",
+        "type": "Text"
+      },
+      {
+        "name": "public_followers",
+        "type": "Number"
+      },
+      {
+        "name": "views",
+        "type": "Number"
+      },
+      {
+        "name": "last_followed_time",
+        "type": "Text"
+      }
+    ]
+  },
+  "QuestionLogs": {
+    "description": "A predicate on the contents of the question logs you are currently viewing. Question logs include all logs related to the question, such as the answers to the question, the person who asked the question, and so on. This predicate represents each log item individually. The `log_added_user` represents the user who wrote the log, `content` represents the content of the log, and log_date and log_time represent the time since the log was written.",
+    "variables": [
+      {
+        "name": "log_added_user",
+        "type": "Text"
+      },
+      {
+        "name": "contents",
+        "type": "Text"
+      },
+      {
+        "name": "log_date",
+        "type": "Date"
+      },
+      {
+        "name": "log_time",
+        "type": "Time"
+      }
+    ]
+  },
+  "TopicPageDetails": {
+    "description": "Details of the current topic page being viewed, including the topic name, number of followers, and available actions such as reading, answering, viewing most viewed writers, and related topics.",
+    "variables": [
+      {
+        "name": "topic_name",
+        "type": "Text"
+      },
+      {
+        "name": "follower_count",
+        "type": "Text"
+      },
+      {
+        "name": "current_tab",
+        "type": "Enum",
+        "enum_values": [
+          "Read",
+          "Answer",
+          "Most viewed writers",
+          "Related topics"
+        ]
+      }
+    ]
+  },
+  "MostViewedWriters": {
+    "description": "Details of the most viewed writers in the current topic, including their name, description, number of views, and number of answers.",
+    "variables": [
+      {
+        "name": "writer_name",
+        "type": "Text"
+      },
+      {
+        "name": "writer_description",
+        "type": "Text"
+      },
+      {
+        "name": "views",
+        "type": "Number"
+      },
+      {
+        "name": "answers_count",
+        "type": "Number"
+      }
+    ]
+  },
+  "RelatedTopicsList": {
+    "description": "List of related topics displayed on the current topic page, including each topic's name and follower count.",
+    "variables": [
+      {
+        "name": "related_topic_name",
+        "type": "Text"
+      },
+      {
+        "name": "related_topic_followers",
+        "type": "Number"
+      },
+      {
+        "name": "current_topic",
+        "type": "Text"
+      }
+    ]
+  },
+  "SelectedSpaceToPost": {
+    "description": "Represents the current state of space selection for posting content on Quora. It includes the default option `Everyone` and the list of suggested spaces available for selection. selected_space can be Everyone or specific space name.",
+    "variables": [
+      {
+        "name": "selected_space",
+        "type": "Text"
+      }
+    ]
+  },
+  "AnswerLogDetails": {
+    "description": "Details of a specific answer log entry on Quora, including the answer ID, author, content snippet, the date and time of posting, and answer options[Log, Remove bookmark, Share via, Thank, Donvote question, Report]",
+    "variables": [
+      {
+        "name": "answer_id",
+        "type": "Text"
+      },
+      {
+        "name": "author_name",
+        "type": "Text"
+      },
+      {
+        "name": "content_snippet",
+        "type": "Text"
+      },
+      {
+        "name": "posted_date",
+        "type": "Date"
+      },
+      {
+        "name": "posted_time",
+        "type": "Time"
+      },
+      {
+        "name": "answer_option",
+        "type": "Enum",
+        "enum_values": ["Log", "Remove bookmark", "Share via", "Thank", "Donvote question", "Report"]
+      }
+    ]
+  },
+  "SpaceSubmissionRules": {
+    "description": "Details about the submission rules for a specific space on Quora, including the space name and submission rule description.",
+    "variables": [
+      {
+        "name": "space_name",
+        "type": "Text"
+      },
+      {
+        "name": "submission rule description",
+        "type": "Text"
+      }
+    ]
+  },
+  "TopicPostsSortOption": {
+    "description": "The current sorting option for the posts displayed on the topic page. Options include 'Recent' and 'Top'. default setting of this is Recent.",
+    "variables": [
+      {
+        "name": "selected_sort_option",
+        "type": "Enum",
+        "enum_values": ["Recent", "Top"]
+      }
+    ]
+  }
+}

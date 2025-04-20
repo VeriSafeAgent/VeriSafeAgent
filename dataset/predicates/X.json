@@ -1,0 +1,418 @@
+{
+    "BottomNavigation": {
+        "description": "Represents the current state of the bottom navigation bar, including the active tab and available options.",
+        "variables": [
+            {
+                "name": "active_tab",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "Grok",
+                    "Communities",
+                    "Notifications",
+                    "Messages"
+                ]
+            }
+        ]
+    },
+    "CommunitiesNavigation": {
+        "description": "Represents the current state of the navigation barin communities tab, including Home and Explore menu",
+        "variables": [
+            {
+                "name": "menu_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "Explore"
+                ]
+            }
+        ]
+    },
+    "CategoryFilters": {
+        "description": "Indicates the state of category filters in the Communities tab, showing which categories are available",
+        "variables": [
+            {
+                "name": "category_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Sports",
+                    "Technology",
+                    "Art",
+                    "Entertainment"
+                ]
+            }
+        ]
+    },
+    "PostDetails": {
+        "description": "Details of each post displayed in the Communities tab, including the post title, author, time since posting, and engagement metrics such as replies, reposts, likes, views, and name of community if the post is written in particular community",
+        "variables": [
+            {
+                "name": "post_title",
+                "type": "Text"
+            },
+            {
+                "name": "author_name",
+                "type": "Text"
+            },
+            {
+                "name": "time_since_posting",
+                "type": "Text"
+            },
+            {
+                "name": "replies_count",
+                "type": "Number"
+            },
+            {
+                "name": "reposts_count",
+                "type": "Number"
+            },
+            {
+                "name": "likes_count",
+                "type": "Number"
+            },
+            {
+                "name": "is_liked",
+                "type": "Boolean"
+            },
+            {
+                "name": "views_count",
+                "type": "Number"
+            },
+            {
+                "name": "community_name_from_post",
+                "type": "Text"
+            },
+            {
+                "name": "add_bookmark",
+                "type": "Boolean"
+            },
+            {
+                "name": "post_order",
+                "type": "Number"
+            }
+        ]
+    },
+    "CommunityOverview": {
+        "description": "Represents the overview details of a community page, including the community name, category, member count, and join status.",
+        "variables": [
+            {
+                "name": "community_name",
+                "type": "Text"
+            },
+            {
+                "name": "category",
+                "type": "Text"
+            },
+            {
+                "name": "member_count",
+                "type": "Text"
+            },
+            {
+                "name": "join_community_status",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "CommunityJoinPage": {
+        "description": "Represents the state of the 'Join Community' page, the action button to agree and join the community.",
+        "variables": [
+            {
+                "name": "agree_and_join_button",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "PostSortingOption": {
+        "description": "Represents the current sorting option selected for viewing posts within a community. The options available are 'Most Liked', 'Most Recent', and 'Trending'. This predicate helps in determining how the posts are organized and displayed to the user.",
+        "variables": [
+            {
+                "name": "sorting_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Most Liked",
+                    "Most Recent",
+                    "Trending"
+                ]
+            }
+        ]
+    },
+    "MessageRequestSettings": {
+        "description": "Represents the settings for who can send message requests to the user. The options include 'No one', 'Verified users', and 'Everyone'. This setting determines the level of privacy the user has regarding incoming message requests.",
+        "variables": [
+            {
+                "name": "message_request_option",
+                "type": "Enum",
+                "enum_values": [
+                    "No one",
+                    "Verified users",
+                    "Everyone"
+                ]
+            }
+        ]
+    },
+    "AudioVideoCallSettings": {
+        "description": "Indicates whether the user has enabled audio and video calling features. This setting allows the user to take messaging to the next level by enabling or disabling audio and video calls.",
+        "variables": [
+            {
+                "name": "audio_video_call_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "AudioVideoCallPermissionSettings": {
+        "description": "Represents the settings for who can make audio and video calls to the user. The options include 'People in your address book', 'People you follow', 'Verified users', and 'Everyone'. This setting determines who is allowed to call the user.",
+        "variables": [
+            {
+                "name": "call_permission_option",
+                "type": "Enum",
+                "enum_values": [
+                    "People in your address book",
+                    "People you follow",
+                    "Verified users",
+                    "Everyone"
+                ]
+            }
+        ]
+    },
+    "LowQualityMessageFilter": {
+        "description": "Represents the setting for filtering low-quality messages. When enabled, it hides message requests detected as spam or low-quality, sending them to a separate inbox.",
+        "variables": [
+            {
+                "name": "low_quality_filter_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "UserMenuOptions": {
+        "description": "Represents the menu options available to the user in the side menu, including Profile, Premium, Bookmarks, Jobs, Lists, Spaces, Monetization, Settings and privacy, and Help Center.",
+        "variables": [
+            {
+                "name": "menu_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Profile",
+                    "Premium",
+                    "Bookmarks",
+                    "Jobs",
+                    "Lists",
+                    "Spaces",
+                    "Monetization",
+                    "Settings and privacy",
+                    "Help Center"
+                ]
+            }
+        ]
+    },
+    "UserSettingsOverview": {
+        "description": "Represents the overview of the settings page for a user in the X app, including the user's account name and the list of available settings categories with their descriptions.",
+        "variables": [
+            {
+                "name": "settings_category",
+                "type": "Enum",
+                "enum_values": [
+                    "Your account",
+                    "Security and account access",
+                    "Premium",
+                    "Monetization",
+                    "Privacy and safety",
+                    "Notifications",
+                    "Accessibility",
+                    "display and languages",
+                    "Additional resources",
+                    "Proxy",
+                    "Accessibility, display and languages"
+                ]
+            }
+        ]
+    },
+    "PrivacyAndSafetySettings": {
+        "description": "Represents the current state of the 'Privacy and Safety' settings page in the X app. It includes various privacy-related options that the user can manage, such as 'Your X activity', 'Audience and tagging', 'Your posts', 'Content you see', 'Mute and block', 'Direct messages', 'Spaces', 'Discoverability and contacts', 'Data sharing and personalization', 'Ads preferences', and 'Inferred identity'. Each option is associated with a description that explains its purpose.",
+        "variables": [
+            {
+                "name": "setting_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Your X activity",
+                    "Audience and tagging",
+                    "Your posts",
+                    "Content you see",
+                    "Mute and block",
+                    "Direct messages",
+                    "Spaces",
+                    "Discoverability and contacts",
+                    "Data sharing and personalization",
+                    "Ads preferences",
+                    "Inferred identity"
+                ]
+            }
+        ]
+    },
+    "ContentVisibilitySettings": {
+        "description": "Represents the current state of the 'Content you see' settings page in the X app. It includes options that allow the user to customize their content visibility preferences, such as 'Explore settings', 'Search settings', and 'Sensitive media'.",
+        "variables": [
+            {
+                "name": "setting_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Explore settings",
+                    "Search settings",
+                    "Sensitive media"
+                ]
+            }
+        ]
+    },
+    "SensitiveMediaSettings": {
+        "description": "Represents the user's preferences for handling sensitive media on the X app. It includes the type of sensitive content and the action to be taken when such content is encountered.",
+        "variables": [
+            {
+                "name": "content_type",
+                "type": "Enum",
+                "enum_values": [
+                    "Graphic violence",
+                    "Adult content",
+                    "Other"
+                ]
+            }
+        ]
+    },
+    "GraphicViolenceSettings": {
+        "description": "Check the user's setting for content, expecially for the sensitive media graphic violence. It has three types, 'Warn', 'Show all', and 'Never show this'",
+        "variables": [
+            {
+                "name": "graphic_violence_media_setting",
+                "type": "Enum",
+                "enum_values": [
+                    "Warn",
+                    "Show all",
+                    "Never show this"
+                ]
+            }
+        ]
+    },
+    "AccessibilityDisplayLanguagesSettings": {
+        "description": "Represents the current state of the 'Accessibility, display and languages' settings page in the Xcom app. It includes options for managing accessibility, display, languages, and data usage, each with a description of its impact on the user's experience.",
+        "variables": [
+            {
+                "name": "setting_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Accessibility",
+                    "Display",
+                    "Languages",
+                    "Data usage"
+                ]
+            }
+        ]
+    },
+    "LanguageSettingsOverview": {
+        "description": "Represents the overview of the language settings page in the X app, including the user's account name and the available language options with their descriptions.",
+        "variables": [
+            {
+                "name": "Language_setting_type",
+                "type": "Enum",
+                "enum_values": [
+                    "preferred_language",
+                    "Other languages"
+                ]
+            }
+        ]
+    },
+    "LanguageSelection": {
+        "description": "Represents the current state of the language selection page in the X app. It includes the available languages displayed",
+        "variables": [
+            {
+                "name": "available_languages",
+                "type": "Enum",
+                "enum_values": [
+                    "English",
+                    "Korean",
+                    "British English"
+                ]
+            }
+        ]
+    },
+    "CreateContentOptions": {
+        "description": "Represents the options available for creating new content, including 'Go Live', 'Spaces', 'Photos', and 'Post'.",
+        "variables": [
+            {
+                "name": "content_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Go Live",
+                    "Spaces",
+                    "Photos",
+                    "Post"
+                ]
+            }
+        ]
+    },
+    "PostCreationSettings": {
+        "description": "Represents the settings and options available when creating a new post in the X app. This includes the audience selection, the content of the post, who can reply, and additional media options.",
+        "variables": [
+            {
+                "name": "audience_selection",
+                "type": "Text"
+            },
+            {
+                "name": "post_content",
+                "type": "Text"
+            },
+            {
+                "name": "media_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Photos",
+                    "GIF",
+                    "Poll",
+                    "Geo Tag"
+                ]
+            }
+        ]
+    },
+    "LocationTaggingScreen": {
+        "description": "Represents the state of the location tagging screen in the X app, including the search input and the list of suggested locations. This screen allows the user to search for and select a location to tag.",
+        "variables": [
+            {
+                "name": "search_input",
+                "type": "Text"
+            },
+            {
+                "name": "suggested_locations",
+                "type": "Text"
+            }
+        ]
+    },
+    "ReplyPermissionSettings": {
+        "description": "Represents the settings for who can reply to a post in the X app. The user can choose from four options: 'Everyone', 'Verified accounts', 'Accounts you follow', and 'Only accounts you mention'. This setting determines the audience that is allowed to reply to the user's post.",
+        "variables": [
+            {
+                "name": "reply_permission_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Everyone",
+                    "Verified accounts",
+                    "Accounts you follow",
+                    "Only accounts you mention"
+                ]
+            }
+        ]
+    },
+    "PostCreationDoneButton": {
+        "description": "Represents the uploading new post in the X app. It means creating post is done, and the button has 'Post' text.",
+        "variables": [
+            {
+                "name": "Post_create_done",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "PostReplyCreation": {
+        "description": "Creation of reply on post in the X app",
+        "variables": [
+            {
+                "name": "Reply_done",
+                "type": "Boolean"
+            }
+        ]
+    }
+}

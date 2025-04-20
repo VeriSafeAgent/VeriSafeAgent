@@ -1,0 +1,11 @@
+pillow==11.0.0
+openai
+python-dotenv
+z3-solver
+pytest
+pytest-cov
+numpy
+termcolor==2.5.0
+python-Levenshtein
+python-dateutil
+graphviz

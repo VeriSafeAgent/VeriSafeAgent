@@ -1,0 +1,581 @@
+{
+    "UpperQuickMenuOptions": {
+        "description": "The options available in the upper quick menu like notifications, search button and account setting.",
+        "variables": [
+            {
+                "name": "selected_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Notifications",
+                    "Search",
+                    "Account"
+                ]
+            }
+        ]
+    },
+    "QuickCategorySelection": {
+        "description": "Indicates the selected music or podcast category from the top navigation buttons. The categories available are 'Podcasts', 'Feel good', 'Workout', and 'Energize'.",
+        "variables": [
+            {
+                "name": "selected_category",
+                "type": "Enum",
+                "enum_values": [
+                    "Podcasts",
+                    "Feel good",
+                    "Workout",
+                    "Energize",
+                    "None"
+                ]
+            }
+        ]
+    },
+    "CurrentTrackInfo": {
+        "description": "Details of the currently playing track, including the track title and the artist(s) performing it.",
+        "variables": [
+            {
+                "name": "track_title",
+                "type": "Text"
+            },
+            {
+                "name": "track_artist",
+                "type": "Text"
+            }
+        ]
+    },
+    "NavigationSection": {
+        "description": "The current section of the app the user is in, as indicated by the bottom navigation bar. Options include 'Home', 'Samples', 'Explore', and 'Library'.",
+        "variables": [
+            {
+                "name": "current_section",
+                "type": "Enum",
+                "enum_values": [
+                    "Home",
+                    "Samples",
+                    "Explore",
+                    "Library"
+                ]
+            }
+        ]
+    },
+    "SocialInteractionMetrics": {
+        "description": "Metrics indicating the level of social interaction with the current video, including the number of likes and comments.",
+        "variables": [
+            {
+                "name": "num_likes",
+                "type": "Number"
+            },
+            {
+                "name": "num_comments",
+                "type": "Number"
+            }
+        ]
+    },
+    "SamplesMenuOptions": {
+        "description": "The options available in the samples like share, shorts, save and play.",
+        "variables": [
+            {
+                "name": "selected_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Like",
+                    "Comment",
+                    "Save",
+                    "Share",
+                    "Play",
+                    "Shorts"
+                ]
+            }
+        ]
+    },
+    "MajorCategorySelection": {
+        "description": "Indicates the selected music category from the top navigation buttons. The categories available are 'New releases', 'Charts', and 'Moods & genres'.",
+        "variables": [
+            {
+                "name": "selected_category",
+                "type": "Enum",
+                "enum_values": [
+                    "New releases",
+                    "Charts",
+                    "Moods & genres"
+                ]
+            }
+        ]
+    },
+    "SearchInterfaceState": {
+        "description": "Represents the state of the search interface in the YT Music app, including the current search query, available search options, and the active section in the navigation bar.",
+        "variables": [
+            {
+                "name": "search_query",
+                "type": "Text"
+            },
+            {
+                "name": "voice_search_enabled",
+                "type": "Boolean"
+            },
+            {
+                "name": "sound_search_enabled",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "SelectedKeyword": {
+        "description": "The keyword selected by the user from the list of suggested keywords during a search operation.",
+        "variables": [
+            {
+                "name": "selected_keyword",
+                "type": "Text"
+            }
+        ]
+    },
+    "TopSongsPreview": {
+        "description": "Details of the top songs displayed in the charts, including their rank, title, and artist. This information is essential for understanding the current music trends in the selected region.",
+        "variables": [
+            {
+                "name": "song_rank",
+                "type": "Number"
+            },
+            {
+                "name": "song_title",
+                "type": "Text"
+            },
+            {
+                "name": "song_artist",
+                "type": "Text"
+            }
+        ]
+    },
+    "ChartsRegionSelection": {
+        "description": "Indicates the selected region for the music charts being viewed. This is crucial for determining the geographical context of the charts displayed.",
+        "variables": [
+            {
+                "name": "selected_region",
+                "type": "Text"
+            }
+        ]
+    },
+    "SubCategorySelection": {
+        "description": "Indicates the selected music category from the 'Moods & genres' section. The categories available are 'Energy Boosters', 'Chill', 'Commute', 'Dance & Electronic', 'Workout', and 'Focus'.",
+        "variables": [
+            {
+                "name": "selected_category",
+                "type": "Enum",
+                "enum_values": [
+                    "Energy Boosters",
+                    "Chill",
+                    "Commute",
+                    "Dance & Electronic",
+                    "Workout",
+                    "Focus"
+                ]
+            }
+        ]
+    },
+    "TopSongsChart": {
+        "description": "Details of the top songs in the 'Top 100 Songs South Korea' chart, including their rank, title, artist, and duration. This information is essential for understanding the current music trends in South Korea.",
+        "variables": [
+            {
+                "name": "song_rank",
+                "type": "Number"
+            },
+            {
+                "name": "song_title",
+                "type": "Text"
+            },
+            {
+                "name": "song_artist",
+                "type": "Text"
+            },
+            {
+                "name": "song_duration",
+                "type": "Time"
+            }
+        ]
+    },
+    "LibrarySectionState": {
+        "description": "Represents the state of the Library section in the YT Music app, including the selected category and the list of displayed items with their details.",
+        "variables": [
+            {
+                "name": "current_major_category",
+                "type": "Enum",
+                "enum_values": [
+                    "Library",
+                    "Downloads",
+                    "Device files"
+                ]
+            },
+            {
+                "name": "selected_sub_category",
+                "type": "Enum",
+                "enum_values": [
+                    "Playlists",
+                    "Songs",
+                    "Albums",
+                    "Artists",
+                    "Podcasts",
+                    "None"
+                ]
+            },
+            {
+                "name": "displayed_items",
+                "type": "Text"
+            }
+        ]
+    },
+    "SelectionoFAlbum": {
+        "description": "When You select the song on the album",
+        "variables": [
+            {
+                "name": "order_from_top",
+                "type": "Number"
+            }
+        ]
+    },
+    "HistoryScreenState": {
+        "description": "Represents the state of the History screen in the YT Music app, including the title of the screen, the list of songs displayed with their titles, artists, and additional information, and the current section in the navigation bar.",
+        "variables": [
+            {
+                "name": "screen_title",
+                "type": "Text"
+            },
+            {
+                "name": "singer_title",
+                "type": "Text"
+            },
+            {
+                "name": "song_title",
+                "type": "Text"
+            }
+        ]
+    },
+    "UserAccountInfo": {
+        "description": "Details of the user's account currently logged into the YT Music app, including the user's name and username.",
+        "variables": [
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "user_username",
+                "type": "Text"
+            }
+        ]
+    },
+    "AccountOptions": {
+        "description": "The list of options available in the user's account section, including 'Your channel', 'Downloads', 'History', 'Your Recap', 'Badges', 'Paid memberships', 'Switch account', 'Settings', and 'Help & feedback'.",
+        "variables": [
+            {
+                "name": "options",
+                "type": "Enum",
+                "enum_values": [
+                    "Your channel",
+                    "Downloads",
+                    "History",
+                    "Your Recap",
+                    "Badges",
+                    "Paid memberships",
+                    "Switch account",
+                    "Settings",
+                    "Help & feedback"
+                ]
+            }
+        ]
+    },
+    "SettingsMenuOptions": {
+        "description": "Represents the available options in the settings menu of the YT Music app. These options allow the user to configure various aspects of the app, such as family settings, general preferences, playback options, data saving, downloads and storage, notifications, privacy and data, recommendations, paid memberships, and information about YouTube Music.",
+        "variables": [
+            {
+                "name": "available_settings_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Family Center",
+                    "General",
+                    "Playback",
+                    "Data saving",
+                    "Downloads & storage",
+                    "Notifications",
+                    "Privacy & data",
+                    "Recommendations",
+                    "Paid memberships",
+                    "About YouTube Music"
+                ]
+            }
+        ]
+    },
+    "UserProfileState": {
+        "description": "Represents the state of the user profile screen in the YT Music app, including the user's name, recent activity, and the current playback status.",
+        "variables": [
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "recent_activity",
+                "type": "Text"
+            }
+        ]
+    },
+    "ExploreMusicCategory": {
+        "description": "For various sections in explore tab, such as 'New releases', 'Charts', and 'Moods & genres'.",
+        "variables": [
+            {
+                "name": "category_name",
+                "type": "Enum",
+                "enum_values": [
+                    "New releases",
+                    "Charts",
+                    "Moods & genres"
+                ]
+            }
+        ]
+    },
+    "ChartsRegionAndContent": {
+        "description": "Represents the current state of the Charts section in the YT Music app, including the selected region",
+        "variables": [
+            {
+                "name": "selected_region",
+                "type": "Text"
+            }
+        ]
+    },
+    "TrackOptionsMenu": {
+        "description": "Represents the options available for a specific track in the YT Music app, including the track title, artist, and available actions such as like, dislike, play next, save to playlist, share, start radio, add to queue, save to library, download, go to album, go to artist, view song credits, and pin to speed dial.",
+        "variables": [
+            {
+                "name": "track_title",
+                "type": "Text"
+            },
+            {
+                "name": "track_artist",
+                "type": "Text"
+            },
+            {
+                "name": "available_actions",
+                "type": "Enum",
+                "enum_values": [
+                    "Like",
+                    "Dislike",
+                    "Play next",
+                    "Save to playlist",
+                    "Share",
+                    "Start radio",
+                    "Add to queue",
+                    "Save to library",
+                    "Download",
+                    "Go to album",
+                    "Go to artist",
+                    "View song credits",
+                    "Pin to Speed dial"
+                ]
+            }
+        ]
+    },
+    "AlbumPageDetails": {
+        "description": "Details of the album page currently being viewed in the YT Music app, including the artist name, album title, release year, and available actions such as download, save to library, play all, and share.",
+        "variables": [
+            {
+                "name": "artist_name",
+                "type": "Text"
+            },
+            {
+                "name": "album_title",
+                "type": "Text"
+            },
+            {
+                "name": "release_year",
+                "type": "Number"
+            },
+            {
+                "name": "available_actions",
+                "type": "Enum",
+                "enum_values": [
+                    "Download",
+                    "Save to library",
+                    "Play all",
+                    "Share",
+                    "Action menu"
+                ]
+            }
+        ]
+    },
+    "SocialInteractionOptions": {
+        "description": "Represents the social interaction options available for the current track, including the number of likes, dislikes, comments, and options to save, switch to video, and share.",
+        "variables": [
+            {
+                "name": "num_likes",
+                "type": "Number"
+            },
+            {
+                "name": "num_comments",
+                "type": "Number"
+            },
+            {
+                "name": "interaction_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Like",
+                    "Dislike",
+                    "Comment",
+                    "Save",
+                    "Switch to video",
+                    "Share"
+                ]
+            }
+        ]
+    },
+    "DownloadSettings": {
+        "description": "Represents the current download settings, including options for using the SD card, showing device files, downloading over Wi-Fi only, and enabling smart downloads.",
+        "variables": [
+            {
+                "name": "use_sd_card",
+                "type": "Boolean"
+            },
+            {
+                "name": "show_device_files",
+                "type": "Boolean"
+            },
+            {
+                "name": "download_over_wifi_only",
+                "type": "Boolean"
+            },
+            {
+                "name": "smart_downloads",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "NotificationSettings": {
+        "description": "Status for the current notification settings, taking each setting name and setting status as arguments. Examples of setting names include Music recommendation notifications, Playlist update notifications, Podcast recommendation notifications, Product update notifications, Recap notifications, Event notifications, and New badges. The setting status is either enabled or disabled.",
+        "variables": [
+            {
+                "name": "setting_name",
+                "type": "Text"
+            },
+            {
+                "name": "setting_status",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "PlaybackSettings": {
+        "description": "Represents the current state of the playback settings in the YT Music app, including the status of external device playback, double-tap seek duration, and dynamic queue.",
+        "variables": [
+            {
+                "name": "external_device_playback",
+                "type": "Boolean"
+            },
+            {
+                "name": "double_tap_seek_duration",
+                "type": "Number"
+            },
+            {
+                "name": "dynamic_queue",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "PlaylistInfo": {
+        "description": "Represents the playlist in library tab in the YT Music app, with the playlist name.",
+        "variables": [
+            {
+                "name": "Playlist_name_library",
+                "type": "Text"
+            }
+        ]
+    },
+    "PlaylistDetails": {
+        "description": "Details of the playlist currently being viewed in the YT Music app, including the playlist title, creator's name, and available actions such as download, edit, play all, share, and action menu.",
+        "variables": [
+            {
+                "name": "playlist_title",
+                "type": "Text"
+            },
+            {
+                "name": "available_actions",
+                "type": "Enum",
+                "enum_values": [
+                    "Download",
+                    "Edit playlist",
+                    "PLAY ALL",
+                    "Share",
+                    "Action menu",
+                    "Add_a_song"
+                ]
+            }
+        ]
+    },
+    "PlaylistEditingState": {
+        "description": "Represents the state of the playlist editing screen in the YT Music app, including the playlist title, privacy setting, number of tracks, and the details of each track in the playlist.",
+        "variables": [
+            {
+                "name": "playlist_title",
+                "type": "Text"
+            },
+            {
+                "name": "playlist_Description",
+                "type": "Text"
+            },
+            {
+                "name": "privacy_setting",
+                "type": "Enum",
+                "enum_values": [
+                    "Public",
+                    "Private",
+                    "Unlisted"
+                ]
+            }
+        ]
+    },
+    "SearchResultsState": {
+        "description": "Represents the state of the search results screen in the YT Music app, including the suggested search terms, and the list of displayed songs with their titles, artists, and saving the song to playlist",
+        "variables": [
+            {
+                "name": "suggested_terms",
+                "type": "Text"
+            },
+            {
+                "name": "song_title",
+                "type": "Text"
+            },
+            {
+                "name": "song_artist",
+                "type": "Text"
+            },
+            {
+                "name": "save_to_the_playlist_from_search",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "CurrentTrackPlaybackState": {
+        "description": "Represents the current playback state of the track in the YT Music app, including the track title, artist, current playback time, total duration, and playback controls status.",
+        "variables": [
+            {
+                "name": "track_title",
+                "type": "Text"
+            },
+            {
+                "name": "track_artist",
+                "type": "Text"
+            },
+            {
+                "name": "current_playback_time",
+                "type": "Time"
+            },
+            {
+                "name": "total_duration",
+                "type": "Time"
+            },
+            {
+                "name": "playback_controls",
+                "type": "Enum",
+                "enum_values": [
+                    "Shuffle off",
+                    "Previous track",
+                    "Pause",
+                    "Next track",
+                    "Repeat off"
+                ]
+            }
+        ]
+    }
+}

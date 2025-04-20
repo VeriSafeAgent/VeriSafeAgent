@@ -1,0 +1,422 @@
+{
+    "BusinessListing": {
+        "description": "Details of a business listing displayed on the app screen, including the name, rating, review count, and location.",
+        "variables": [
+            {
+                "name": "business_name",
+                "type": "Text"
+            },
+            {
+                "name": "business_rating",
+                "type": "Text"
+            },
+            {
+                "name": "review_count",
+                "type": "Text"
+            },
+            {
+                "name": "business_location",
+                "type": "Text"
+            }
+        ]
+    },
+    "CategoryShortcuts": {
+        "description": "The categories available for quick search shortcuts on the app screen.",
+        "variables": [
+            {
+                "name": "shortcut_categories",
+                "type": "Enum",
+                "enum_values": [
+                    "Restaurants",
+                    "Auto Repair",
+                    "Movers",
+                    "Plumbers"
+                ]
+            }
+        ]
+    },
+    "SearchBarPlaceholder": {
+        "description": "The placeholder text in the search bar, which suggests possible search queries to the user. Also placeholder_location's Current Location means near by me.",
+        "variables": [
+            {
+                "name": "placeholder_text",
+                "type": "Text"
+            },
+            {
+                "name": "placeholder_location",
+                "type": "Text"
+            }
+        ]
+    },
+    "BusinessDetails": {
+        "description": "Details of the business listing displayed on the app screen, including the name, rating, review count, type of cuisine, operating hours, and a brief description.",
+        "variables": [
+            {
+                "name": "business_name",
+                "type": "Text"
+            },
+            {
+                "name": "business_rating",
+                "type": "Text"
+            },
+            {
+                "name": "review_count",
+                "type": "Text"
+            },
+            {
+                "name": "cuisine_type",
+                "type": "Text"
+            },
+            {
+                "name": "operating_hours",
+                "type": "Text"
+            },
+            {
+                "name": "business_description",
+                "type": "Text"
+            },
+            {
+                "name": "business_phone_number",
+                "type": "Text"
+            },
+            {
+                "name": "business_website",
+                "type": "Text"
+            }
+        ]
+    },
+    "UserRecommendation": {
+        "description": "User's recommendation status for the business, including the question and the options to respond.",
+        "variables": [
+            {
+                "name": "recommendation_question",
+                "type": "Text"
+            },
+            {
+                "name": "recommendation_options",
+                "type": "Enum",
+                "enum_values": [
+                    "Yes",
+                    "No"
+                ]
+            }
+        ]
+    },
+    "RecentlyViewedBusiness": {
+        "description": "Details of the business that the user has recently viewed, including the business name and address.",
+        "variables": [
+            {
+                "name": "recent_business_name",
+                "type": "Text"
+            },
+            {
+                "name": "recent_business_address",
+                "type": "Text"
+            }
+        ]
+    },
+    "CollectionOverview": {
+        "description": "Overview of the user's collections, including the number of items in 'My Bookmarks' and the status of the collection.",
+        "variables": [
+            {
+                "name": "collection_name",
+                "type": "Text"
+            },
+            {
+                "name": "bookmark_count",
+                "type": "Number"
+            },
+            {
+                "name": "collection_status",
+                "type": "Text"
+            }
+        ]
+    },
+    "BusinessReviewDetails": {
+        "description": "Details of the business review displayed on the app screen, including the business name, review count, location, and review text.",
+        "variables": [
+            {
+                "name": "business_name",
+                "type": "Text"
+            },
+            {
+                "name": "review_count",
+                "type": "Number"
+            },
+            {
+                "name": "business_location",
+                "type": "Text"
+            },
+            {
+                "name": "review_text",
+                "type": "Text"
+            }
+        ]
+    },
+    "BottomNavigationBar": {
+        "description": "Options available in the bottom navigation bar of the Yelp app, including Search, Projects, Me, Collections, and More. Indicates the presence of notifications on specific sections.",
+        "variables": [
+            {
+                "name": "navigation_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Search",
+                    "Projects",
+                    "Me",
+                    "Collections",
+                    "More"
+                ]
+            },
+            {
+                "name": "notification_presence",
+                "type": "Boolean"
+            }
+        ]
+    },
+    "MoreSectionOptions": {
+        "description": "Options available in the 'More' section of the Yelp app, including actions like Add Review, Add a photo or video, Check In, Messages, Notifications, Activity Feed, Recently viewed, Add a Business, and Explore Yelp for Business.",
+        "variables": [
+            {
+                "name": "option_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Add Review",
+                    "Add a photo or video",
+                    "Check In",
+                    "Messages",
+                    "Notifications",
+                    "Activity Feed",
+                    "Recently viewed",
+                    "Add a Business",
+                    "Explore Yelp for Business",
+                    "Yelp Elite Squad",
+                    "Friend Check-Ins",
+                    "Talk",
+                    "Events",
+                    "Settings",
+                    "Support Center"
+                ]
+            }
+        ]
+    },
+    "SettingsOptions": {
+        "description": "The available settings options on the Yelp app's settings page, indicating the various user preferences and account management features accessible from this screen.",
+        "variables": [
+            {
+                "name": "option_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Push Notifications",
+                    "Email Notifications",
+                    "My Locations",
+                    "Location Services",
+                    "Clear History",
+                    "Distance Units",
+                    "Privacy Settings",
+                    "Security Settings",
+                    "Mobile App Preferences",
+                    "Close Account",
+                    "Log Out"
+                ]
+            }
+        ]
+    },
+    "UserProfileOverview": {
+        "description": "Overview of the user's profile, including the user's name, location, and profile completion status.",
+        "variables": [
+            {
+                "name": "user_name",
+                "type": "Text"
+            },
+            {
+                "name": "user_location",
+                "type": "Text"
+            },
+            {
+                "name": "profile_completion_status",
+                "type": "Text"
+            }
+        ]
+    },
+    "MeSectionUpperBarOptions": {
+        "description": "Options available in the upper bar of the 'Me' section in the Yelp app, including bookmarks, reviews, photos, check-ins, and about me.",
+        "variables": [
+            {
+                "name": "option_name",
+                "type": "Enum",
+                "enum_values": [
+                    "Notification",
+                    "More Options"
+                ]
+            }
+        ]
+    },
+    "CurrentScreenTitle": {
+        "description": "The title of the current screen displayed on the Yelp app.",
+        "variables": [
+            {
+                "name": "screen_title",
+                "type": "Text"
+            }
+        ]
+    },
+    "CollectionSectionOptions": {
+        "description": "Options available in the 'Collections' section of the Yelp app, including 'View All' to see more details or a list of collections.",
+        "variables": [
+            {
+                "name": "option_name",
+                "type": "Enum",
+                "enum_values": [
+                    "View All",
+                    "create"
+                ]
+            }
+        ]
+    },
+    "SelectedBusiness": {
+        "description": "Details of the selected business, including the business name, rating, review count, and location.",
+        "variables": [
+            {
+                "name": "business_name",
+                "type": "Text"
+            },
+            {
+                "name": "business_rating",
+                "type": "Text"
+            },
+            {
+                "name": "review_count",
+                "type": "Text"
+            },
+            {
+                "name": "business_location",
+                "type": "Text"
+            },
+            {
+                "name": "business_distance",
+                "type": "Text"
+            }
+        ]
+    },
+    "SelectedKeywordForSearchBar": {
+        "description": "The keyword selected by the user for searching on the Yelp app.",
+        "variables": [
+            {
+                "name": "selected_keyword",
+                "type": "Text"
+            }
+        ]
+    },
+    "SearchResultFilterOptions": {
+        "description": "Filter options available for search results on the Yelp app, including 'Open Now', 'Offering a Deal', 'Sort by', and 'Price'.",
+        "variables": [
+            {
+                "name": "filter_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Filters",
+                    "Sort",
+                    "Open Now",
+                    "Price",
+                    "Offers Takeout",
+                    "Reservations",
+                    "Offers Delivery",
+                    "Good for Dinner",
+                    "Outdoor Seating",
+                    "Hot and New",
+                    "Good for Lunch",
+                    "Good for Kids"
+                ]
+            }
+        ]
+    },
+    "PriceFilterSelection": {
+        "description": "The selected price range filter options on the Yelp app's filter screen, allowing users to specify their preferred price range for search results.",
+        "variables": [
+            {
+                "name": "price_range",
+                "type": "Enum",
+                "enum_values": [
+                    "$",
+                    "$$",
+                    "$$$",
+                    "$$$$"
+                ]
+            }
+        ]
+    },
+    "PopularFilterSelection": {
+        "description": "The selected popular filter options on the Yelp app's filter screen, allowing users to specify popular features they are interested in for search results.",
+        "variables": [
+            {
+                "name": "popular_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Hot and New",
+                    "Offers Delivery",
+                    "Open Now"
+                ]
+            }
+        ]
+    },
+    "SortFilterSelection": {
+        "description": "The selected sorting option on the Yelp app's filter screen, allowing users to sort search results based on different criteria.",
+        "variables": [
+            {
+                "name": "sort_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Recommended",
+                    "Distance",
+                    "Rating",
+                    "Reviewed"
+                ]
+            }
+        ]
+    },
+    "OfferingFilterSelection": {
+        "description": "The selected offering filter options on the Yelp app's filter screen, allowing users to specify the type of offerings they are interested in for search results.",
+        "variables": [
+            {
+                "name": "offering_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Reservations",
+                    "Offers Online Waitlist"
+                ]
+            }
+        ]
+    },
+    "MealFilterSelection": {
+        "description": "The selected meal filter options on the Yelp app's filter screen, allowing users to specify the type of meals they are interested in for search results.",
+        "variables": [
+            {
+                "name": "meal_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Good for Breakfast",
+                    "Good for Brunch",
+                    "Good for Dinner",
+                    "Good for Lunch",
+                    "Good for Dessert",
+                    "See all"
+                ]
+            }
+        ]
+    },
+    "GoodForFilterSelection": {
+        "description": "The selected 'Good For' filter options on the Yelp app's filter screen, allowing users to specify the type of activities or occasions they are interested in for search results.",
+        "variables": [
+            {
+                "name": "good_for_option",
+                "type": "Enum",
+                "enum_values": [
+                    "Good for Kids",
+                    "Good for Groups",
+                    "Good for Happy Hour",
+                    "Liked by Vegetarians"
+                ]
+            }
+        ]
+    }
+}

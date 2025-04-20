@@ -1,0 +1,594 @@
+{
+  "SearchBarState": {
+    "description": "The current state of the search bar, including the placeholder text and the presence of voice search and account settings options.",
+    "variables": [
+      {
+        "name": "placeholder_text",
+        "type": "Text"
+      },
+      {
+        "name": "voice_search_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "account_settings_accessible",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "QuickAccessCategories": {
+    "description": "The categories available for quick access searches in the Explore tab below the search bar, such as Home, Restaurants, Shopping, and Coffee.",
+    "variables": [
+      {
+        "name": "categories",
+        "type": "Enum",
+        "enum_values": [
+          "Home",
+          "Restaurants",
+          "Shopping",
+          "Coffee",
+          "Gas",
+          "Hotels",
+          "Parks"
+        ]
+      }
+    ]
+  },
+  "WeatherInformation": {
+    "description": "Displays the current weather conditions, including temperature and air quality index (AQI).",
+    "variables": [
+      {
+        "name": "temperature",
+        "type": "Text"
+      },
+      {
+        "name": "aqi",
+        "type": "Text"
+      }
+    ]
+  },
+  "BottomNavigationOptions": {
+    "description": "The navigation options available at the bottom of the screen, including Explore, Go, Saved, Contribute, and Updates.",
+    "variables": [
+      {
+        "name": "navigation_options",
+        "type": "Enum",
+        "enum_values": ["Explore", "You", "Contribute"]
+      }
+    ]
+  },
+  "MyListDetails": {
+    "description": "Details of the user's saved lists, including the list name, privacy status, and the number of places in each list.",
+    "key_arg_name": "list_name",
+    "variables": [
+      {
+        "name": "list_name",
+        "type": "Text"
+      },
+      {
+        "name": "privacy_status",
+        "type": "Enum",
+        "enum_values": ["Private", "Shared"]
+      },
+      {
+        "name": "num_places",
+        "type": "Number"
+      }
+    ]
+  },
+  "RecentlySavedPlaces": {
+    "description": "Details of places recently saved by the user, including the place name, type, status, and the list it belongs to. Not for the searched places. There is another for them named SearchedPlacesDetails.",
+    "variables": [
+      {
+        "name": "place_name",
+        "type": "Text"
+      },
+      {
+        "name": "place_type",
+        "type": "Text"
+      },
+      {
+        "name": "place_status",
+        "type": "Text"
+      },
+      {
+        "name": "list_name",
+        "type": "Text"
+      }
+    ]
+  },
+  "ContributionOptions": {
+    "description": "Options available for the user to contribute to Google Maps, such as adding places, updating places, writing reviews, and adding photos.",
+    "variables": [
+      {
+        "name": "contribution_option",
+        "type": "Enum",
+        "enum_values": [
+          "Add Place",
+          "Update Place",
+          "Add Review",
+          "Add Photo",
+          "Update Road",
+          "Update Address"
+        ]
+      }
+    ]
+  },
+  "PhotoViewsStatistics": {
+    "description": "Statistics about the user's all-time photo views.",
+    "variables": [
+      {
+        "name": "all_time_photo_views",
+        "type": "Number"
+      }
+    ]
+  },
+  "FollowingTabState": {
+    "description": "The current state of the 'Following' tab, including the title, description, and suggested recommendations.",
+    "variables": [
+      {
+        "name": "tab_title",
+        "type": "Text"
+      },
+      {
+        "name": "tab_description",
+        "type": "Text"
+      },
+      {
+        "name": "suggested_for_you_title",
+        "type": "Text"
+      },
+      {
+        "name": "suggested_person_name",
+        "type": "Text"
+      },
+      {
+        "name": "suggested_person_description",
+        "type": "Text"
+      }
+    ]
+  },
+  "UserProfile": {
+    "description": "Details about the user's profile and available settings in the Google Maps app, including the user's name, email, and available options for account management and settings.",
+    "variables": [
+      {
+        "name": "user_name",
+        "type": "Text"
+      },
+      {
+        "name": "user_email",
+        "type": "Text"
+      }
+    ]
+  },
+  "UserProfileSettings": {
+    "description": "Details about the user's profile and available settings in the Google Maps app, including the user's name, email, and available options for account management and settings.",
+    "variables": [
+      {
+        "name": "menu_option",
+        "type": "Enum",
+        "enum_values": [
+          "Account Management",
+          "Incognito Mode",
+          "Profile",
+          "Location Sharing",
+          "Offline Maps",
+          "Data in Maps",
+          "Settings",
+          "Help & Feedback",
+          "Privacy Policy Link",
+          "Terms of Service Link"
+        ]
+      }
+    ]
+  },
+  "WiFiOnlySetting": {
+    "description": "Indicates whether the 'Wi-Fi only' setting is enabled or disabled in the Google Maps settings.",
+    "variables": [
+      {
+        "name": "wifi_only_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "ShakeToSendFeedback": {
+    "description": "Indicates whether the 'Shake to send feedback' feature is enabled or disabled in the Google Maps settings.",
+    "variables": [
+      {
+        "name": "shake_to_send_feedback_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "NotificationSetting": {
+    "description": "Indicates the current status of the 'Notifications' setting in the Google Maps settings.",
+    "variables": [
+      {
+        "name": "notifications_status",
+        "type": "Enum",
+        "enum_values": ["On", "Off"]
+      }
+    ]
+  },
+  "DistanceUnitsSetting": {
+    "description": "Indicates the current setting for 'Distance units' in the Google Maps settings.",
+    "variables": [
+      {
+        "name": "distance_units",
+        "type": "Enum",
+        "enum_values": ["Automatic", "Kilometers", "Miles"]
+      }
+    ]
+  },
+  "SettingOptions": {
+    "description": "Options available in the Google Maps settings, such as 'Edit home or work', 'Maps history', 'Electric vehicle settings', and more.",
+    "variables": [
+      {
+        "name": "setting_option",
+        "type": "Enum",
+        "enum_values": [
+          "Offline Maps Settings",
+          "Edit Home or Work",
+          "Video Settings",
+          "Saved Trips Settings",
+          "Google Location Settings",
+          "Personal Content",
+          "Accessibility Settings",
+          "Location Accuracy Tips",
+          "Maps History",
+          "Electric Vehicle Settings",
+          "Notifications",
+          "Chat",
+          "Distance Units",
+          "Show Scale on Map",
+          "Navigation Settings",
+          "Manage Your Preferences",
+          "Manage Your Areas",
+          "Sign Out of Google Maps",
+          "About, Terms & Privacy"
+        ]
+      }
+    ]
+  },
+  "SearchedPlacesOptions": {
+    "description": "Options available for places searched by the user, such as 'Share', 'Directions', 'Menu', 'Call', 'Save', 'Website', 'Start', 'Reserve', and 'More'.",
+    "variables": [
+      {
+        "name": "searched_place_option",
+        "type": "Enum",
+        "enum_values": [
+          "Directions",
+          "Start",
+          "Reserve",
+          "Share",
+          "Menu",
+          "Call",
+          "Save",
+          "Website",
+          "More"
+        ]
+      }
+    ]
+  },
+  "SearchedPlacesDetails": {
+    "description": "Details about places displayed in search results, including the place name, type, address, rating, number of reviews, operational status, distance, opening hours, and list index. List index is the index of the place in the search results list. If it is not in the list, you can ignore it.",
+    "key_arg_name": "place_name",
+    "variables": [
+      {
+        "name": "place_name",
+        "type": "Text"
+      },
+      {
+        "name": "place_type",
+        "type": "Text"
+      },
+      {
+        "name": "place_address",
+        "type": "Text"
+      },
+      {
+        "name": "place_rating",
+        "type": "Number"
+      },
+      {
+        "name": "place_number_of_reviews",
+        "type": "Number"
+      },
+      {
+        "name": "is_open_now",
+        "type": "Boolean"
+      },
+      {
+        "name": "distance_from_current_location",
+        "type": "Number"
+      },
+      {
+        "name": "place_opening_hours",
+        "type": "Text"
+      },
+      {
+        "name": "list_index",
+        "type": "Number"
+      }
+    ]
+  },
+  "NavigatingOptions": {
+    "description": "Options available before starting navigation like Start, Steps and Pin.",
+    "variables": [
+      {
+        "name": "navigation_option",
+        "type": "Enum",
+        "enum_values": ["Start", "Steps", "Pin"]
+      }
+    ]
+  },
+  "NavigationState": {
+    "description": "The current state of navigation, including the direction, next turn, distance remaining, estimated time of arrival, and audio settings.",
+    "variables": [
+      {
+        "name": "current_direction",
+        "type": "Text"
+      },
+      {
+        "name": "next_turn",
+        "type": "Text"
+      },
+      {
+        "name": "distance_remaining",
+        "type": "Text"
+      },
+      {
+        "name": "estimated_arrival_time",
+        "type": "Text"
+      },
+      {
+        "name": "audio_status",
+        "type": "Enum",
+        "enum_values": ["Muted", "Unmuted"]
+      }
+    ]
+  },
+  "SpeedInformation": {
+    "description": "Information about the current speed of the vehicle, including the speed value and unit.",
+    "variables": [
+      {
+        "name": "current_speed",
+        "type": "Text"
+      },
+      {
+        "name": "speed_unit",
+        "type": "Text"
+      }
+    ]
+  },
+  "UserProfileOverview": {
+    "description": "Overview of the user's profile, including their name, guide level, points, number of contributions, followers, and following.",
+    "variables": [
+      {
+        "name": "user_name",
+        "type": "Text"
+      },
+      {
+        "name": "guide_level",
+        "type": "Text"
+      },
+      {
+        "name": "points",
+        "type": "Number"
+      },
+      {
+        "name": "num_contributions",
+        "type": "Number"
+      },
+      {
+        "name": "num_followers",
+        "type": "Number"
+      },
+      {
+        "name": "num_following",
+        "type": "Number"
+      }
+    ]
+  },
+  "UserBio": {
+    "description": "The bio section of the user's profile, allowing them to describe themselves and their interests.",
+    "variables": [
+      {
+        "name": "bio_text",
+        "type": "Text"
+      }
+    ]
+  },
+  "UserReviews": {
+    "description": "Details about the user's reviews, including the place name, type, location, rating, and the time since the review was posted.",
+    "variables": [
+      {
+        "name": "review_place_name",
+        "type": "Text"
+      },
+      {
+        "name": "review_place_type",
+        "type": "Text"
+      },
+      {
+        "name": "review_place_location",
+        "type": "Text"
+      },
+      {
+        "name": "review_rating",
+        "type": "Text"
+      },
+      {
+        "name": "review_timestamp",
+        "type": "Text"
+      }
+    ]
+  },
+  "SelectedKeyword": {
+    "description": "The chose search keyword that is one of the appeared when the user starts typing in the search bar. if it is about auto-filled keyword, the location should be * and if it is about candidate place, it has its address. Finally, it it is about the franchise, it has See locations at detail",
+    "variables": [
+      {
+        "name": "keyword",
+        "type": "Text",
+        "detail": "Text"
+      }
+    ]
+  },
+  "SearchQueryAndFilters": {
+    "description": "The current search query and applied filters in the Google Maps app, including the search term and the status of filters like 'Relevance', 'Open now', 'Price', 'Top rated', and more.",
+    "variables": [
+      {
+        "name": "search_term",
+        "type": "Text"
+      },
+      {
+        "name": "sort_by",
+        "type": "Enum",
+        "enum_values": ["Relevance", "Distance"]
+      },
+      {
+        "name": "price_per_person_begin",
+        "type": "Number"
+      },
+      {
+        "name": "price_per_person_end",
+        "type": "Number"
+      },
+      {
+        "name": "minimum_rating",
+        "type": "Enum",
+        "enum_values": ["Any", "3.5", "4.0", "4.5"]
+      },
+      {
+        "name": "open_hours",
+        "type": "Enum",
+        "enum_values": ["Any", "Open now", "Custom"]
+      },
+      {
+        "name": "filter_option",
+        "type": "Enum",
+        "enum_values": [
+          "Relevance",
+          "Open Now",
+          "Price",
+          "Top Rated",
+          "Wheelchair Accessible Entrance",
+          "Delivery",
+          "Good for Kids",
+          "Recently Opened",
+          "None"
+        ]
+      }
+    ]
+  },
+  "RouteInformation": {
+    "description": "Details about the current route, including the start location, destination, selected mode of transportation, travel time, and additional route information such as parking difficulty.",
+    "variables": [
+      {
+        "name": "start_location",
+        "type": "Text"
+      },
+      {
+        "name": "destination",
+        "type": "Text"
+      },
+      {
+        "name": "selected_mode",
+        "type": "Enum",
+        "enum_values": [
+          "Driving",
+          "Transit",
+          "Walking",
+          "Ride Service",
+          "Bicycling"
+        ]
+      },
+      {
+        "name": "consumed_time",
+        "type": "Number"
+      },
+      {
+        "name": "travel_time",
+        "type": "Time"
+      },
+      {
+        "name": "parking_difficulty",
+        "type": "Text"
+      }
+    ]
+  },
+  "TripOptionsSettings": {
+    "description": "The current settings for trip options in the Google Maps app, including the status of 'Wheelchair accessible' and 'Avoid ferries'. Each setting has a description and a toggle indicating whether it is enabled or disabled. These options exist to filter the breadcrumbs when navigating to a route.",
+    "variables": [
+      {
+        "name": "wheelchair_accessible_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "avoid_ferries_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "MapDetailsSelection": {
+    "description": "Indicates the current selection of map details in the Google Maps app, including options like Public transit, Traffic, Bicycling, 3D, Street View, Wildfires, and Air Quality. Each option can be either enabled or disabled.",
+    "variables": [
+      {
+        "name": "public_transit_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "traffic_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "bicycling_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "3d_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "street_view_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "wildfires_enabled",
+        "type": "Boolean"
+      },
+      {
+        "name": "air_quality_enabled",
+        "type": "Boolean"
+      }
+    ]
+  },
+  "MapTypeSelection": {
+    "description": "Indicates the current selection of map type in the Google Maps app, which can be Default, Satellite, or Terrain.",
+    "variables": [
+      {
+        "name": "selected_map_type",
+        "type": "Enum",
+        "enum_values": ["Default", "Satellite", "Terrain"]
+      }
+    ]
+  },
+  "SharingInterfaceState": {
+    "description": "The current state of the sharing interface in the Google Maps app, including the user's name, email, and available sharing options.",
+    "variables": [
+      {
+        "name": "user_name",
+        "type": "Text"
+      },
+      {
+        "name": "user_email",
+        "type": "Text"
+      },
+      {
+        "name": "sharing_options",
+        "type": "Enum",
+        "enum_values": ["Messages", "Chrome", "Copy to clipboard", "More"]
+      }
+    ]
+  }
+}
