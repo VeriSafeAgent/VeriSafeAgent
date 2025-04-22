@@ -4,8 +4,6 @@ This repository contains the implementation of the VeriSafe Agent System, a fram
 
 ## VeriSafeAgent Library
 
-VeriSafeAgent Library:
-
 [VeriSafeAgent Library on GitHub](https://github.com/VeriSafeAgent/VeriSafeAgent_Library)
 
 ## Installation
