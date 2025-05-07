@@ -1,4 +1,4 @@
-# VeriSafe Agent System
+![image](https://github.com/user-attachments/assets/d0399cd1-6595-4d72-b75c-91c51f30bf0b)# VeriSafe Agent System
 
 This repository contains the implementation of the VeriSafe Agent System, a framework for safe and verified mobile task automation using AI agents.
 
@@ -141,9 +141,11 @@ The dataset contains information about various mobile applications and their ass
 Dataset.xlsx
 │
 ├── APP_NAME                    # Name of the mobile application
-├── NUMBER                      # Number of instructions for each app
+├── PACKAGE_NAME               # Name of the mobile application's package
+├── INSTRUCTION_NUMBER                      # Number of instructions for each app
 ├── DATASET_TYPE               # Type of dataset (e.g., llamatouch, challenge)
-└── INSTRUCTION                # Natural language instructions for the app
+├── INSTRUCTION_1                # Correct Natural language instructions for the app
+└── INSTRUCTION_2                # Wrong Natural language instructions for the app
 ```
 
 ### Predicates
